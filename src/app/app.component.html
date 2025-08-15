@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<div style="position: fixed;top: 0;background-color: white;">
+<input [(ngModel)]="hideTopBar" id="hideTopBar" type="checkbox" > Hide topbar
+<div [class.hidden]="hideTopBar" style="position: fixed;top: 5;background-color: white;">
   <div>
     <label for="fname">Set:</label>
     <input [(ngModel)]="setName" id="fname" type="text">

@@ -11,9 +11,11 @@ export enum SETS {
     OP10 = 'OP10',
     OP11 = 'OP11',
     OP12 = 'OP12',
+    OP13 = 'OP13',
 
     EB01 = 'EB01',
     EB02 = 'EB02',
+    PRB02 = 'PRB02',
 
 
     ST01 = 'ST01',
@@ -37,6 +39,7 @@ export enum SETS {
     ST19 = 'ST19',
     ST20 = 'ST20',
     ST21 = 'ST21',
+    ST22 = 'ST22',
     ST23 = 'ST23',
     ST24 = 'ST24',
     ST25 = 'ST25',

@@ -73,3 +73,7 @@ th {
 .dark-yellow {
   background-color: #fae2a0;
 }
+
+.hidden {
+  display: none;
+}

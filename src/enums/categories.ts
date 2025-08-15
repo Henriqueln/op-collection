@@ -16,5 +16,6 @@ export const raritiesOptions = [
     'R',
     'SR',
     'SEC',
-    'ALT'
+    'ALT',
+    'P'
 ]

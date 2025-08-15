@@ -49,6 +49,7 @@ export class AppComponent {
   categoriesOptions = categoriesOptions;
   raritiesOptions = raritiesOptions;
   nameOptions = nameOptions;
+  hideTopBar = false;
 
   constructor(private apiService: ApiService) { }
 
@@ -232,3 +233,6 @@ export class AppComponent {
 
 
 
+// TO DO A BACKUP OF THE DB RUN THIS COMMAND
+// curl -u admin:1234 -X GET http://localhost:5984/cards/_all_docs?include_docs=true > cards_backup.json
+// GIT TOKEN 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

@@ -8,6 +8,7 @@ import { MARKET_FIXED_OP06 } from "./market-fixed/op06";
 import { MARKET_FIXED_OP07 } from "./market-fixed/op07";
 import { MARKET_FIXED_OP08 } from "./market-fixed/op08";
 import { MARKET_FIXED_OP09 } from "./market-fixed/op09";
+import { MARKET_FIXED_OP10 } from "./market-fixed/op10";
 
 export const MARKET_WATCH_FIXED = [
     ...MARKET_FIXED_OP01,
@@ -19,5 +20,6 @@ export const MARKET_WATCH_FIXED = [
     ...MARKET_FIXED_OP07,
     ...MARKET_FIXED_OP08,
     ...MARKET_FIXED_OP09,
+    ...MARKET_FIXED_OP10,
     
 ] as MarketWatch[]

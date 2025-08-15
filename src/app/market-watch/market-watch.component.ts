@@ -15,13 +15,13 @@ export class MarketWatchComponent implements OnInit {
     console.log(market)
     return market;
   });
-  cardsFixed = MARKET_WATCH_FIXED.map(market => {
+  cardsFixed = MARKET_WATCH_FIXED.filter(m => m.prices[0] > 0).map(market => {
     const prices = market.prices.reverse();
     market.currentPrice = prices[0];
     market.previousPrice = prices[1] ?? market.currentPrice;
     console.log(market)
     return market
-  }).sort((a, b) => a.currentPrice - b.currentPrice);;
+  }).sort((a, b) => a.currentPrice - b.currentPrice);
 
   constructor() { }
 
