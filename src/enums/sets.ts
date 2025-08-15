@@ -1,0 +1,52 @@
+export enum SETS {
+    OP01 = 'OP01', 
+    OP02 = 'OP02',
+    OP03 = 'OP03', 
+    OP04 = 'OP04', 
+    OP05 = 'OP05',
+    OP06 = 'OP06',
+    OP07 = 'OP07',
+    OP08 = 'OP08',
+    OP09 = 'OP09',
+    OP10 = 'OP10',
+    OP11 = 'OP11',
+    OP12 = 'OP12',
+
+    EB01 = 'EB01',
+    EB02 = 'EB02',
+
+
+    ST01 = 'ST01',
+    ST02 = 'ST02',
+    ST03 = 'ST03',
+    ST04 = 'ST04',
+    ST05 = 'ST05',
+    ST06 = 'ST06',
+    ST07 = 'ST07',
+    ST08 = 'ST08',
+    ST09 = 'ST09',
+    ST10 = 'ST10',
+    ST11 = 'ST11',
+    ST12 = 'ST12',
+    ST13 = 'ST13',
+    ST14 = 'ST14',
+    ST15 = 'ST15',
+    ST16 = 'ST16',
+    ST17 = 'ST17',
+    ST18 = 'ST18',
+    ST19 = 'ST19',
+    ST20 = 'ST20',
+    ST21 = 'ST21',
+    ST23 = 'ST23',
+    ST24 = 'ST24',
+    ST25 = 'ST25',
+    ST26 = 'ST26',
+    ST27 = 'ST27',
+    ST28 = 'ST28',
+    
+    P = 'P',
+
+    DON = 'DON',
+
+    PLAYSETS = 'PLAYSETS'
+}

@@ -1,0 +1,15 @@
+<div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;" >
+  <div *ngFor="let card of cards">
+    <img style="width: 100px;" src="assets/img/{{card.image}}.png">
+    <div [style.color]="card.currentPrice > card.previousPrice ? 'red' : (card.currentPrice < card.previousPrice ? 'green' : 'blue')" style="text-align: center;"><p>{{card.currentPrice | currency:'EUR'}}</p></div>
+  </div>
+</div>
+
+
+<div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;" >
+  <div *ngFor="let card of cardsFixed">
+    <p style="text-align: center;">{{card.code}}</p>
+    <img style="width: 100px;" src="assets/img/{{card.image}}.png">
+    <div [style.color]="card.currentPrice > card.previousPrice ? 'red' : (card.currentPrice < card.previousPrice ? 'green' : 'blue')" style="text-align: center;"><p>{{card.currentPrice | currency:'EUR'}}</p></div>
+  </div>
+</div>
