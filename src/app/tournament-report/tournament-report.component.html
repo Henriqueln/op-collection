@@ -1,0 +1,146 @@
+<!-- Tabs Navigation -->
+<div class="tabs">
+    <button (click)="switchTab('tab1')" [class.active]="activeTab === 'tab1'">Leader Tournament Points</button>
+    <button (click)="switchTab('tab2')" [class.active]="activeTab === 'tab2'">Tournament Retrospective</button>
+    <button (click)="switchTab('tab3')" [class.active]="activeTab === 'tab3'">Leader Stats</button>
+</div>
+
+<!-- Tab 1 -->
+<div *ngIf="activeTab === 'tab1'" #scrollContainer1 style="margin-bottom: 3rem;">
+    <table class="w3-table w3-striped">
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Leader</th>
+            <th>Points</th>
+        </tr>
+        <tr *ngFor="let leader of leaders">
+            <td [ngClass]="leader.color1.toLowerCase()"></td>
+            <td [ngClass]="leader.color1.toLowerCase()">
+                <img src="assets/img/{{leader.code}}.png">
+            </td>
+            <td [ngClass]="leader.color2.toLowerCase()">{{leader.name}}</td>
+            <td [ngClass]="leader.color2.toLowerCase()">{{leader.points | number:'1.0-2'}}</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Tab 2 -->
+<div *ngIf="activeTab === 'tab2'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <table class="w3-table w3-striped">
+        <tr>
+            <th>Deck</th>
+            <th>Type</th>
+            <th>Store</th>
+            <th>Placement</th>
+            <th>Points</th>
+            <th>Date</th>
+        </tr>
+        <tr *ngFor="let t of tournaments;">
+            <ng-container *ngIf="getRowContext(t) as tData">
+                <td [ngClass]="tData.leader!.color1.toLowerCase()">
+                    <img src="assets/img/{{tData.leader!.code}}.png">
+                </td>
+                <td [ngClass]="tData.leader!.color1.toLowerCase()">{{tData.type!.name}}</td>
+                <td [ngClass]="tData.leader!.color1.toLowerCase()">{{tData.store!.name}} <span  [ngClass]="'flag-icon flag-icon-pt'"></span></td>
+                <td [ngClass]="tData.leader!.color2.toLowerCase()">{{t.placement}}</td>
+                <td [ngClass]="tData.leader!.color2.toLowerCase()">{{tData.points | number:'1.0-2'}}</td>
+                <td [ngClass]="tData.leader!.color2.toLowerCase()">{{t.date | date:'dd/MM/yyyy' }}</td>
+            </ng-container>
+        </tr>
+    </table>
+</div>
+
+<!-- Tab 3 -->
+<!-- <div *ngIf="activeTab === 'tab3'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <h4 style="font-weight: bold;">Most Played (Tournaments)</h4>
+    <table class="w3-table w3-striped">
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Leader</th>
+            <th>Times Used</th>
+        </tr>
+        <tr *ngFor="let leader of leaders">
+            <td [ngClass]="leader.color1.toLowerCase()"></td>
+            <td [ngClass]="leader.color1.toLowerCase()">
+                <img src="assets/img/{{leader.code}}.png">
+            </td>
+            <td [ngClass]="leader.color2.toLowerCase()">{{leader.name}}</td>
+            <td [ngClass]="leader.color2.toLowerCase()">{{leader.timesUsed}}</td>
+        </tr>
+    </table>
+</div> -->
+
+<div *ngIf="activeTab === 'tab3'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <h4 style="font-weight: bold;">Most Played (Tournaments)</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostUsedComp">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesUsed}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Wins (Tournaments)</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostWinsComp">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesWon}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Played (Ranked - {{currentSet}})</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostWinsRankCurrent">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesUsed}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Wins (Ranked - {{currentSet}})</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostWinsRankCurrent">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesWon}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Best Win Ratio (Ranked - {{currentSet}})</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.bestWinRatioRankCurrent">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.winRatio}}%</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Played (Ranked - All Time)</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostWinsRank">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesUsed}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Wins (Ranked - All Time)</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostWinsRank">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesWon}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Best Win Ratio (Ranked - All Time)</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.bestWinRatioRank">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.winRatio}}%</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Wins Against</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.individualWins">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesWon}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Loses Against</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.individualLoses">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesLost}}</p>
+        </div>
+    </div>
+</div>

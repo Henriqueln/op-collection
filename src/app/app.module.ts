@@ -8,12 +8,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MarketWatchComponent } from './market-watch/market-watch.component';
 import { PlaysetsComponent } from './playsets/playsets.component';
+import { TournamentReportComponent } from './tournament-report/tournament-report.component';
 
 @NgModule({
   declarations: [		
     AppComponent,
       MarketWatchComponent,
-      PlaysetsComponent
+      PlaysetsComponent,
+      TournamentReportComponent
    ],
   imports: [
     BrowserModule,

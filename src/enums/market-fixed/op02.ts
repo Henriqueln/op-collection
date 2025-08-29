@@ -5,7 +5,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Edward Newgate',
-        prices: [75]
+        prices: [75, 55]
     },
     {
         code: 'OP02-002',
@@ -13,15 +13,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Monkey D. Garp',
-        prices: [79]
-    },
-    {
-        code: 'OP02-004',
-        image: 'OP02-004_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Edward Newgate',
-        prices: [10.29]
+        prices: [79, 67]
     },
     {
         code: 'OP02-004',
@@ -29,15 +21,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Edward Newgate (Ebay)',
-        prices: [6]
-    },
-    {
-        code: 'OP02-004',
-        image: 'OP02-004_p4',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Edward Newgate',
-        prices: [8]
+        prices: [6, 14]
     },
     {
         code: 'OP02-008',
@@ -45,23 +29,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Jozu',
-        prices: [6]
-    },
-    {
-        code: 'OP02-008',
-        image: 'OP02-009_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Squard',
-        prices: [0.5]
-    },
-    {
-        code: 'OP02-013',
-        image: 'OP02-013_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Portgas D. Ace',
-        prices: [18]
+        prices: [6, 6]
     },
     {
         code: 'OP02-018',
@@ -69,7 +37,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Marco',
-        prices: [4.5]
+        prices: [4.5, 4]
     },
     {
         code: 'OP02-025',
@@ -77,7 +45,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kin emon',
-        prices: [31]
+        prices: [31, 20]
     },
     {
         code: 'OP02-026',
@@ -85,7 +53,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sanji',
-        prices: [44]
+        prices: [44, 35]
     },
     {
         code: 'OP02-031',
@@ -93,7 +61,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kouzuki Toki',
-        prices: [1.5]
+        prices: [1.5, 1.5]
     },
     {
         code: 'OP02-036',
@@ -101,7 +69,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Nami',
-        prices: [9.6]
+        prices: [9.6, 9]
     },
     {
         code: 'OP02-041',
@@ -109,7 +77,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Monkey D. Luffy',
-        prices: [14]
+        prices: [14, 13]
     },
     {
         code: 'OP02-049',
@@ -117,7 +85,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Emporio Ivankov',
-        prices: [30]
+        prices: [30, 27]
     },
     {
         code: 'OP02-062',
@@ -125,7 +93,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Monkey D. Luffy',
-        prices: [9.83]
+        prices: [9.83, 8]
     },
     {
         code: 'OP02-063',
@@ -133,7 +101,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Mr. 1 (Daz Bonez)',
-        prices: [3.8]
+        prices: [3.8, 3]
     },
     {
         code: 'OP02-071',
@@ -141,7 +109,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Magellan',
-        prices: [30.99]
+        prices: [30.99, 25]
     },
     {
         code: 'OP02-072',
@@ -149,7 +117,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Zephyr',
-        prices: [30]
+        prices: [30, 19]
     },
     {
         code: 'OP02-073',
@@ -157,7 +125,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Little Sadi',
-        prices: [3.98]
+        prices: [3.98, 3]
     },
     {
         code: 'OP02-085',
@@ -165,7 +133,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Magellan',
-        prices: [22]
+        prices: [22, 22]
     },
     {
         code: 'OP02-086',
@@ -173,7 +141,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Minokoala',
-        prices: [0.8]
+        prices: [0.8, 0.36]
     },
     {
         code: 'OP02-089',
@@ -181,7 +149,15 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Judgment of Hell',
-        prices: [6.5]
+        prices: [0.15, 0.15]
+    },
+    {
+        code: 'OP02-089',
+        image: 'OP02-089_p3',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Judgment of Hell',
+        prices: [6.5, 10]
     },
     {
         code: 'OP02-093',
@@ -189,7 +165,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Smoker',
-        prices: [79.79]
+        prices: [79.79, 57]
     },
     {
         code: 'OP02-096',
@@ -197,7 +173,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kuzan',
-        prices: [34]
+        prices: [34, 22]
     },
     {
         code: 'OP02-096',
@@ -205,7 +181,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kuzan',
-        prices: [14]
+        prices: [14, 9]
     },
     {
         code: 'OP02-099',
@@ -213,7 +189,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sakazuki',
-        prices: [23.99]
+        prices: [23.99, 22]
     },
     {
         code: 'OP02-099',
@@ -221,7 +197,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sakazuki',
-        prices: [4]
+        prices: [4, 4]
     },
     {
         code: 'OP02-106',
@@ -229,7 +205,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Tsuru',
-        prices: [8.75]
+        prices: [8.75, 8]
     },
     {
         code: 'OP02-106',
@@ -237,7 +213,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Tsuru',
-        prices: [4.5]
+        prices: [4.5, 3]
     },
     {
         code: 'OP02-108',
@@ -245,7 +221,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Donquixote Rosinante',
-        prices: [1.8]
+        prices: [1.8, 1]
     },
     {
         code: 'OP02-114',
@@ -253,7 +229,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Borsalino',
-        prices: [13.5]
+        prices: [13.5, 8]
     },
     {
         code: 'OP02-114',
@@ -261,7 +237,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Borsalino',
-        prices: [5.9]
+        prices: [5.9, 4]
     },
     {
         code: 'OP02-115',
@@ -269,7 +245,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Monkey D. Garp',
-        prices: [8]
+        prices: [8, 7]
     },
     {
         code: 'OP02-120',
@@ -277,7 +253,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Uta',
-        prices: [9.5]
+        prices: [9.5, 9]
     },
     {
         code: 'OP02-120',
@@ -285,7 +261,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Uta',
-        prices: [45]
+        prices: [45, 48]
     },
     {
         code: 'OP02-120',
@@ -293,7 +269,7 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Uta',
-        prices: [3.89]
+        prices: [3.89, 4]
     },
     {
         code: 'OP02-121',
@@ -301,6 +277,6 @@ export const MARKET_FIXED_OP02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kuzan',
-        prices: [25]
+        prices: [25, 16]
     },
 ]

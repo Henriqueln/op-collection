@@ -5,7 +5,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Dragon',
-        prices: [13.5]
+        prices: [13.5, 13]
     },
     {
         code: 'OP07-015',
@@ -13,7 +13,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Dragon',
-        prices: [65]
+        prices: [65, 60]
     },
     {
         code: 'OP07-021',
@@ -21,7 +21,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Urouge',
-        prices: [23]
+        prices: [23, 24]
     },
     {
         code: 'OP07-022',
@@ -29,7 +29,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Otama',
-        prices: [5]
+        prices: [5, 3]
     },
     {
         code: 'OP07-038',
@@ -37,7 +37,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Hancock',
-        prices: [30]
+        prices: [30, 31]
     },
     {
         code: 'OP07-038',
@@ -45,7 +45,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Hancock',
-        prices: [102.99]
+        prices: [102.99, 85]
     },
     {
         code: 'OP07-045',
@@ -53,7 +53,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Jinbe',
-        prices: [3]
+        prices: [3, 3]
     },
     {
         code: 'OP07-045',
@@ -61,7 +61,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Jinbe',
-        prices: [4]
+        prices: [4, 4]
     },
     {
         code: 'OP07-046',
@@ -69,7 +69,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sengoku',
-        prices: [3]
+        prices: [3, 3]
     },
     {
         code: 'OP07-046',
@@ -77,7 +77,15 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sengoku',
-        prices: [20]
+        prices: [20, 50]
+    },
+    {
+        code: 'OP07-047',
+        image: 'OP07-047_p2',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Law',
+        prices: [3]
     },
     {
         code: 'OP07-051',
@@ -85,7 +93,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Hancock',
-        prices: [6]
+        prices: [6, 7]
     },
     {
         code: 'OP07-051',
@@ -93,7 +101,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Hancock',
-        prices: [125]
+        prices: [125, 136]
     },
     {
         code: 'OP07-064',
@@ -101,7 +109,15 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sanji',
-        prices: [20]
+        prices: [20, 13]
+    },
+    {
+        code: 'OP07-066',
+        image: 'OP07-066_p1',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Chopper',
+        prices: [40]
     },
     {
         code: 'OP07-079',
@@ -109,7 +125,15 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Lucci',
-        prices: [25]
+        prices: [25, 18]
+    },
+    {
+        code: 'OP07-080',
+        image: 'OP07-080_p2',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Kaku',
+        prices: [7]
     },
     {
         code: 'OP07-085',
@@ -117,15 +141,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Stussy',
-        prices: [5]
-    },
-    {
-        code: 'OP07-085',
-        image: 'OP07-085_p2',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Stussy',
-        prices: [42]
+        prices: [5, 4]
     },
     {
         code: 'OP07-091',
@@ -133,7 +149,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [11]
+        prices: [11, 11]
     },
     {
         code: 'OP07-097',
@@ -141,7 +157,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Vegapunk',
-        prices: [99]
+        prices: [99, 24]
     },
     {
         code: 'OP07-109',
@@ -149,7 +165,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [21]
+        prices: [21, 25]
     },
     {
         code: 'OP07-109',
@@ -157,7 +173,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [6]
+        prices: [6, 4]
     },
     {
         code: 'OP07-109',
@@ -165,7 +181,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [11]
+        prices: [11, 9]
     },
     {
         code: 'OP07-111',
@@ -173,15 +189,15 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Lillith',
-        prices: [6]
+        prices: [6, 5]
     },
     {
         code: 'OP07-113',
         image: 'OP07-113_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Lillith',
-        prices: [53]
+        name: 'Zoro',
+        prices: [53, 63]
     },
     {
         code: 'OP07-118',
@@ -189,7 +205,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sabo',
-        prices: [10]
+        prices: [10, 8]
     },
     {
         code: 'OP07-119',
@@ -197,6 +213,6 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Ace',
-        prices: [22]
+        prices: [22, 19]
     },
 ]

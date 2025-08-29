@@ -13,7 +13,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Carrot',
-        prices: [14]
+        prices: [14, 14]
     },
     {
         code: 'OP08-023',
@@ -21,15 +21,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Carrot',
-        prices: [13]
-    },
-    {
-        code: 'OP08-040',
-        image: 'OP08-040_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Atmos',
-        prices: [2]
+        prices: [13, 12]
     },
     {
         code: 'OP08-057',
@@ -37,7 +29,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'King',
-        prices: [10]
+        prices: [10, 10]
     },
     {
         code: 'OP08-067',
@@ -45,7 +37,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Pudding',
-        prices: [8]
+        prices: [8, 6]
     },
     {
         code: 'OP08-069',
@@ -53,7 +45,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Linlin',
-        prices: [19]
+        prices: [19, 8]
     },
     {
         code: 'OP08-074',
@@ -61,7 +53,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Black Maria',
-        prices: [6]
+        prices: [6, 6]
     },
     {
         code: 'OP08-079',
@@ -69,7 +61,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kaido',
-        prices: [7]
+        prices: [7, 6]
     },
     {
         code: 'OP08-080',
@@ -77,7 +69,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Queen',
-        prices: [3]
+        prices: [3, 2]
     },
     {
         code: 'OP08-084',
@@ -85,7 +77,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Jack',
-        prices: [7]
+        prices: [7, 7]
     },
     {
         code: 'OP08-105',
@@ -93,7 +85,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Bonney',
-        prices: [5]
+        prices: [5, 7]
     },
     {
         code: 'OP08-105',
@@ -101,7 +93,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Bonney',
-        prices: [20]
+        prices: [20, 4]
     },
     {
         code: 'OP08-106',
@@ -109,7 +101,7 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Nami',
-        prices: [150]
+        prices: [150, 180]
     },
     {
         code: 'OP08-112',
@@ -117,14 +109,6 @@ export const MARKET_FIXED_OP08 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'S-Snake',
-        prices: [4]
-    },
-    {
-        code: 'OP08-112',
-        image: 'OP08-112_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'S-Snake',
-        prices: [4]
+        prices: [4, 5]
     },
 ]

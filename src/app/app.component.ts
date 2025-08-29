@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { SETS } from 'src/enums/sets';
 import { ApiService } from './api.service';
 import { Card } from './entities/card';
@@ -14,6 +14,8 @@ import { nameOptions } from 'src/enums/name';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+
   showEdit = false;
 
   SETS = SETS;
@@ -43,6 +45,7 @@ export class AppComponent {
   haveCards = 0;
   completion = 0;
   colorFilter = '';
+  sourceFilter = '';
   playsetsSelected = false;
   typeOptions = typesOptions;
   sourceOptions = sourcesOptions;
@@ -50,6 +53,7 @@ export class AppComponent {
   raritiesOptions = raritiesOptions;
   nameOptions = nameOptions;
   hideTopBar = false;
+  showAll = false;
 
   constructor(private apiService: ApiService) { }
 
@@ -63,6 +67,8 @@ export class AppComponent {
   }
 
   updateView() {
+    const container = this.scrollContainer.nativeElement;
+    const scrollTop = container.scrollTop;
     this.playsetsSelected = false;
     this.apiService.getCards().subscribe(result => {
       this.allCards = result;
@@ -81,13 +87,31 @@ export class AppComponent {
       if (this.selectedSet === SETS.PLAYSETS) {
         this.playsetsSelected = true;
         this.filteredCards = this.allCards.filter(c => c.quantity < c.playset && c.rarity !== 'ALT' && c.set !== SETS.DON);
+        this.filteredCards = this.filteredCards.map(c => {
+          if (c.playset == 5 || c.playset == 2) {
+            c.playset = c.playset - 1;
+          }
+          return c;
+        })
+
       } else {
-        this.filteredCards = this.allCards.filter(c => c.set === this.selectedSet);
+        if(!this.showAll) {
+          this.filteredCards = this.allCards.filter(c => c.set === this.selectedSet);
+        } else {
+          this.filteredCards = this.allCards;
+        }
       }
       if (this.colorFilter) {
         this.filteredCards = this.filteredCards.filter(c => c.color === this.colorFilter || c.color2 === this.colorFilter);
       }
+      if(this.sourceFilter) {
+        this.filteredCards = this.filteredCards.filter(c => c.source === this.sourceFilter);
+      }
       this.updateStatistics();
+      // Wait for view to render
+      setTimeout(() => {
+        container.scrollTop = scrollTop;
+      });
     });
   }
 
@@ -96,8 +120,14 @@ export class AppComponent {
     this.updateView();
   }
 
+  filterBySource() {
+    this.sourceFilter = this.source;
+    this.updateView();
+  }
+
   removeFilters() {
     this.colorFilter = '';
+    this.sourceFilter = '';
     this.updateView();
   }
 
@@ -222,7 +252,7 @@ export class AppComponent {
   printList() {
     let textOutput = '';
     this.filteredCards.forEach(card => {
-      textOutput+=`${card.playset - card.quantity}X ${card.code} - ${card.name}\n`
+      textOutput += `${card.playset - card.quantity}X ${card.code} - ${card.name}\n`
     })
 
     const blob = new Blob([textOutput], { type: 'text/plain' });

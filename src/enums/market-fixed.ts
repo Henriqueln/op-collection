@@ -9,6 +9,12 @@ import { MARKET_FIXED_OP07 } from "./market-fixed/op07";
 import { MARKET_FIXED_OP08 } from "./market-fixed/op08";
 import { MARKET_FIXED_OP09 } from "./market-fixed/op09";
 import { MARKET_FIXED_OP10 } from "./market-fixed/op10";
+import { MARKET_FIXED_OP11 } from "./market-fixed/op11";
+import { MARKET_FIXED_EB01 } from "./market-fixed/eb01";
+import { MARKET_FIXED_EB02 } from "./market-fixed/eb02";
+import { MARKET_FIXED_ST } from "./market-fixed/st";
+import { MARKET_FIXED_PROMO } from "./market-fixed/promo";
+import { MARKET_FIXED_DON } from "./market-fixed/don";
 
 export const MARKET_WATCH_FIXED = [
     ...MARKET_FIXED_OP01,
@@ -21,5 +27,11 @@ export const MARKET_WATCH_FIXED = [
     ...MARKET_FIXED_OP08,
     ...MARKET_FIXED_OP09,
     ...MARKET_FIXED_OP10,
+    ...MARKET_FIXED_OP11,
+    ...MARKET_FIXED_EB01,
+    ...MARKET_FIXED_EB02,
+    ...MARKET_FIXED_ST,
+    ...MARKET_FIXED_PROMO,
+    ...MARKET_FIXED_DON,
     
 ] as MarketWatch[]

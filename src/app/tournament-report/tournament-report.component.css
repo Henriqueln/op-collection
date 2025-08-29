@@ -1,0 +1,103 @@
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+img {
+  height: 100px;
+}
+
+td {
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 10px !important;
+}
+
+tr {
+  border-width: 1px;
+  border-style: solid;
+}
+
+th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.dark-red {
+  background-color: #f59089;
+}
+
+.red {
+  background-color: #f5c0bc;
+}
+
+.green {
+  background-color: #c8f7cc;
+}
+
+.dark-green {
+  background-color: #89f592;
+}
+
+.blue {
+  background-color: #d1ddff;
+}
+
+.dark-blue {
+  background-color: #94aff7;
+}
+
+.purple {
+  background-color: #e3d3f0;
+}
+
+.dark-purple {
+  background-color: #dbaefc;
+}
+
+.black {
+  background-color: #c7c6c3;
+}
+
+.dark-black {
+  background-color: #787877;
+}
+
+.yellow {
+  background-color: #fff3d1;
+}
+
+.dark-yellow {
+  background-color: #fae2a0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+/* Tab buttons */
+.tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  transition: background-color 0.2s;
+}
+
+.tabs button:hover {
+  background-color: #ccc;
+}
+
+/* Active tab */
+.tabs button.active {
+  background-color: #fff;
+  border-bottom: 2px solid #fff; /* visually connect to table */
+}

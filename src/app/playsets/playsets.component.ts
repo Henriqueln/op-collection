@@ -26,7 +26,7 @@ export class PlaysetsComponent implements OnInit {
   }
 
   getCardsFiltered(set: string) {
-    return this.cards.filter(c => c.set == set);
+    return this.cards.filter(c => c.set == set &&  c.quantity < c.playset);
   }
 
   downloadImage() {

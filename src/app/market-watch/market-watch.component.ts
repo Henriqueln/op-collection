@@ -21,6 +21,7 @@ export class MarketWatchComponent implements OnInit {
     market.previousPrice = prices[1] ?? market.currentPrice;
     console.log(market)
     return market
+  // });
   }).sort((a, b) => a.currentPrice - b.currentPrice);
 
   constructor() { }

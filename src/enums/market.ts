@@ -2,20 +2,12 @@ import { MarketWatch } from "src/app/entities/market";
 
 export const MARKET_WATCH = [
     {
-        code: 'OP12-001',
-        image: 'OP12-001_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Rayleigh',
-        prices: [50]
-    },
-    {
         code: 'OP12-002',
         image: 'OP12-002',
         currentPrice: 0,
         previousPrice: 0,
         name: 'Newgate',
-        prices: [6.9]
+        prices: [6.9, 6.8, 6.7, 3.3, 2.2, 1.89, 1.5]
     },
     {
         code: 'OP12-004',
@@ -23,7 +15,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Oden',
-        prices: [7.9]
+        prices: [7.9, 5, 7.9, 7.5, 1.99, 1.9, 1.49, 1.4]
     },
     {
         code: 'OP12-008',
@@ -31,31 +23,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Shanks',
-        prices: [20]
-    },
-    {
-        code: 'OP12-014',
-        image: 'OP12-014',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Hancock',
-        prices: [3.95]
-    },
-    {
-        code: 'OP12-014',
-        image: 'OP12-014_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Hancock',
-        prices: [20]
-    },
-    {
-        code: 'OP12-015',
-        image: 'OP12-015',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Monkey D. Luffy',
-        prices: [3.95]
+        prices: [20,15, 13, 9.99, 9, 8.99, 8, 9.4]
     },
     {
         code: 'OP12-015',
@@ -63,23 +31,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Monkey D. Luffy',
-        prices: [18]
-    },
-    {
-        code: 'OP12-020',
-        image: 'OP12-020_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Roronoa Zoro',
-        prices: [69]
-    },
-    {
-        code: 'OP12-030',
-        image: 'OP12-030',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Mihawk',
-        prices: [4.95]
+        prices: [18, 15, 12.99, 14, 13.99, 12.97, 10, 10.99]
     },
     {
         code: 'OP12-030',
@@ -87,23 +39,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Mihawk',
-        prices: [30]
-    },
-    {
-        code: 'OP12-031',
-        image: 'OP12-031_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Tashigi',
-        prices: [23]
-    },
-    {
-        code: 'OP12-034',
-        image: 'OP12-034',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Perona',
-        prices: [3.5]
+        prices: [30, 27, 23, 24.9, 24.85, 24.89, 24.55]
     },
     {
         code: 'OP12-034',
@@ -111,15 +47,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Perona',
-        prices: [26]
-    },
-    {
-        code: 'OP12-040',
-        image: 'OP12-040_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Kuzan',
-        prices: [37]
+        prices: [26,24.8, 20, 19.99, 19, 18]
     },
     {
         code: 'OP12-041',
@@ -127,47 +55,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sanji',
-        prices: [37]
-    },
-    {
-        code: 'OP12-043',
-        image: 'OP12-043_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Kuzan',
-        prices: [10]
-    },
-    {
-        code: 'OP12-056',
-        image: 'OP12-056',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Garp',
-        prices: [1.9]
-    },
-    {
-        code: 'OP12-056',
-        image: 'OP12-056_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Garp',
-        prices: [15]
-    },
-    {
-        code: 'OP12-061',
-        image: 'OP12-061_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Rosinante',
-        prices: [18]
-    },
-    {
-        code: 'OP12-063',
-        image: 'OP12-063',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Reiju',
-        prices: [2.95]
+        prices: [25, 24.49, 24, 22.99, 22.48, 20, 19]
     },
     {
         code: 'OP12-063',
@@ -175,23 +63,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Reiju',
-        prices: [12]
-    },
-    {
-        code: 'OP12-070',
-        image: 'OP12-070_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Sanji',
-        prices: [15]
-    },
-    {
-        code: 'OP12-073',
-        image: 'OP12-073',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Law',
-        prices: [1.45]
+        prices: [12, 10, 7.5, 7.99, 7.5, 6.9, 6.9]
     },
     {
         code: 'OP12-073',
@@ -199,7 +71,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Law',
-        prices: [13]
+        prices: [13, 12, 8.4, 7.5, 6.99, 6, 5.48, 4.99]
     },
     {
         code: 'OP12-087',
@@ -207,7 +79,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Robin',
-        prices: [3.9]
+        prices: [3.9, 2.2, 1.9, 1.8, 1.4, 1.2, 0.75, 1]
     },
     {
         code: 'OP12-087',
@@ -215,15 +87,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Robin',
-        prices: [20]
-    },
-    {
-        code: 'OP12-094',
-        image: 'OP12-094',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Dragon',
-        prices: [1.8]
+        prices: [20, 17.95, 14, 13.5, 13.95, 13.88]
     },
     {
         code: 'OP12-094',
@@ -231,15 +95,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Dragon',
-        prices: [14]
-    },
-    {
-        code: 'OP12-102',
-        image: 'OP12-102',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Shirahoshi',
-        prices: [1]
+        prices: [14, 10, 9, 8.95, 9.9]
     },
     {
         code: 'OP12-102',
@@ -247,7 +103,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Shirahoshi',
-        prices: [15]
+        prices: [15, 10, 9, 7, 5.9, 5.5, 4.99, 4.85]
     },
     {
         code: 'OP12-106',
@@ -255,15 +111,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Law',
-        prices: [0]
-    },
-    {
-        code: 'OP12-108',
-        image: 'OP12-108_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Rosinante',
-        prices: [15]
+        prices: [3, 2.5, 2, 1]
     },
     {
         code: 'OP12-114',
@@ -271,15 +119,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Wyper',
-        prices: [0]
-    },
-    {
-        code: 'OP12-116',
-        image: 'OP12-116',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'We\'ll Ring the Bell Waiting for You!!',
-        prices: [3.9]
+        prices: [3.5, 2, 2, 1.5]
     },
     {
         code: 'OP12-119',
@@ -287,15 +127,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kuma',
-        prices: [25]
-    },
-    {
-        code: 'OP12-119',
-        image: 'OP12-119_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Kuma',
-        prices: [44]
+        prices: [25, 17.9, 19, 19.75, 19.5, 21, 23, 22]
     },
     {
         code: 'OP10-082',
@@ -303,31 +135,7 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kuzan',
-        prices: [85]
-    },
-    {
-        code: 'OP06-050',
-        image: 'OP06-050_p2',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Tashigi',
-        prices: [60]
-    },
-    {
-        code: 'OP10-063',
-        image: 'OP10-063_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Sanji',
-        prices: [22]
-    },
-    {
-        code: 'OP12-081',
-        image: 'OP12-081_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Koala',
-        prices: [30]
+        prices: [85, 70, 65, 57.99, 49.99, 48.99, 43, 38.65, 35]
     },
     {
         code: 'ST13-011',
@@ -335,6 +143,14 @@ export const MARKET_WATCH = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Ace',
-        prices: [75]
+        prices: [75, 63, 58.9, 49.99, 53, 45, 49, 47.99, 48]
+    },
+    {
+        code: 'OP03-040',
+        image: 'OP03-040_p1',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Nami',
+        prices: [99, 104]
     },
 ] as MarketWatch[]
