@@ -5,7 +5,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Smoker',
-        prices: [19]
+        prices: [19, 17]
     },
     {
         code: 'OP10-004',
@@ -21,7 +21,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Law',
-        prices: [25]
+        prices: [25, 17]
     },
     {
         code: 'OP10-030',
@@ -29,7 +29,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Smoker',
-        prices: [14]
+        prices: [14, 14]
     },
     {
         code: 'OP10-032',
@@ -37,7 +37,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Tashigi',
-        prices: [18]
+        prices: [18, 18]
     },
     {
         code: 'OP10-042',
@@ -45,7 +45,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Usopp',
-        prices: [15]
+        prices: [15, 14]
     },
     {
         code: 'OP10-045',
@@ -53,7 +53,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Cavendish',
-        prices: [8]
+        prices: [8, 9]
     },
     {
         code: 'OP10-046',
@@ -61,14 +61,14 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kyros',
-        prices: [3]
+        prices: [3, 3]
     },
     {
         code: 'OP10-049',
         image: 'OP10-049_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sabo',
+        name: 'Sabo', // Judge pack Vol. 2 (JP)
         prices: [0]
     },
     {
@@ -76,15 +76,15 @@ export const MARKET_FIXED_OP10 = [
         image: 'OP10-049_p3',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sabo',
-        prices: [300]
+        name: 'Sabo', // Treasure Rare - OP12 (FR)
+        prices: [300, 79]
     },
     {
         code: 'OP10-049',
         image: 'OP10-049_p4',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sabo',
+        name: 'Sabo', // Treasure Campaign Pack - 3rd Anniversary
         prices: [0]
     },
     {
@@ -93,7 +93,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Rebecca',
-        prices: [5]
+        prices: [5, 5]
     },
     {
         code: 'OP10-063',
@@ -101,14 +101,14 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sanji',
-        prices: [15]
+        prices: [15, 12]
     },
     {
         code: 'OP10-076',
         image: 'OP10-076_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Baby 5',
+        name: 'Baby 5', // 3rd Anniversary Chinese (CH)
         prices: [0]
     },
     {
@@ -116,16 +116,16 @@ export const MARKET_FIXED_OP10 = [
         image: 'OP10-082_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Kuzan',
-        prices: [21]
+        name: 'Kuzan', // AA - OP10
+        prices: [21, 16]
     },
     {
         code: 'OP10-082',
         image: 'OP10-082_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Kuzan',
-        prices: [65]
+        name: 'Kuzan', // SP - OP12
+        prices: [65, 35]
     },
     {
         code: 'OP10-085',
@@ -136,12 +136,20 @@ export const MARKET_FIXED_OP10 = [
         prices: [12]
     },
     {
+        code: 'OP10-095',
+        image: 'OP10-095_p1',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Zoro',
+        prices: [45]
+    },
+    {
         code: 'OP10-099',
         image: 'OP10-099_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Burgess',
-        prices: [19]
+        name: 'Kid',
+        prices: [19, 19]
     },
     {
         code: 'OP10-112',
@@ -149,7 +157,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kid',
-        prices: [11]
+        prices: [11, 11]
     },
     {
         code: 'OP10-118',
@@ -157,7 +165,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [2]
+        prices: [2, 2]
     },
     {
         code: 'OP10-118',
@@ -165,7 +173,7 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [7]
+        prices: [7, 8]
     },
     {
         code: 'OP10-119',
@@ -173,6 +181,6 @@ export const MARKET_FIXED_OP10 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Law',
-        prices: [20]
+        prices: [20, 20]
     },
 ]

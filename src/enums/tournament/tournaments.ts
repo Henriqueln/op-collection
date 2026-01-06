@@ -199,4 +199,363 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 30,
+        placement: 6,
+        date: 1756564666000,
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RU_CAESAR, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.BLUE_KUZAN, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.YELLOW_ENEL, wonDice: true, won: false },
+            { number: 4, opponent: LeaderEnum.RED_RAYLEIGH, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalMedium,
+        players: 13,
+        placement: 3,
+        date: 1756665579000,
+        rounds: [
+            { number: 1, opponent: LeaderEnum.PB_LUFFY, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.BLUE_KUZAN, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.BY_KOALA, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 14,
+        placement: 9,
+        date: 1756941951000, // 03-Set-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.UP_SANJI, wonDice: true, won: false },
+            { number: 2, opponent: LeaderEnum.BLUE_KUZAN, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.UP_LUFFY, wonDice: true, won: false },
+            { number: 4, opponent: LeaderEnum.GREEN_BONNEY, wonDice: true, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_SHANKS,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalMedium,
+        players: 8,
+        placement: 2,
+        date: 1757020786000, // 04-Set-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.YELLOW_KID, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.UP_REIJU, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.UP_LUFFY, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 22,
+        placement: 18,
+        date: 1757183278000, // 06-Set-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RY_BETTY, wonDice: false, won: false },
+            { number: 2, opponent: LeaderEnum.YELLOW_ENEL, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.UY_NAMI, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.RB_KOBY, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.PY_ROSINANTE,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalMedium,
+        players: 9,
+        placement: 6,
+        date: new Date('2025-09-07').getTime(), // 07-Set-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.YELLOW_KATAKURI, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.BLUE_ACE_NEWGATE, wonDice: false, won: false },
+            { number: 3, opponent: LeaderEnum.BLUE_ACE_NEWGATE, wonDice: true, won: false },
+            { number: 4, opponent: LeaderEnum.BY_KOALA, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_ZORO,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 21,
+        placement: 13,
+        date: 1757508054000, // 10-Set-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLACK_TEACH, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.YELLOW_KALGARA, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.RED_SHANKS, wonDice: true, won: false },
+            { number: 4, opponent: LeaderEnum.UY_NAMI, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        store: StoresEnum.ZENITH,
+        tournamentType: TournamentType.StoreChampionship,
+        players: 22,
+        placement: 13,
+        date: 1757778726000, // 13-Set-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RED_RAYLEIGH, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.UP_LUFFY, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.GREEN_BONNEY, wonDice: false, won: false },
+            { number: 5, opponent: LeaderEnum.GP_LIM, wonDice: false, won: false },
+        ],
+        location: 'Leiria'
+    },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        store: StoresEnum.GG_LOUNGE,
+        tournamentType: TournamentType.StoreChampionship,
+        players: 25,
+        placement: 9,
+        date: 1757865126000, // 14-Set-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.PB_LUFFY, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.UP_LUFFY, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.BY_KOALA, wonDice: true, won: false },
+            { number: 4, opponent: LeaderEnum.YELLOW_KATAKURI, wonDice: true, won: false },
+            { number: 5, opponent: LeaderEnum.GREEN_BONNEY, wonDice: false, won: true },
+        ],
+        location: 'Viseu'
+    },
+    {
+        leader: LeaderEnum.RED_SHANKS,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalMedium,
+        players: 14,
+        placement: 9,
+        date: new Date('2025-10-22').getTime(), // 22-Oct-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RED_RAYLEIGH, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.GREEN_BONNEY, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.RG_SMOKER, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_SHANKS,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalSmall,
+        players: 9,
+        placement: 3,
+        date: 1761444638000, // 26-Oct-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLUE_KUZAN, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.RG_ODEN, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalSmall,
+        players: 10,
+        placement: 3,
+        date: new Date('2025-11-07').getTime(), // 07-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RED_RAYLEIGH, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.UY_NAMI, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.RB_SABO, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.RU_ACE, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 29,
+        placement: 5,
+        date: new Date('2025-11-08').getTime(), // 08-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RP_ROGER,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalSmall,
+        players: 7,
+        placement: 4,
+        date: new Date('2025-11-08').getTime(), // 08-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.RED_RAYLEIGH, wonDice: false, won: false },
+            { number: 3, opponent: LeaderEnum.PY_CROCODILE, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 23,
+        placement: 1,
+        date: new Date('2025-11-13').getTime(), // 13-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RP_SUGAR, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.RP_ROGER, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.RP_ROGER, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.PECOCCITANIA,
+        tournamentType: TournamentType.Regional,
+        players: 512,
+        placement: 512, //Drop
+        date: new Date('2025-11-15').getTime(), // 15-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: false },
+            { number: 2, opponent: LeaderEnum.BLUE_DOFFY, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.GREEN_BONNEY, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+        ],
+        location: 'Bordeux'
+    },
+    {
+        leader: LeaderEnum.RP_ROGER,
+        store: StoresEnum.PECOCCITANIA,
+        tournamentType: TournamentType.RegionalSideEvent,
+        players: 56,
+        placement: 1, 
+        date: new Date('2025-11-15').getTime(), // 15-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.RB_SABO, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: true },
+        ],
+        location: 'Bordeux'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.StoreTreasureCup,
+        players: 35,
+        placement: 9, 
+        date: new Date('2025-11-22').getTime(), // 22-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.GP_LIM, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.RU_ACE, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.RU_ACE, wonDice: true, won: true },
+            { number: 5, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.StoreTreasureCup,
+        players: 15,
+        placement: 1, 
+        date: new Date('2025-11-22').getTime(), // 22-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RU_ACE, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.RU_ACE, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.YELLOW_BONNEY,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalSmall,
+        players: 9,
+        placement: 2, 
+        date: new Date('2025-11-23').getTime(), // 23-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RB_SABO, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.RED_RAYLEIGH, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.UB_USOPP, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.BLACK_IMU, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.YELLOW_BONNEY,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalSmall,
+        players: 11,
+        placement: 7, 
+        date: new Date('2025-11-27').getTime(), // 27-Nov-2025
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RG_LUFFY_OP13, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.RB_SABO, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.StoreTreasureCup,
+        players: 18,
+        placement: 4, 
+        date: new Date('2025-11-30').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.RU_ACE, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.RU_ACE, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.GREEN_ZORO, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalSmall,
+        players: 12,
+        placement: 2, 
+        date: new Date('2025-12-03').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.PY_PUDDING, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.PURPLE_LUFFY, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.RG_SMOKER, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_ZORO,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalSmall,
+        players: 10,
+        placement: 5, 
+        date: new Date('2025-12-04').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.UY_NAMI, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.RB_SABO, wonDice: true, won: false },
+            { number: 4, opponent: LeaderEnum.PURPLE_LUFFY, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
 ]

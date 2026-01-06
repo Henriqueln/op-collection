@@ -5,7 +5,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Oden',
-        prices: [19]
+        prices: [19, 19]
     },
     {
         code: 'EB01-006',
@@ -13,7 +13,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Chopper',
-        prices: [30]
+        prices: [30, 86]
     },
     {
         code: 'EB01-013',
@@ -21,7 +21,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Hiyori',
-        prices: [9]
+        prices: [9, 7]
     },
     {
         code: 'EB01-015',
@@ -29,23 +29,23 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Apoo',
-        prices: [15]
+        prices: [15, 10]
     },
     {
         code: 'EB01-027',
         image: 'EB01-027_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Mr. 1',
-        prices: [4]
+        name: 'Mr. 1', // AA - EB01
+        prices: [4, 3]
     },
     {
         code: 'EB01-027',
         image: 'EB01-027_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Mr. 1',
-        prices: [8]
+        name: 'Mr. 1', // Beginners Deck Party ST-23 - ST-28
+        prices: [8, 7]
     },
     {
         code: 'EB01-040',
@@ -53,7 +53,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kyros',
-        prices: [9]
+        prices: [9, 10]
     },
     {
         code: 'EB01-046',
@@ -61,7 +61,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Brook',
-        prices: [17]
+        prices: [17, 20]
     },
     {
         code: 'EB01-046',
@@ -69,7 +69,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Brook',
-        prices: [30]
+        prices: [30, 82]
     },
     {
         code: 'EB01-048',
@@ -77,7 +77,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Laboon',
-        prices: [23]
+        prices: [23, 22]
     },
     {
         code: 'EB01-052',
@@ -85,7 +85,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Viola',
-        prices: [9]
+        prices: [9, 9]
     },
     {
         code: 'EB01-056',
@@ -93,7 +93,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Flampe',
-        prices: [8]
+        prices: [8, 8]
     },
     {
         code: 'EB01-056',
@@ -101,7 +101,7 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Flampe',
-        prices: [21]
+        prices: [21, 23]
     },
     {
         code: 'EB01-057',
@@ -109,6 +109,6 @@ export const MARKET_FIXED_EB01 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Shirahoshi',
-        prices: [40]
+        prices: [40, 40]
     },
 ]

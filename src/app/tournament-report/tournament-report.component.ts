@@ -16,7 +16,7 @@ export class TournamentReportComponent implements OnInit {
   stores = Stores;
   tournamentTypes = TournamentTypeData;
   ranked = RankedData;
-  currentSet = FormatEnum.OP12;
+  currentSet = FormatEnum.OP14;
 
   leaderStats = {
     mostUsedComp: [],
@@ -37,7 +37,7 @@ export class TournamentReportComponent implements OnInit {
       }
     });
     this.tournaments = this.tournaments.sort((a, b) => b.date - a.date)
-    this.leaders = this.leaders.sort((a, b) => b.points - a.points).filter(l => l.points > 0);
+    this.leaders = this.leaders.sort((a, b) => b.points - a.points);
   }
 
   getRowContext(tData: any) {
@@ -79,6 +79,9 @@ export class TournamentReportComponent implements OnInit {
       leadersRankedCurrentSet.forEach(l => {
         l.winRatio = Math.round((l.timesWon / (l.timesWon + l.timesLost)) * 100 * 100) / 100;
       })
+      leadersIndividualWinLose.forEach(l => {
+        l.winRatio = Math.round((l.timesWon / (l.timesWon + l.timesLost)) * 100 * 100) / 100;
+      })
       this.leaderStats = {
         mostUsedComp: leadersAux.sort((a, b) => b.timesUsed - a.timesUsed).filter(l => l.timesUsed > 0).slice(0, 10),
         mostWinsComp: leadersAux.sort((a, b) => b.timesWon - a.timesWon).filter(l => l.timesWon > 0).slice(0, 10),
@@ -90,11 +93,18 @@ export class TournamentReportComponent implements OnInit {
         bestWinRatioRankCurrent: leadersRankedCurrentSet.sort((a, b) => b.winRatio - a.winRatio).filter(l => l.winRatio > 0).slice(0, 10),
         individualWins: leadersIndividualWinLose.sort((a, b) => b.timesWon - a.timesWon).slice(0, 10),
         individualLoses: leadersIndividualWinLose.sort((a, b) => b.timesLost - a.timesLost).slice(0, 10),
+        individualWinRatio: leadersIndividualWinLose.filter(l => l.timesLost+l.timesWon >= 30).sort((a, b) => b.winRatio - a.winRatio).slice(0, 10),
+        individualLoseRatio: leadersIndividualWinLose.filter(l => l.timesLost+l.timesWon >= 30).sort((a, b) => a.winRatio - b.winRatio).slice(0, 10),
       }
       console.log('leader stats', this.leaderStats)
+      console.log('leader stats', leadersIndividualWinLose)
     }
 
     this.activeTab = tab;
+  }
+
+  calculateWinRatio(wins: number, loses: number): number {
+     return Math.round((wins / (wins + loses)) * 100 * 100) / 100;
   }
 
 }

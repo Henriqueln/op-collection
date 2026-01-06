@@ -15,23 +15,25 @@ import { MARKET_FIXED_EB02 } from "./market-fixed/eb02";
 import { MARKET_FIXED_ST } from "./market-fixed/st";
 import { MARKET_FIXED_PROMO } from "./market-fixed/promo";
 import { MARKET_FIXED_DON } from "./market-fixed/don";
+import { MARKET_FIXED_OP12 } from "./market-fixed/op12";
 
 export const MARKET_WATCH_FIXED = [
-    ...MARKET_FIXED_OP01,
-    ...MARKET_FIXED_OP02,
-    ...MARKET_FIXED_OP03,
-    ...MARKET_FIXED_OP04,
-    ...MARKET_FIXED_OP05,
-    ...MARKET_FIXED_OP06,
-    ...MARKET_FIXED_OP07,
-    ...MARKET_FIXED_OP08,
-    ...MARKET_FIXED_OP09,
-    ...MARKET_FIXED_OP10,
-    ...MARKET_FIXED_OP11,
-    ...MARKET_FIXED_EB01,
-    ...MARKET_FIXED_EB02,
-    ...MARKET_FIXED_ST,
-    ...MARKET_FIXED_PROMO,
-    ...MARKET_FIXED_DON,
-    
+    ...MARKET_FIXED_OP01, // 01-Set-2025
+    ...MARKET_FIXED_OP02, // 01-Set-2025
+    ...MARKET_FIXED_OP03, // 01-Set-2025
+    ...MARKET_FIXED_OP04, // 01-Set-2025
+    ...MARKET_FIXED_OP05, // 01-Set-2025
+    ...MARKET_FIXED_OP06, // 01-Set-2025
+    ...MARKET_FIXED_OP07, // 01-Set-2025
+    ...MARKET_FIXED_OP08, // 02-Set-2025
+    ...MARKET_FIXED_OP09, // 02-Set-2025
+    ...MARKET_FIXED_OP10, // 02-Set-2025
+    ...MARKET_FIXED_OP11, // 02-Set-2025
+    ...MARKET_FIXED_OP12, // 02-Set-2025
+    ...MARKET_FIXED_EB01, // 02-Set-2025
+    ...MARKET_FIXED_EB02, // 02-Set-2025
+    ...MARKET_FIXED_ST,   // 02-Set-2025
+    ...MARKET_FIXED_PROMO,// 05-Set-2025
+    ...MARKET_FIXED_DON,  // 05-Set-2025
+
 ] as MarketWatch[]

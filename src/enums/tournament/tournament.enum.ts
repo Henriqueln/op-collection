@@ -1,3 +1,4 @@
+import { characterNames } from "../characters";
 import { COLOR } from "../color";
 
 export enum TournamentType {
@@ -143,6 +144,25 @@ export enum LeaderEnum {
   RB_KOBY = 'OP11-001',
   PY_ROSINANTE = 'OP12-061',
   BLUE_ACE_NEWGATE = 'ST22-001',
+  RU_CAESAR = 'OP10-002',
+  BY_KOALA = 'OP12-081',
+  GP_DOFLAMINGO = 'OP04-019',
+  RU_ACE = 'OP13-002',
+  BLACK_IMU = 'OP13-079',
+  GP_LIM = 'OP09-001',
+  RP_ROGER = 'OP13-003',
+  RB_SABO = 'OP05-001',
+  RED_SANJI = 'PRB01-001',
+  GU_ROSINANTE = 'OP06-001',
+  RP_SUGAR = 'OP10-001',
+  YELLOW_BONNEY = 'OP13-100',
+  RG_LUFFY_OP13 = 'OP13-001',
+  RU_VIVI_EB03 = 'EB03-001',
+  RED_LAW = 'OP14-001',
+  BY_MORIA = 'OP14-001',
+  PURPLE_DOFLAMINGO = 'OP14-001',
+  BLACK_CROCODILE = 'OP14-001',
+  UY_BOA = 'OP14-001',
 }
 
 export const leaders: Leader[] = [
@@ -182,6 +202,7 @@ export const leaders: Leader[] = [
   createLeader('Gecko Moria', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_MORIA),
   createLeader('Charlotte Pudding', COLOR.PURPLE, COLOR.YELLOW, LeaderEnum.PY_PUDDING),
   createLeader('Donquixote Doflamingo', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_DOFFY),
+  createLeader('Donquixote Doflamingo', COLOR.GREEN, COLOR.PURPLE, LeaderEnum.GP_DOFLAMINGO),
   createLeader('Smoker', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_SMOKER),
   createLeader('Eustass "Captain" Kid', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_KID),
   createLeader('Usopp', COLOR.BLUE, COLOR.BLACK, LeaderEnum.UB_USOPP),
@@ -206,6 +227,25 @@ export const leaders: Leader[] = [
   createLeader('Sanji', COLOR.BLUE, COLOR.PURPLE, LeaderEnum.UP_SANJI),
   createLeader('Donquixote Rosinante', COLOR.PURPLE, COLOR.YELLOW, LeaderEnum.PY_ROSINANTE),
   createLeader('Ace & Newgate', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_ACE_NEWGATE),
+  createLeader('Caesar Clown', COLOR.RED, COLOR.BLUE, LeaderEnum.RU_CAESAR),
+  createLeader('Koala', COLOR.BLACK, COLOR.YELLOW, LeaderEnum.BY_KOALA),
+  createLeader('Ace & Newgate', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_ACE_NEWGATE),
+  createLeader('Portgas D. Ace', COLOR.RED, COLOR.BLUE, LeaderEnum.RU_ACE),
+  createLeader('Imu', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_IMU),
+  createLeader('Lim', COLOR.GREEN, COLOR.PURPLE, LeaderEnum.GP_LIM),
+  createLeader('Gol D. Roger', COLOR.RED, COLOR.PURPLE, LeaderEnum.RP_ROGER),
+  createLeader('Sabo', COLOR.RED, COLOR.BLACK, LeaderEnum.RB_SABO),
+  createLeader('Sanji', COLOR.RED, COLOR.RED, LeaderEnum.RED_SANJI),
+  createLeader('Rosinante', COLOR.GREEN, COLOR.BLUE, LeaderEnum.GU_ROSINANTE),
+  createLeader('Sugar', COLOR.RED, COLOR.PURPLE, LeaderEnum.RP_SUGAR),
+  createLeader('Jewelry Bonney', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_BONNEY),
+  createLeader('Monkey D. Luffy', COLOR.RED, COLOR.GREEN, LeaderEnum.RG_LUFFY_OP13),
+  createLeader('Nefeltari Vivi', COLOR.RED, COLOR.BLUE, LeaderEnum.RU_VIVI_EB03),
+  createLeader('Trafalgar Law', COLOR.RED, COLOR.RED, LeaderEnum.RED_LAW),
+  createLeader('Gecko Moria', COLOR.BLACK, COLOR.YELLOW, LeaderEnum.BY_MORIA),
+  createLeader('Donquixote Doflamingo', COLOR.PURPLE, COLOR.PURPLE, LeaderEnum.PURPLE_DOFLAMINGO),
+  createLeader('Crocodile', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_CROCODILE),
+  createLeader('Boa Hancock', COLOR.BLUE, COLOR.YELLOW, LeaderEnum.UY_BOA),
 ]
 
 export enum FormatEnum {
@@ -219,6 +259,9 @@ export enum FormatEnum {
   EB02 = 'EB02',
   OP11 = 'OP11',
   OP12 = 'OP12',
+  PRB02 = 'PRB02',
+  OP13 = 'OP13',
+  OP14 = 'OP14',
 }
 
 export enum StoresEnum {
@@ -238,7 +281,8 @@ export enum StoresEnum {
   GG_LOUNGE,
   LOTUS_MARKET,
   MERCADIA,
-  GAMERSWORLD
+  GAMERSWORLD,
+  ZENITH
 }
 
 export const Stores = [
@@ -259,6 +303,7 @@ export const Stores = [
   { name: 'Lotus Market', location: 'pt', id: StoresEnum.LOTUS_MARKET },
   { name: 'Mercadia', location: 'pt', id: StoresEnum.MERCADIA },
   { name: 'Gamers World', location: 'ie', id: StoresEnum.GAMERSWORLD },
+  { name: 'Zenith Game Store', location: 'pt', id: StoresEnum.ZENITH },
 ]
 
 export function getTournamentScore(

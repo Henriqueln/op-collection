@@ -1,5 +1,6 @@
 export enum CATEGORIES {
-    LEADER = 'Leader'
+    LEADER = 'Leader',
+    EVENT = 'Event',
 }
 
 export const categoriesOptions = [

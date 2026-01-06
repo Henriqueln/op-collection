@@ -15,8 +15,8 @@
             <th>Points</th>
         </tr>
         <tr *ngFor="let leader of leaders">
-            <td [ngClass]="leader.color1.toLowerCase()"></td>
-            <td [ngClass]="leader.color1.toLowerCase()">
+            <td [ngClass]="leader?.color1?.toLowerCase() ?? ''"></td>
+            <td [ngClass]="leader?.color1?.toLowerCase() ?? ''">
                 <img src="assets/img/{{leader.code}}.png">
             </td>
             <td [ngClass]="leader.color2.toLowerCase()">{{leader.name}}</td>
@@ -136,11 +136,18 @@
             <p style="text-align: center;">{{used.timesWon}}</p>
         </div>
     </div>
-    <h4 style="font-weight: bold;">Most Loses Against</h4>
+    <h4 style="font-weight: bold;">Worst win ratio</h4>
     <div style="display: flex; gap: 2rem;">
-        <div *ngFor="let used of leaderStats.individualLoses">
+        <div *ngFor="let used of leaderStats.individualLoseRatio">
             <img style="height: 150px;" src="assets/img/{{used.code}}.png">
-            <p style="text-align: center;">{{used.timesLost}}</p>
+            <p style="text-align: center;">{{used.winRatio}}%</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Best win ratio</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.individualWinRatio">
+            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.winRatio}}%</p>
         </div>
     </div>
 </div>

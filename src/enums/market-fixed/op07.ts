@@ -4,16 +4,16 @@ export const MARKET_FIXED_OP07 = [
         image: 'OP07-015_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Dragon',
-        prices: [13.5, 13]
+        name: 'Dragon', // AA - OP07
+        prices: [13.5, 13, 14]
     },
     {
         code: 'OP07-015',
         image: 'OP07-015_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Dragon',
-        prices: [65, 60]
+        name: 'Dragon', // SP - OP09
+        prices: [65, 60, 59]
     },
     {
         code: 'OP07-021',
@@ -21,7 +21,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Urouge',
-        prices: [23, 24]
+        prices: [23, 24, 25]
     },
     {
         code: 'OP07-022',
@@ -29,30 +29,30 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Otama',
-        prices: [5, 3]
+        prices: [5, 3, 3]
     },
     {
         code: 'OP07-038',
         image: 'OP07-038_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Hancock',
-        prices: [30, 31]
+        name: 'Hancock', // AA - OP07
+        prices: [30, 31, 30]
     },
     {
         code: 'OP07-038',
         image: 'OP07-038_p3',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Hancock',
-        prices: [102.99, 85]
+        name: 'Hancock', // PSA Promo
+        prices: [102.99, 85, 80]
     },
     {
         code: 'OP07-045',
         image: 'OP07-045_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Jinbe',
+        name: 'Jinbe', // AA - OP07
         prices: [3, 3]
     },
     {
@@ -60,7 +60,7 @@ export const MARKET_FIXED_OP07 = [
         image: 'OP07-045_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Jinbe',
+        name: 'Jinbe', // 2nd Anniversary Chinese (CH)
         prices: [4, 4]
     },
     {
@@ -68,7 +68,7 @@ export const MARKET_FIXED_OP07 = [
         image: 'OP07-046_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sengoku',
+        name: 'Sengoku', // AA - OP07
         prices: [3, 3]
     },
     {
@@ -76,8 +76,8 @@ export const MARKET_FIXED_OP07 = [
         image: 'OP07-046_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sengoku',
-        prices: [20, 50]
+        name: 'Sengoku', // Treasure Rare - OP10 (CH)
+        prices: [20, 50, 49]
     },
     {
         code: 'OP07-047',
@@ -85,31 +85,39 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Law',
-        prices: [3]
+        prices: [3, 3]
     },
     {
         code: 'OP07-051',
         image: 'OP07-051_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Hancock',
-        prices: [6, 7]
+        name: 'Hancock', // AA - OP07
+        prices: [6, 7, 8]
     },
     {
         code: 'OP07-051',
         image: 'OP07-051_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Hancock',
-        prices: [125, 136]
+        name: 'Hancock', // SP - OP09
+        prices: [125, 136, 143]
     },
     {
         code: 'OP07-064',
         image: 'OP07-064_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sanji',
-        prices: [20, 13]
+        name: 'Sanji', // AA - OP07
+        prices: [20, 13, 14]
+    },
+    {
+        code: 'OP07-064',
+        image: 'OP07-064_p3',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Sanji', // Promotion Pack EX Vol.2 (JP)
+        prices: [0]
     },
     {
         code: 'OP07-066',
@@ -117,7 +125,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Chopper',
-        prices: [40]
+        prices: [40, 40]
     },
     {
         code: 'OP07-079',
@@ -125,7 +133,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Lucci',
-        prices: [25, 18]
+        prices: [25, 18, 19]
     },
     {
         code: 'OP07-080',
@@ -133,7 +141,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kaku',
-        prices: [7]
+        prices: [7, 7]
     },
     {
         code: 'OP07-085',
@@ -141,7 +149,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Stussy',
-        prices: [5, 4]
+        prices: [5, 4, 6]
     },
     {
         code: 'OP07-091',
@@ -149,7 +157,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [11, 11]
+        prices: [11, 11, 10]
     },
     {
         code: 'OP07-097',
@@ -157,15 +165,15 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Vegapunk',
-        prices: [99, 24]
+        prices: [99, 24, 26]
     },
     {
         code: 'OP07-109',
         image: 'OP07-109_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Luffy',
-        prices: [21, 25]
+        name: 'Luffy', // Treasure Rare - OP08 (EN)
+        prices: [21, 25, 22]
     },
     {
         code: 'OP07-109',
@@ -173,15 +181,15 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [6, 4]
+        prices: [6, 4, 4]
     },
     {
         code: 'OP07-109',
         image: 'OP07-109_p4',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Luffy',
-        prices: [11, 9]
+        name: 'Luffy', // One Piece Day - 2024
+        prices: [11, 9, 9]
     },
     {
         code: 'OP07-111',
@@ -189,7 +197,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Lillith',
-        prices: [6, 5]
+        prices: [6, 5, 6]
     },
     {
         code: 'OP07-113',
@@ -197,7 +205,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Zoro',
-        prices: [53, 63]
+        prices: [53, 63, 63]
     },
     {
         code: 'OP07-118',
@@ -205,7 +213,7 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sabo',
-        prices: [10, 8]
+        prices: [10, 8, 10]
     },
     {
         code: 'OP07-119',
@@ -213,6 +221,6 @@ export const MARKET_FIXED_OP07 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Ace',
-        prices: [22, 19]
+        prices: [22, 19, 19]
     },
 ]

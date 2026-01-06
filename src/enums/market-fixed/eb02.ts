@@ -12,7 +12,7 @@ export const MARKET_FIXED_EB02 = [
         image: 'EB02-010_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Luffy',
+        name: 'Luffy', // AA - EB02
         prices: [200]
     },
     {
@@ -20,8 +20,8 @@ export const MARKET_FIXED_EB02 = [
         image: 'EB02-010_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Luffy',
-        prices: [200]
+        name: 'Luffy', // LA Dodgers Promo
+        prices: [600]
     },
     {
         code: 'EB02-015',
@@ -29,7 +29,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Bonney',
-        prices: [5]
+        prices: [5, 5]
     },
     {
         code: 'EB02-017',
@@ -37,7 +37,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Nami',
-        prices: [20]
+        prices: [20, 21]
     },
     {
         code: 'EB02-022',
@@ -45,7 +45,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Usopp',
-        prices: [3]
+        prices: [3, 4]
     },
     {
         code: 'EB02-035',
@@ -53,7 +53,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sanji & Pudding',
-        prices: [22]
+        prices: [22, 19]
     },
     {
         code: 'EB02-036',
@@ -61,7 +61,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Robin',
-        prices: [13]
+        prices: [13, 13]
     },
     {
         code: 'EB02-045',
@@ -69,7 +69,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Law',
-        prices: [5]
+        prices: [5, 5]
     },
     {
         code: 'EB02-052',
@@ -77,7 +77,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Enel',
-        prices: [14]
+        prices: [14, 16]
     },
     {
         code: 'EB02-054',
@@ -85,7 +85,7 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Sanji',
-        prices: [9]
+        prices: [9, 7]
     },
     {
         code: 'EB02-056',
@@ -93,6 +93,6 @@ export const MARKET_FIXED_EB02 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Vegapunk',
-        prices: [9]
+        prices: [9, 10]
     },
 ]

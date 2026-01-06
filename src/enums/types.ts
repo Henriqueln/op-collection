@@ -9,6 +9,7 @@ export const typesOptions = [
   'Asuka Island',
   'Baroque Works',
   'Barto Club',
+  'Baterilla',
   'Beautiful Pirates',
   'Biological Weapon',
   'Big Mom Pirates',
@@ -41,6 +42,7 @@ export const typesOptions = [
   'Firetank Pirates',
   'Fish-Man',
   'Fish-Man Island',
+  'Five Elders',
   'Flevance',
   'Flying Pirates',
   'Foolshout Island',
@@ -137,4 +139,6 @@ export const typesOptions = [
   'Windmill Village',
   'World Government',
   'World Pirates',
+  '?',
+  'Neptunian'
 ];

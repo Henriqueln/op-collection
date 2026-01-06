@@ -5,7 +5,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Honesty Impact',
-        prices: [20]
+        prices: [20, 19]
     },
     {
         code: 'OP11-021',
@@ -21,7 +21,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Shirahoshi',
-        prices: [14]
+        prices: [14, 12]
     },
     {
         code: 'OP11-023',
@@ -37,7 +37,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Jinbe',
-        prices: [4]
+        prices: [4, 3]
     },
     {
         code: 'OP11-040',
@@ -45,7 +45,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [20]
+        prices: [20, 26]
     },
     {
         code: 'OP11-041',
@@ -53,7 +53,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Nami',
-        prices: [30]
+        prices: [30, 33]
     },
     {
         code: 'OP11-047',
@@ -61,7 +61,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Reiju',
-        prices: [5]
+        prices: [5, 5]
     },
     {
         code: 'OP11-051',
@@ -85,7 +85,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Katakuri',
-        prices: [18]
+        prices: [18, 16]
     },
     {
         code: 'OP11-067',
@@ -93,7 +93,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Katakuri',
-        prices: [21]
+        prices: [21, 18]
     },
     {
         code: 'OP11-070',
@@ -101,7 +101,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Pudding',
-        prices: [5]
+        prices: [5, 5]
     },
     {
         code: 'OP11-073',
@@ -109,7 +109,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Linlin',
-        prices: [5]
+        prices: [5, 5]
     },
     {
         code: 'OP11-080',
@@ -117,7 +117,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Gear 2',
-        prices: [35]
+        prices: [35, 37]
     },
     {
         code: 'OP11-095',
@@ -125,23 +125,23 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Garp',
-        prices: [5]
+        prices: [5, 5]
     },
     {
         code: 'OP11-106',
         image: 'OP11-106_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Zeus',
-        prices: [17]
+        name: 'Zeus', // AA - OP11
+        prices: [17, 15]
     },
     {
         code: 'OP11-106',
         image: 'OP11-106_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Zeus',
-        prices: [30]
+        name: 'Zeus', // Official Playmat Limited Edition Vol.3
+        prices: [30, 29]
     },
     {
         code: 'OP11-114',
@@ -149,7 +149,7 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Red Hawk',
-        prices: [22]
+        prices: [22, 22]
     },
     {
         code: 'OP11-118',
@@ -157,6 +157,6 @@ export const MARKET_FIXED_OP11 = [
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [13]
+        prices: [13, 10]
     },
 ]

@@ -7,6 +7,10 @@ import { COLOR } from 'src/enums/color';
 import { typesOptions } from 'src/enums/types';
 import { sourcesOptions } from 'src/enums/sources';
 import { nameOptions } from 'src/enums/name';
+import { eventsNames } from 'src/enums/events';
+import { characterNames } from 'src/enums/characters';
+import {Clipboard} from '@angular/cdk/clipboard';
+
 
 @Component({
   selector: 'app-root',
@@ -47,15 +51,18 @@ export class AppComponent {
   colorFilter = '';
   sourceFilter = '';
   playsetsSelected = false;
+  cardType = CATEGORIES.LEADER;
   typeOptions = typesOptions;
   sourceOptions = sourcesOptions;
   categoriesOptions = categoriesOptions;
   raritiesOptions = raritiesOptions;
   nameOptions = nameOptions;
+  eventsNames = eventsNames.sort((a, b) => a.localeCompare(b));
+  characterNames = characterNames.sort((a, b) => a.localeCompare(b));
   hideTopBar = false;
   showAll = false;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private clipboard: Clipboard) { }
 
   ngOnInit() {
     this.updateView();
@@ -202,6 +209,10 @@ export class AppComponent {
     this.apiService.createCard(request).subscribe(response => {
       this.updateView();
     })
+  }
+
+  copyToClipboard(text: string) {
+    this.clipboard.copy(text);
   }
 
   selectCard(card: Card) {

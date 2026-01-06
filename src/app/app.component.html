@@ -37,7 +37,12 @@
     </select>
     <label for="name">Name:</label>
     <select [(ngModel)]="name" id="name">
-      <option *ngFor="let option of nameOptions" [value]="option">{{ option }}</option>
+      <ng-container *ngIf="category === 'Event' || category === 'Stage'">
+        <option *ngFor="let option of eventsNames" [value]="option">{{ option }}</option>
+      </ng-container>
+      <ng-container *ngIf="category !== 'Event' && category !== 'Stage'">
+        <option *ngFor="let option of characterNames" [value]="option">{{ option }}</option>
+      </ng-container>
     </select>
     <label for="code">Code:</label>
     <input [(ngModel)]="code" id="code" type="text">
@@ -91,14 +96,14 @@
       <th>Source</th>
     </tr>
     <tr *ngFor="let card of filteredCards">
-      <td [ngClass]="getColor(card, card.color)">{{card.code}}</td>
+      <td [ngClass]="getColor(card, card.color)" (click)="copyToClipboard(card.code)">{{card.code}}</td>
       <td [ngClass]="getColor(card, card.color)">{{card.quantity}}/{{card.playset}}</td>
       <td [ngClass]="getColor(card, card.color)">{{card.extra}}</td>
       <td [ngClass]="getColor(card, card.color)"><input style="width: 30px;" [(ngModel)]="card.increment" id="increment"
           type="number"><button (click)="increment(card)">+</button><button (click)="decrement(card)">-</button></td>
       <td *ngIf="selectedSet !== SETS.PLAYSETS" [ngClass]="getColor(card, card.color)"><img (click)="selectCard(card)"
           src="assets/img/{{card.code}}.png"></td>
-      <td [ngClass]="getColor(card, card.color)">{{card.name}}</td>
+      <td [ngClass]="getColor(card, card.color)" (click)="copyToClipboard(card.name)">{{card.name}}</td>
       <td [ngClass]="getColor(card, card.color)">{{card.rarity}}</td>
       <!-- <td [ngClass]="getColor(card, card.color2)">{{card.category}}</td> -->
       <td [ngClass]="getColor(card, card.color2)">{{card.type1}}</td>
