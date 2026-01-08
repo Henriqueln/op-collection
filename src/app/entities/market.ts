@@ -5,4 +5,5 @@ export interface MarketWatch {
     previousPrice: number;
     currentPrice: number;
     prices: number[];
+    quantNeeded?: number;
 }

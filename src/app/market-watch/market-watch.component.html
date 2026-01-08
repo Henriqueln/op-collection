@@ -1,15 +1,25 @@
-<div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;" >
+<input [(ngModel)]="showWishlist" id="hideTopBar" type="checkbox"> Show Wishlist
+
+<div *ngIf="!showWishlist" style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;" >
   <div *ngFor="let card of cards">
     <img style="width: 100px;" src="assets/img/{{card.image}}.png">
-    <div [style.color]="card.currentPrice > card.previousPrice ? 'red' : (card.currentPrice < card.previousPrice ? 'green' : 'blue')" style="text-align: center;"><p>{{card.currentPrice | currency:'EUR'}}</p></div>
+    <div [style.color]="card.currentPrice > card.previousPrice ? 'indianred' : (card.currentPrice < card.previousPrice ? 'green' : 'cornflowerblue')" style="text-align: center;"><p>{{card.currentPrice | currency:'EUR'}}</p></div>
   </div>
 </div>
 
 
-<div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;" >
+<div *ngIf="!showWishlist" style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;" >
   <div *ngFor="let card of cardsFixed">
     <p style="text-align: center;">{{card.code}}</p>
     <img style="width: 100px;" src="assets/img/{{card.image}}.png">
-    <div [style.color]="card.currentPrice > card.previousPrice ? 'red' : (card.currentPrice < card.previousPrice ? 'green' : 'blue')" style="text-align: center;"><p>{{card.currentPrice | currency:'EUR'}}</p></div>
+    <div [style.color]="card.currentPrice > card.previousPrice ? 'indianred' : (card.currentPrice < card.previousPrice ? 'green' : 'cornflowerblue')" style="text-align: center;"><p>{{card.currentPrice | currency:'EUR'}}</p></div>
   </div>
 </div>
+
+<div *ngIf="showWishlist" style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap; " >
+  <div style="position: relative;" *ngFor="let card of wishList">
+    <img style="width: 100px; position: relative;" src="assets/img/{{card.image}}.png">
+    <p style="border-radius: 50%;background-color: lightgrey;top: -10px;right: 5px;position: absolute;text-align: center;width: 24px;font-weight: bold;">{{card.quantNeeded}}</p>
+  </div>
+</div>
+

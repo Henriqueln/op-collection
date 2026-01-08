@@ -2,403 +2,354 @@ import { MarketWatch } from "src/app/entities/market";
 
 export const MARKET_WATCH = [
     {
-        code: 'OP01-001',
-        image: 'OP01-001_p1',
+        code: 'EB04-018',
+        image: 'EB04-018',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Zoro',
-        prices: [270]
+        name: 'Megalo',
+        prices: [0],
+        quantNeeded: 3 
     },
     {
-        code: 'OP01-001',
-        image: 'OP01-001_p3',
+        code: 'EB04-018',
+        image: 'EB04-018_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Zoro',
-        prices: [65]
+        name: 'Megalo',
+        prices: [0],
+        quantNeeded: 1 
     },
     {
-        code: 'OP01-006',
-        image: 'OP01-006_p1',
+        code: 'EB04-038',
+        image: 'EB04-038',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Otama',
-        prices: [32]
+        name: 'Law & Rosinante',
+        prices: [0],
+        quantNeeded: 3 
     },
     {
-        code: 'OP01-013',
-        image: 'OP01-013_p6',
+        code: 'EB04-038',
+        image: 'EB04-038_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sanji',
-        prices: [65]
+        name: 'Law & Rosinante',
+        prices: [0],
+        quantNeeded: 1 
     },
     {
-        code: 'OP01-016',
-        image: 'OP01-016_p5',
+        code: 'OP12-108',
+        image: 'OP12-108_p2',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Nami',
-        prices: [19]
+        name: 'Rosinante',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP02-001',
-        image: 'OP02-001_p1',
+        code: 'OP14-001',
+        image: 'OP14-001_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Newgate',
-        prices: [50]
+        name: 'Law',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP02-004',
-        image: 'OP02-004_p3',
+        code: 'OP14-002',
+        image: 'OP14-002',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Newgate',
-        prices: [9]
+        name: 'Urouge',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP02-018',
-        image: 'OP02-018_p4',
+        code: 'OP14-004',
+        image: 'OP14-004',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Marco',
-        prices: [3]
+        name: 'Cavendish',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP02-026',
-        image: 'OP02-026_p1',
+        code: 'OP14-005',
+        image: 'OP14-005',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sanji',
-        prices: [37]
+        name: 'Killer',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP03-013',
-        image: 'OP03-013_p3',
+        code: 'OP14-007',
+        image: 'OP14-007',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Marco',
-        prices: [22]
+        name: 'Bonney',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP03-022',
-        image: 'OP03-022_p1',
+        code: 'OP14-009',
+        image: 'OP14-009',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Arlong',
-        prices: [37]
+        name: 'Law',
+        prices: [0],
+        quantNeeded: 3
     },
     {
-        code: 'OP03-040',
-        image: 'OP03-040_p1',
+        code: 'OP14-009',
+        image: 'OP14-009_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Nami',
-        prices: [110]
+        name: 'Law',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP03-114',
-        image: 'OP03-114_p2',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Linlin',
-        prices: [47]
-    },
-    {
-        code: 'OP04-001',
-        image: 'OP04-001_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Vivi',
-        prices: [37]
-    },
-    {
-        code: 'OP04-010',
-        image: 'OP04-010_p2',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Chopper',
-        prices: [35]
-    },
-    {
-        code: 'OP04-024',
-        image: 'OP04-024_p2',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Sugar',
-        prices: [25]
-    },
-    {
-        code: 'OP04-089',
-        image: 'OP04-089_p4',
+        code: 'OP14-011',
+        image: 'OP14-011',
         currentPrice: 0,
         previousPrice: 0,
         name: 'Bartolomeo',
-        prices: [48]
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP05-060',
-        image: 'OP05-060_p3',
+        code: 'OP14-013',
+        image: 'OP14-013',
         currentPrice: 0,
         previousPrice: 0,
         name: 'Luffy',
-        prices: [195]
+        prices: [0],
+        quantNeeded: 3
     },
     {
-        code: 'OP05-074',
-        image: 'OP05-074_p2',
+        code: 'OP14-013',
+        image: 'OP14-013_p1',
+        currentPrice: 0,
+        previousPrice: 0,
+        name: 'Luffy',
+        prices: [0],
+        quantNeeded: 1
+    },
+    {
+        code: 'OP14-014',
+        image: 'OP14-014',
         currentPrice: 0,
         previousPrice: 0,
         name: 'Kid',
-        prices: [29]
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP05-091',
-        image: 'OP05-091_p3',
+        code: 'OP14-014',
+        image: 'OP14-014_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Rebecca',
-        prices: [45]
+        name: 'Kid',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP05-119',
-        image: 'OP05-119_p1',
+        code: 'OP14-015',
+        image: 'OP14-015',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Monkey D. Luffy',
-        prices: [40]
+        name: 'Zoro',
+        prices: [0],
+        quantNeeded: 7
     },
     {
-        code: 'OP06-001',
-        image: 'OP06-001_p1',
+        code: 'OP14-015',
+        image: 'OP14-015_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Uta',
-        prices: [18]
+        name: 'Zoro',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP06-007',
-        image: 'OP06-007_p2',
+        code: 'OP14-016',
+        image: 'OP14-016',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Shanks',
-        prices: [59]
+        name: 'Drake',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP06-119',
-        image: 'OP06-119_p2',
+        code: 'OP14-032',
+        image: 'OP14-032',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Sanji',
-        prices: [49]
+        name: 'Humandrill',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP07-015',
-        image: 'OP07-015_p2',
+        code: 'OP14-061',
+        image: 'OP14-061',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Monkey D. Dragon',
-        prices: [72]
+        name: 'Vergo',
+        prices: [0],
+        quantNeeded: 3
     },
     {
-        code: 'OP07-038',
-        image: 'OP07-038_p3',
+        code: 'OP14-061',
+        image: 'OP14-061_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Boa Hancock',
-        prices: [80]
+        name: 'Vergo',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP08-002',
-        image: 'OP08-002_p3',
+        code: 'OP14-069',
+        image: 'OP14-069',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Marco',
-        prices: [99]
+        name: 'Doflamingo',
+        prices: [0],
+        quantNeeded: 3
     },
     {
-        code: 'OP08-067',
-        image: 'OP08-067_p1',
+        code: 'OP14-069',
+        image: 'OP14-069_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Charlotte Pudding',
-        prices: [6]
+        name: 'Doflamingo',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP09-004',
-        image: 'OP09-004_p2',
+        code: 'OP14-074',
+        image: 'OP14-074',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Shanks',
-        prices: [110]
+        name: 'Monet',
+        prices: [0],
+        quantNeeded: 3
     },
     {
-        code: 'OP09-005',
-        image: 'OP09-005_p1',
+        code: 'OP14-074',
+        image: 'OP14-074_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Silvers Rayleigh',
-        prices: [27]
+        name: 'Monet',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP09-009',
-        image: 'OP09-009_p2',
+        code: 'OP14-076',
+        image: 'OP14-076',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Benn Beckman',
-        prices: [34]
+        name: 'Ever White',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP09-013',
-        image: 'OP09-013_p1',
+        code: 'OP14-077',
+        image: 'OP14-077',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Yasopp',
-        prices: [20]
+        name: 'Penta chromatic string',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP09-015',
-        image: 'OP09-015_p1',
+        code: 'OP14-100',
+        image: 'OP14-100',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Lucky Roux',
-        prices: [15]
+        name: 'Absalom',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP09-050',
-        image: 'OP09-050_p1',
+        code: 'OP14-102',
+        image: 'OP14-102',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Nami',
-        prices: [3]
+        name: 'Kumacy',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP09-050',
-        image: 'OP09-050_p2',
+        code: 'OP14-104',
+        image: 'OP14-104',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Nami',
-        prices: [40]
+        name: 'Moria',
+        prices: [0],
+        quantNeeded: 3
     },
     {
-        code: 'OP09-118',
-        image: 'OP09-118_p2',
+        code: 'OP14-104',
+        image: 'OP14-104_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Gol D. Roger',
-        prices: [133]
+        name: 'Moria',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP11-018',
-        image: 'OP11-018_p1',
+        code: 'OP14-108',
+        image: 'OP14-108',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Honesty Impact',
-        prices: [20]
+        name: 'Rayleigh',
+        prices: [0],
+        quantNeeded: 3
     },
     {
-        code: 'OP11-041',
-        image: 'OP11-041_p1',
+        code: 'OP14-108',
+        image: 'OP14-108_p1',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Nami',
-        prices: [29]
+        name: 'Rayleigh',
+        prices: [0],
+        quantNeeded: 1
     },
     {
-        code: 'OP11-058',
-        image: 'OP11-058_p2',
+        code: 'OP14-109',
+        image: 'OP14-109',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Monkey D. Luffy',
-        prices: [16]
+        name: 'Cindry',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP12-015',
-        image: 'OP12-015_p1',
+        code: 'OP14-110',
+        image: 'OP14-110',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Monkey D. Luffy',
-        prices: [3]
+        name: 'Dr. Hogback',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP13-042',
-        image: 'OP13-042_p1',
+        code: 'OP14-111',
+        image: 'OP14-111',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Edward Newgate',
-        prices: [29]
+        name: 'Perona',
+        prices: [0],
+        quantNeeded: 4
     },
     {
-        code: 'OP13-064',
-        image: 'OP13-064_p1',
+        code: 'EB01-003',
+        image: 'EB01-003_p3',
         currentPrice: 0,
         previousPrice: 0,
-        name: 'Gol D. Roger',
-        prices: [10]
-    },
-    {
-        code: 'OP13-065',
-        image: 'OP13-065_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Shanks',
-        prices: [10]
-    },
-    {
-        code: 'OP13-118',
-        image: 'OP13-118_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Monkey D. Luffy',
-        prices: [15]
-    },
-    {
-        code: 'EB02-045',
-        image: 'EB02-045_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Trafalgar Law',
-        prices: [5]
-    },
-    {
-        code: 'EB02-028',
-        image: 'EB02-028_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Portgas D. Ace',
-        prices: [45]
-    },
-    {
-        code: 'ST01-006',
-        image: 'ST01-006_p8',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Tony Tony Chopper',
-        prices: [4]
-    },
-    {
-        code: 'ST01-013',
-        image: 'ST01-013_p3',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Roronoa Zoro',
-        prices: [18]
-    },
-    {
-        code: 'ST01-012',
-        image: 'ST01-012_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Monkey D. Luffy',
-        prices: [169]
-    },
-    {
-        code: 'ST14-003',
-        image: 'ST14-003_p1',
-        currentPrice: 0,
-        previousPrice: 0,
-        name: 'Sanji',
-        prices: [39]
+        name: 'Kid & Killer',
+        prices: [0],
+        quantNeeded: 1
     },
 ] as MarketWatch[]
