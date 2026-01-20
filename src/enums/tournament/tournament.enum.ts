@@ -84,6 +84,7 @@ export const TournamentMultipliers: Record<TournamentType, number> = {
 };
 
 export enum LeaderEnum {
+  BYE = 'ST01-001',
   RP_LAW = 'ST10-001',
   RP_LUFFY = 'ST10-002',
   RED_ZORO = 'OP01-001',
@@ -159,10 +160,13 @@ export enum LeaderEnum {
   RG_LUFFY_OP13 = 'OP13-001',
   RU_VIVI_EB03 = 'EB03-001',
   RED_LAW = 'OP14-001',
-  BY_MORIA = 'OP14-001',
-  PURPLE_DOFLAMINGO = 'OP14-001',
-  BLACK_CROCODILE = 'OP14-001',
-  UY_BOA = 'OP14-001',
+  BY_MORIA = 'OP14-080',
+  PURPLE_DOFLAMINGO = 'OP14-060',
+  BLACK_CROCODILE = 'OP14-079',
+  UY_BOA = 'OP14-041',
+  BLUE_JINBE = 'OP14-040',
+  GREEN_MIHAWK = 'OP14-020',
+  YELLOW_LUFFY = 'ST29-001',
 }
 
 export const leaders: Leader[] = [
@@ -246,6 +250,9 @@ export const leaders: Leader[] = [
   createLeader('Donquixote Doflamingo', COLOR.PURPLE, COLOR.PURPLE, LeaderEnum.PURPLE_DOFLAMINGO),
   createLeader('Crocodile', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_CROCODILE),
   createLeader('Boa Hancock', COLOR.BLUE, COLOR.YELLOW, LeaderEnum.UY_BOA),
+  createLeader('Jinbe', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_JINBE),
+  createLeader('Monkey D. Luffy', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_LUFFY),
+  createLeader('Dracule Mihawk', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_MIHAWK),
 ]
 
 export enum FormatEnum {

@@ -20,13 +20,13 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.GU_ZORO_SANJI, wins: 1, loses: 0 },
             { leader: LeaderEnum.UP_LUFFY, wins: 2, loses: 1 },
             { leader: LeaderEnum.RU_CAESAR, wins: 1, loses: 0 },
-            { leader: LeaderEnum.YELLOW_ENEL, wins: 0, loses: 2 }, 
-            { leader: LeaderEnum.BY_KOALA, wins: 0, loses: 1 }, 
-            { leader: LeaderEnum.RED_SHANKS, wins: 3, loses: 0 }, 
-            { leader: LeaderEnum.YELLOW_KALGARA, wins: 0, loses: 1 }, 
-            { leader: LeaderEnum.RG_SMOKER, wins: 2, loses: 0 }, 
-            { leader: LeaderEnum.RB_KOBY, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.UY_NAMI, wins: 0, loses: 1 }, 
+            { leader: LeaderEnum.YELLOW_ENEL, wins: 0, loses: 2 },
+            { leader: LeaderEnum.BY_KOALA, wins: 0, loses: 1 },
+            { leader: LeaderEnum.RED_SHANKS, wins: 3, loses: 0 },
+            { leader: LeaderEnum.YELLOW_KALGARA, wins: 0, loses: 1 },
+            { leader: LeaderEnum.RG_SMOKER, wins: 2, loses: 0 },
+            { leader: LeaderEnum.RB_KOBY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_NAMI, wins: 0, loses: 1 },
         ],
         format: FormatEnum.OP12
     },
@@ -36,21 +36,21 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.RED_RAYLEIGH, wins: 1, loses: 1 },
             { leader: LeaderEnum.BLACK_TEACH, wins: 0, loses: 2 },
             { leader: LeaderEnum.PB_LUFFY, wins: 0, loses: 1 },
-            { leader: LeaderEnum.GP_LUFFY, wins: 2, loses: 1 }, 
-            { leader: LeaderEnum.BLUE_KUZAN, wins: 2, loses: 0 }, 
-            { leader: LeaderEnum.BLACK_LUCCI_OP07, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.GREEN_ZORO, wins: 2, loses: 2 }, 
-            { leader: LeaderEnum.UB_SAKAZUKI, wins: 2, loses: 1 }, 
-            { leader: LeaderEnum.RB_KOBY, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.UP_REIJU, wins: 2, loses: 0 }, 
-            { leader: LeaderEnum.PURPLE_LUFFY, wins: 2, loses: 1 }, 
-            { leader: LeaderEnum.YELLOW_KID, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.YELLOW_KALGARA, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.UB_USOPP, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.UY_NAMI, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.GP_DOFLAMINGO, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.GREEN_BONNEY, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.BLUE_DOFFY, wins: 1, loses: 0 }, 
+            { leader: LeaderEnum.GP_LUFFY, wins: 2, loses: 1 },
+            { leader: LeaderEnum.BLUE_KUZAN, wins: 2, loses: 0 },
+            { leader: LeaderEnum.BLACK_LUCCI_OP07, wins: 1, loses: 0 },
+            { leader: LeaderEnum.GREEN_ZORO, wins: 2, loses: 2 },
+            { leader: LeaderEnum.UB_SAKAZUKI, wins: 2, loses: 1 },
+            { leader: LeaderEnum.RB_KOBY, wins: 1, loses: 1 },
+            { leader: LeaderEnum.UP_REIJU, wins: 2, loses: 0 },
+            { leader: LeaderEnum.PURPLE_LUFFY, wins: 2, loses: 1 },
+            { leader: LeaderEnum.YELLOW_KID, wins: 1, loses: 0 },
+            { leader: LeaderEnum.YELLOW_KALGARA, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UB_USOPP, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_NAMI, wins: 1, loses: 1 },
+            { leader: LeaderEnum.GP_DOFLAMINGO, wins: 1, loses: 0 },
+            { leader: LeaderEnum.GREEN_BONNEY, wins: 1, loses: 1 },
+            { leader: LeaderEnum.BLUE_DOFFY, wins: 1, loses: 0 },
         ],
         format: FormatEnum.OP12
     },
@@ -77,14 +77,14 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.GREEN_BONNEY, wins: 0, loses: 2 },
             { leader: LeaderEnum.RY_BETTY, wins: 0, loses: 1 },
             { leader: LeaderEnum.YELLOW_ENEL, wins: 0, loses: 1 },
-            { leader: LeaderEnum.RED_SHANKS, wins: 2, loses: 0 }, 
-            { leader: LeaderEnum.BLUE_BUGGY, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.RG_SMOKER, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.RED_RAYLEIGH, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.BLACK_LUCCI_OP07, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.GREEN_ZORO, wins: 3, loses: 2 }, 
-            { leader: LeaderEnum.UP_LUFFY, wins: 2, loses: 3 }, 
-            { leader: LeaderEnum.GP_LUFFY, wins: 0, loses: 1 }, 
+            { leader: LeaderEnum.RED_SHANKS, wins: 2, loses: 0 },
+            { leader: LeaderEnum.BLUE_BUGGY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.RG_SMOKER, wins: 1, loses: 0 },
+            { leader: LeaderEnum.RED_RAYLEIGH, wins: 1, loses: 1 },
+            { leader: LeaderEnum.BLACK_LUCCI_OP07, wins: 1, loses: 1 },
+            { leader: LeaderEnum.GREEN_ZORO, wins: 3, loses: 2 },
+            { leader: LeaderEnum.UP_LUFFY, wins: 2, loses: 3 },
+            { leader: LeaderEnum.GP_LUFFY, wins: 0, loses: 1 },
         ],
         format: FormatEnum.OP12
     },
@@ -103,13 +103,13 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.RG_SMOKER, wins: 0, loses: 1 },
             { leader: LeaderEnum.YELLOW_ENEL, wins: 0, loses: 1 },
             { leader: LeaderEnum.PB_LUFFY, wins: 0, loses: 1 },
-            { leader: LeaderEnum.RED_SHANKS, wins: 2, loses: 0 }, 
-            { leader: LeaderEnum.BLACK_TEACH, wins: 1, loses: 0 }, 
-            { leader: LeaderEnum.GREEN_ZORO, wins: 1, loses: 2 }, 
-            { leader: LeaderEnum.GP_LUFFY, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.BLUE_KUZAN, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.YELLOW_KID, wins: 1, loses: 1 }, 
-            { leader: LeaderEnum.RED_RAYLEIGH, wins: 3, loses: 0 }, 
+            { leader: LeaderEnum.RED_SHANKS, wins: 2, loses: 0 },
+            { leader: LeaderEnum.BLACK_TEACH, wins: 1, loses: 0 },
+            { leader: LeaderEnum.GREEN_ZORO, wins: 1, loses: 2 },
+            { leader: LeaderEnum.GP_LUFFY, wins: 1, loses: 1 },
+            { leader: LeaderEnum.BLUE_KUZAN, wins: 1, loses: 1 },
+            { leader: LeaderEnum.YELLOW_KID, wins: 1, loses: 1 },
+            { leader: LeaderEnum.RED_RAYLEIGH, wins: 3, loses: 0 },
         ],
         format: FormatEnum.OP12
     },
@@ -221,7 +221,10 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.UY_NAMI, wins: 1, loses: 0 },
             { leader: LeaderEnum.BLACK_TEACH, wins: 0, loses: 1 },
             { leader: LeaderEnum.YELLOW_BONNEY, wins: 1, loses: 0 },
-            //mihawk 1-0
+            { leader: LeaderEnum.GREEN_MIHAWK, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_BOA, wins: 0, loses: 1 },
+            { leader: LeaderEnum.UP_LUFFY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.GP_LUFFY, wins: 1, loses: 0 },
         ],
         format: FormatEnum.OP14
     },
@@ -233,17 +236,93 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.RU_ACE, wins: 1, loses: 0 },
             { leader: LeaderEnum.RU_VIVI_EB03, wins: 2, loses: 0 },
             { leader: LeaderEnum.GREEN_ZORO, wins: 1, loses: 1 },
-            { leader: LeaderEnum.BLACK_CROCODILE, wins: 1, loses: 1 },
+            { leader: LeaderEnum.BLACK_CROCODILE, wins: 1, loses: 3 },
             { leader: LeaderEnum.UY_BOA, wins: 3, loses: 1 },
             { leader: LeaderEnum.RED_LAW, wins: 0, loses: 1 },
             { leader: LeaderEnum.YELLOW_BONNEY, wins: 1, loses: 3 },
-            { leader: LeaderEnum.BLACK_IMU, wins: 2, loses: 0 },
-            { leader: LeaderEnum.UY_NAMI, wins: 1, loses: 0 },
-            { leader: LeaderEnum.UP_LUFFY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.BLACK_IMU, wins: 4, loses: 1 },
+            { leader: LeaderEnum.UY_NAMI, wins: 2, loses: 1 },
+            { leader: LeaderEnum.UP_LUFFY, wins: 1, loses: 1 },
             { leader: LeaderEnum.RP_ROGER, wins: 1, loses: 0 },
-            //jinbe 0-1
-            //mihawk 0-2
+            { leader: LeaderEnum.BLUE_JINBE, wins: 0, loses: 1 },
+            { leader: LeaderEnum.GREEN_MIHAWK, wins: 0, loses: 3 },
+            { leader: LeaderEnum.GREEN_BONNEY, wins: 0, loses: 1 },
+            { leader: LeaderEnum.YELLOW_LUFFY, wins: 2, loses: 0 },
+            { leader: LeaderEnum.RG_LUFFY_OP13, wins: 1, loses: 0 },
+            { leader: LeaderEnum.BLUE_KUZAN, wins: 1, loses: 0 },
         ],
         format: FormatEnum.OP14
     },
+    {
+        leader: LeaderEnum.RP_SUGAR,
+        opponents: [
+            { leader: LeaderEnum.BY_MORIA, wins: 0, loses: 1 },
+            { leader: LeaderEnum.GREEN_MIHAWK, wins: 0, loses: 2 },
+            { leader: LeaderEnum.PURPLE_KAIDO, wins: 0, loses: 1 },
+        ],
+        format: FormatEnum.OP14
+    },
+    {
+        leader: LeaderEnum.RED_ZORO,
+        opponents: [
+            { leader: LeaderEnum.BLACK_CROCODILE, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_BOA, wins: 1, loses: 0 },
+            { leader: LeaderEnum.BLACK_IMU, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UP_SANJI, wins: 1, loses: 0 },
+        ],
+        format: FormatEnum.OP14
+    },
+    {
+        leader: LeaderEnum.YELLOW_BONNEY,
+        opponents: [
+            { leader: LeaderEnum.RU_ACE, wins: 0, loses: 1 },
+            { leader: LeaderEnum.BLACK_CROCODILE, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_BOA, wins: 1, loses: 0 },
+            { leader: LeaderEnum.PURPLE_LUFFY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.BLACK_IMU, wins: 0, loses: 1 },
+            { leader: LeaderEnum.RG_LUFFY_OP13, wins: 0, loses: 1 },
+
+
+        ],
+        format: FormatEnum.OP14
+    },
+    {
+        leader: LeaderEnum.RP_ROGER,
+        opponents: [
+            { leader: LeaderEnum.RU_ACE, wins: 0, loses: 1 },
+        ],
+        format: FormatEnum.OP14
+    },
+    {
+        leader: LeaderEnum.RP_LUFFY,
+        opponents: [
+            { leader: LeaderEnum.BLACK_TEACH, wins: 1, loses: 0 },
+            { leader: LeaderEnum.BLUE_KUZAN, wins: 0, loses: 1 },
+        ],
+        format: FormatEnum.OP14
+    },
+    {
+        leader: LeaderEnum.RG_CHOPPER,
+        opponents: [
+            { leader: LeaderEnum.PURPLE_DOFLAMINGO, wins: 0, loses: 1 },
+            { leader: LeaderEnum.PURPLE_KAIDO, wins: 1, loses: 1 },
+            { leader: LeaderEnum.RG_LAW, wins: 1, loses: 0 },
+        ],
+        format: FormatEnum.OP14
+    },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        opponents: [
+            { leader: LeaderEnum.GREEN_MIHAWK, wins: 0, loses: 1 },
+        ],
+        format: FormatEnum.OP14
+    },
+    {
+        leader: LeaderEnum.RU_ACE,
+        opponents: [
+            { leader: LeaderEnum.RB_KOBY, wins: 1, loses: 0 },
+        ],
+        format: FormatEnum.OP14
+    },
+
 ]

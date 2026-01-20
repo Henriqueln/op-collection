@@ -3,6 +3,8 @@
     <button (click)="switchTab('tab1')" [class.active]="activeTab === 'tab1'">Leader Tournament Points</button>
     <button (click)="switchTab('tab2')" [class.active]="activeTab === 'tab2'">Tournament Retrospective</button>
     <button (click)="switchTab('tab3')" [class.active]="activeTab === 'tab3'">Leader Stats</button>
+    <button (click)="switchTab('tab4')" [class.active]="activeTab === 'tab4'">Leader Stats Detailed</button>
+    <button (click)="switchTab('tab5')" [class.active]="activeTab === 'tab5'">Leader Stats Detailed (All Time)</button>
 </div>
 
 <!-- Tab 1 -->
@@ -17,7 +19,7 @@
         <tr *ngFor="let leader of leaders">
             <td [ngClass]="leader?.color1?.toLowerCase() ?? ''"></td>
             <td [ngClass]="leader?.color1?.toLowerCase() ?? ''">
-                <img src="assets/img/{{leader.code}}.png">
+                <img (click)="selectLeader(leader.code)" src="assets/img/{{leader.code}}.png">
             </td>
             <td [ngClass]="leader.color2.toLowerCase()">{{leader.name}}</td>
             <td [ngClass]="leader.color2.toLowerCase()">{{leader.points | number:'1.0-2'}}</td>
@@ -39,10 +41,11 @@
         <tr *ngFor="let t of tournaments;">
             <ng-container *ngIf="getRowContext(t) as tData">
                 <td [ngClass]="tData.leader!.color1.toLowerCase()">
-                    <img src="assets/img/{{tData.leader!.code}}.png">
+                    <img (click)="selectLeader(tData.leader!.code)" src="assets/img/{{tData.leader!.code}}.png">
                 </td>
                 <td [ngClass]="tData.leader!.color1.toLowerCase()">{{tData.type!.name}}</td>
-                <td [ngClass]="tData.leader!.color1.toLowerCase()">{{tData.store!.name}} <span  [ngClass]="'flag-icon flag-icon-pt'"></span></td>
+                <td [ngClass]="tData.leader!.color1.toLowerCase()">{{tData.store!.name}} <span
+                        [ngClass]="'flag-icon flag-icon-pt'"></span></td>
                 <td [ngClass]="tData.leader!.color2.toLowerCase()">{{t.placement}}</td>
                 <td [ngClass]="tData.leader!.color2.toLowerCase()">{{tData.points | number:'1.0-2'}}</td>
                 <td [ngClass]="tData.leader!.color2.toLowerCase()">{{t.date | date:'dd/MM/yyyy' }}</td>
@@ -73,59 +76,73 @@
 </div> -->
 
 <div *ngIf="activeTab === 'tab3'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <h4 style="font-weight: bold;">Most Played (Tournaments - {{currentSet}})</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostUsedCompCurrent">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesUsed}}</p>
+        </div>
+    </div>
+    <h4 style="font-weight: bold;">Most Wins (Tournaments - {{currentSet}})</h4>
+    <div style="display: flex; gap: 2rem;">
+        <div *ngFor="let used of leaderStats.mostWinsCompCurrent">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <p style="text-align: center;">{{used.timesWon}}</p>
+        </div>
+    </div>
     <h4 style="font-weight: bold;">Most Played (Tournaments)</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.mostUsedComp">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.timesUsed}}</p>
         </div>
     </div>
     <h4 style="font-weight: bold;">Most Wins (Tournaments)</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.mostWinsComp">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.timesWon}}</p>
         </div>
     </div>
     <h4 style="font-weight: bold;">Most Played (Ranked - {{currentSet}})</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.mostWinsRankCurrent">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.timesUsed}}</p>
         </div>
     </div>
     <h4 style="font-weight: bold;">Most Wins (Ranked - {{currentSet}})</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.mostWinsRankCurrent">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.timesWon}}</p>
         </div>
     </div>
     <h4 style="font-weight: bold;">Best Win Ratio (Ranked - {{currentSet}})</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.bestWinRatioRankCurrent">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.winRatio}}%</p>
         </div>
     </div>
     <h4 style="font-weight: bold;">Most Played (Ranked - All Time)</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.mostWinsRank">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.timesUsed}}</p>
         </div>
     </div>
     <h4 style="font-weight: bold;">Most Wins (Ranked - All Time)</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.mostWinsRank">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.timesWon}}</p>
         </div>
     </div>
     <h4 style="font-weight: bold;">Best Win Ratio (Ranked - All Time)</h4>
     <div style="display: flex; gap: 2rem;">
         <div *ngFor="let used of leaderStats.bestWinRatioRank">
-            <img style="height: 150px;" src="assets/img/{{used.code}}.png">
+            <img (click)="selectLeader(used.code)" style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.winRatio}}%</p>
         </div>
     </div>
@@ -148,6 +165,46 @@
         <div *ngFor="let used of leaderStats.individualWinRatio">
             <img style="height: 150px;" src="assets/img/{{used.code}}.png">
             <p style="text-align: center;">{{used.winRatio}}%</p>
+        </div>
+    </div>
+</div>
+
+<!-- tab 4 -->
+<div *ngIf="activeTab === 'tab4'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;">
+        <img style="width: 150px; height: auto; margin-bottom: 1rem;" src="assets/img/{{selectedLeader?.code}}.png">
+        <div *ngFor="let leader of leaderCurrentSetFiltered.opponents">
+            <ng-container *ngIf="getRowContext(leader) as tData">
+                <img style="width: 120px; height: auto; margin-bottom: 1rem;" src="assets/img/{{leader.leader}}.png">
+                <div [style.color]="(((leader.wins / (leader.wins +
+        leader.loses)) * 100 * 100) / 100) < 50 ? 'indianred' : 'green'"
+                    style="text-align: center; font-weight: bold;">
+                    <p style="margin: 0;">{{((leader.wins / (leader.wins +
+                        leader.loses)) * 100 * 100) / 100 | number:'1.2-2'}}%</p>
+                    <p style="margin: 0;">{{leader.wins}} - {{leader.loses}}</p>
+                </div>
+            </ng-container>
+
+        </div>
+    </div>
+</div>
+
+<!-- tab 5 -->
+<div *ngIf="activeTab === 'tab5'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;">
+        <img style="width: 150px; height: auto; margin-bottom: 1rem;" src="assets/img/{{selectedLeader?.code}}.png">
+        <div *ngFor="let leader of leaderFilteredAllTime">
+            <ng-container *ngIf="getRowContext(leader) as tData">
+                <img style="width: 120px; height: auto; margin-bottom: 1rem;" src="assets/img/{{leader.leader}}.png">
+                <div [style.color]="(((leader.wins / (leader.wins +
+        leader.loses)) * 100 * 100) / 100) < 50 ? 'indianred' : 'green'"
+                    style="text-align: center; font-weight: bold;">
+                    <p style="margin: 0;">{{((leader.wins / (leader.wins +
+                        leader.loses)) * 100 * 100) / 100 | number:'1.2-2'}}%</p>
+                    <p style="margin: 0;">{{leader.wins}} - {{leader.loses}}</p>
+                </div>
+            </ng-container>
+
         </div>
     </div>
 </div>

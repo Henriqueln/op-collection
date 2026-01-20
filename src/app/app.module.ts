@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MarketWatchComponent } from './market-watch/market-watch.component';
 import { PlaysetsComponent } from './playsets/playsets.component';
 import { TournamentReportComponent } from './tournament-report/tournament-report.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [		
@@ -21,7 +22,8 @@ import { TournamentReportComponent } from './tournament-report/tournament-report
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgChartsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
