@@ -153,6 +153,7 @@ export enum LeaderEnum {
   GP_LIM = 'OP09-001',
   RP_ROGER = 'OP13-003',
   RB_SABO = 'OP05-001',
+  RB_SABO_OP13 = 'OP13-001',
   RED_SANJI = 'PRB01-001',
   GU_ROSINANTE = 'OP06-001',
   RP_SUGAR = 'OP10-001',
@@ -253,6 +254,7 @@ export const leaders: Leader[] = [
   createLeader('Jinbe', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_JINBE),
   createLeader('Monkey D. Luffy', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_LUFFY),
   createLeader('Dracule Mihawk', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_MIHAWK),
+  createLeader('Sabo', COLOR.RED, COLOR.BLACK, LeaderEnum.RB_SABO_OP13),
 ]
 
 export enum FormatEnum {

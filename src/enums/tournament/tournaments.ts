@@ -625,4 +625,100 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.RED_LAW,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 28,
+        placement: 12, 
+        set: FormatEnum.OP14,
+        date: new Date('2026-01-21').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLUE_JINBE, wonDice: false, won: false },
+            { number: 2, opponent: LeaderEnum.YELLOW_BONNEY, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.GREEN_BONNEY, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.PURPLE_DOFLAMINGO, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.PY_ROSINANTE,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalMedium,
+        players: 14,
+        placement: 5, 
+        set: FormatEnum.OP14,
+        date: new Date('2026-01-22').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RU_ACE, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.BLUE_JINBE, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.RB_SABO_OP13, wonDice: true, won: false },
+            { number: 4, opponent: LeaderEnum.UP_SANJI, wonDice: true, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_LAW,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalBig,
+        players: 21,
+        placement: 10, 
+        set: FormatEnum.OP14,
+        date: new Date('2026-01-25').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BY_KOALA, wonDice: false, won: false },
+            { number: 2, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.GREEN_MIHAWK, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.BLUE_JINBE, wonDice: true, won: true },
+            { number: 5, opponent: LeaderEnum.PURPLE_DOFLAMINGO, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.YELLOW_BONNEY,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalSmall,
+        players: 7,
+        placement: 1, 
+        set: FormatEnum.OP14,
+        date: new Date('2026-01-28').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.UY_BOA, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.GP_LUFFY, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RP_ROGER,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalMedium,
+        players: 15,
+        placement: 6, 
+        set: FormatEnum.OP14,
+        date: new Date('2026-01-29').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.YELLOW_BONNEY, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.YELLOW_LUFFY, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.PURPLE_DOFLAMINGO, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.UY_BOA, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.PY_ROSINANTE,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalMedium,
+        players: 14,
+        placement: 3, 
+        set: FormatEnum.OP14,
+        date: new Date('2026-02-01').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RB_SABO_OP13, wonDice: false, won: false },
+            { number: 2, opponent: LeaderEnum.GREEN_BONNEY, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.PURPLE_DOFLAMINGO, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.RB_SABO_OP13, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
 ]
