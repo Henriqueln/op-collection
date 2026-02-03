@@ -225,6 +225,7 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.UY_BOA, wins: 0, loses: 1 },
             { leader: LeaderEnum.UP_LUFFY, wins: 1, loses: 0 },
             { leader: LeaderEnum.GP_LUFFY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.RU_VIVI_EB03, wins: 0, loses: 1 },
         ],
         format: FormatEnum.OP14
     },
@@ -266,7 +267,7 @@ export const CURRENT_RANKED = [
         leader: LeaderEnum.RED_ZORO,
         opponents: [
             { leader: LeaderEnum.BLACK_CROCODILE, wins: 1, loses: 0 },
-            { leader: LeaderEnum.UY_BOA, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_BOA, wins: 2, loses: 0 },
             { leader: LeaderEnum.BLACK_IMU, wins: 1, loses: 0 },
             { leader: LeaderEnum.UP_SANJI, wins: 1, loses: 0 },
         ],
@@ -321,6 +322,10 @@ export const CURRENT_RANKED = [
         leader: LeaderEnum.RU_ACE,
         opponents: [
             { leader: LeaderEnum.RB_KOBY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.BLUE_KUZAN, wins: 1, loses: 0 },
+            { leader: LeaderEnum.GP_LUFFY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.RU_ACE, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UP_LUFFY, wins: 0, loses: 1 },
         ],
         format: FormatEnum.OP14
     },
