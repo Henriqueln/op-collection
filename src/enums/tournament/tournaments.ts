@@ -721,4 +721,19 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.RG_LAW,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalSmall,
+        players: 7,
+        placement: 1, 
+        set: FormatEnum.OP14,
+        date: new Date('2026-02-04').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.UB_USOPP, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.RB_SABO_OP13, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
 ]
