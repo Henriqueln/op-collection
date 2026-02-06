@@ -51,5 +51,10 @@ export const eventsNames = [
     'You\'ll Frighten Me... ♡',
     'Raw Heat Strike',
     'Kizaru!! Compared to Two Years Ago We\'re a Hundred Times Stronger Now!!',
-    'Iai Death Lion Song'
+    'Iai Death Lion Song',
+    'But If We Ever See Each Other Again... Will You Call Me Your Shipmate?!!',
+    'There You Are, Sore Loser!',
+    'Insolent Fool!! Stand Down!!',
+    'Thanks for the Treat. ♡',
+    'I Knew You People Were Behind This.',
 ]

@@ -733,4 +733,5 @@ export const characterNames = [
     'Ran',
     'Rindo',
     'Bluegrass',
+    'Yu'
 ];
