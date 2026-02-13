@@ -327,8 +327,10 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.BLUE_KUZAN, wins: 1, loses: 0 },
             { leader: LeaderEnum.GP_LUFFY, wins: 1, loses: 0 },
             { leader: LeaderEnum.RU_ACE, wins: 1, loses: 0 },
-            { leader: LeaderEnum.YELLOW_LUFFY, wins: 1, loses: 0 },
-            { leader: LeaderEnum.UP_LUFFY, wins: 0, loses: 1 },
+            { leader: LeaderEnum.YELLOW_LUFFY, wins: 2, loses: 0 },
+            { leader: LeaderEnum.UP_LUFFY, wins: 0, loses: 2 },
+            { leader: LeaderEnum.GREEN_UTA, wins: 1, loses: 0 },
+            { leader: LeaderEnum.RG_LUFFY_OP13, wins: 1, loses: 0 },
         ],
         format: FormatEnum.OP14
     },
