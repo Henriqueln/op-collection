@@ -13,6 +13,7 @@ export enum SETS {
     OP12 = 'OP12',
     OP13 = 'OP13',
     OP14 = 'OP14',
+    OP15 = 'OP15',
 
     EB01 = 'EB01',
     EB02 = 'EB02',

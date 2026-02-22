@@ -168,6 +168,7 @@ export enum LeaderEnum {
   BLUE_JINBE = 'OP14-040',
   GREEN_MIHAWK = 'OP14-020',
   YELLOW_LUFFY = 'ST29-001',
+  YELLOW_VEGAPUNK = 'OP07-097',
 }
 
 export const leaders: Leader[] = [
@@ -255,6 +256,7 @@ export const leaders: Leader[] = [
   createLeader('Monkey D. Luffy', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_LUFFY),
   createLeader('Dracule Mihawk', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_MIHAWK),
   createLeader('Sabo', COLOR.RED, COLOR.BLACK, LeaderEnum.RB_SABO_OP13),
+  createLeader('Vegapunk', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_VEGAPUNK),
 ]
 
 export enum FormatEnum {
@@ -271,6 +273,7 @@ export enum FormatEnum {
   PRB02 = 'PRB02',
   OP13 = 'OP13',
   OP14 = 'OP14',
+  EB03 = 'EB03',
 }
 
 export enum StoresEnum {
