@@ -752,4 +752,19 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.RU_VIVI_EB03,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalMedium,
+        players: 14,
+        placement: 3, 
+        set: FormatEnum.EB03,
+        date: new Date('2026-02-22').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RP_KID, wonDice: true, won: false },
+            { number: 2, opponent: LeaderEnum.BYE, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.RU_ACE, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
 ]
