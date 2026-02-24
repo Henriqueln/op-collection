@@ -131,7 +131,7 @@ export class TournamentReportComponent implements OnInit {
       this.leaderFilteredAllTime = [];
       this.ranked.filter((l: any) => l.leader === this.selectedLeader?.code).forEach((r: any) => {
         r.opponents.forEach((opp: any) => {
-          if(this.leaderFilteredAllTime.find((l: any) => l.leader === opp.leader)) {
+          if (this.leaderFilteredAllTime.find((l: any) => l.leader === opp.leader)) {
             this.leaderFilteredAllTime.find((l: any) => l.leader === opp.leader).wins += opp.wins;
             this.leaderFilteredAllTime.find((l: any) => l.leader === opp.leader).loses += opp.loses;
           } else {
@@ -148,6 +148,39 @@ export class TournamentReportComponent implements OnInit {
 
   calculateWinRatio(wins: number, loses: number): number {
     return Math.round((wins / (wins + loses)) * 100 * 100) / 100;
+  }
+
+  getWinRatioCurrent(): any {
+    let wins = 0;
+    let loses = 0;
+
+    this.leaderCurrentSetFiltered.opponents.forEach((o: any) => {
+      wins += o.wins;
+      loses += o.loses;
+    })
+
+    return {
+      wins: wins,
+      loses: loses,
+      ratio: this.calculateWinRatio(wins, loses)
+    }
+  }
+
+  getWinRatioAllTime(): any {
+    console.log(this.leaderFilteredAllTime)
+    let wins = 0;
+    let loses = 0;
+
+    this.leaderFilteredAllTime.forEach((o: any) => {
+      wins += o.wins;
+      loses += o.loses;
+    })
+
+    return {
+      wins: wins,
+      loses: loses,
+      ratio: this.calculateWinRatio(wins, loses)
+    }
   }
 
 

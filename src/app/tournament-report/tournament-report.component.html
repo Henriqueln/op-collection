@@ -171,6 +171,12 @@
 
 <!-- tab 4 -->
 <div *ngIf="activeTab === 'tab4'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <ng-container *ngIf="getWinRatioCurrent() as tData">
+        <div style="margin-left: 4rem;" [style.color]="(tData.ratio < 50) ? 'indianred' : 'green'">
+            <p style="margin: 0;">{{ tData.ratio | number:'1.2-2'}}%</p>
+            <p style="margin: 0;">{{tData.wins}} - {{tData.loses}}</p>
+        </div>
+    </ng-container>
     <div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;">
         <img style="width: 150px; height: auto; margin-bottom: 1rem;" src="assets/img/{{selectedLeader?.code}}.png">
         <div *ngFor="let leader of leaderCurrentSetFiltered.opponents">
@@ -191,6 +197,12 @@
 
 <!-- tab 5 -->
 <div *ngIf="activeTab === 'tab5'" #scrollContainer2 style="margin-bottom: 3rem;">
+    <ng-container *ngIf="getWinRatioAllTime() as tData">
+        <div style="margin-left: 4rem;" [style.color]="(tData.ratio < 50) ? 'indianred' : 'green'">
+            <p style="margin: 0;">{{ tData.ratio | number:'1.2-2'}}%</p>
+            <p style="margin: 0;">{{tData.wins}} - {{tData.loses}}</p>
+        </div>
+    </ng-container>
     <div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap;">
         <img style="width: 150px; height: auto; margin-bottom: 1rem;" src="assets/img/{{selectedLeader?.code}}.png">
         <div *ngFor="let leader of leaderFilteredAllTime">
