@@ -170,7 +170,8 @@ export enum LeaderEnum {
   YELLOW_LUFFY = 'ST29-001',
   YELLOW_VEGAPUNK = 'OP07-097',
   RP_KID = 'ST10-003',
-  GREEN_CARROT = 'OP08-021'
+  GREEN_CARROT = 'OP08-021',
+  PY_ROBIN = 'OP09-062'
 }
 
 export const leaders: Leader[] = [
@@ -261,6 +262,7 @@ export const leaders: Leader[] = [
   createLeader('Vegapunk', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_VEGAPUNK),
   createLeader('Eustass "Captain" Kid', COLOR.RED, COLOR.PURPLE, LeaderEnum.RP_KID),
   createLeader('Carrot', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_CARROT),
+  createLeader('Nico Robin', COLOR.PURPLE, COLOR.YELLOW, LeaderEnum.PY_ROBIN),
 ]
 
 export enum FormatEnum {

@@ -329,7 +329,7 @@ export const CURRENT_RANKED = [
         leader: LeaderEnum.RU_VIVI_EB03,
         opponents: [
             { leader: LeaderEnum.RY_BETTY, wins: 1, loses: 1 },
-            { leader: LeaderEnum.UY_NAMI, wins: 1, loses: 1 },
+            { leader: LeaderEnum.UY_NAMI, wins: 2, loses: 1 },
             { leader: LeaderEnum.BLACK_TEACH, wins: 0, loses: 1 },
             { leader: LeaderEnum.YELLOW_BONNEY, wins: 1, loses: 0 },
             { leader: LeaderEnum.GREEN_MIHAWK, wins: 1, loses: 1 },
@@ -346,18 +346,21 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.BLACK_IMU, wins: 0, loses: 1 },
             { leader: LeaderEnum.YELLOW_LUFFY, wins: 1, loses: 1 },
             { leader: LeaderEnum.RG_LUFFY_OP13, wins: 0, loses: 1 },
-            { leader: LeaderEnum.GREEN_CARROT, wins: 0, loses: 1 },
+            { leader: LeaderEnum.GREEN_CARROT, wins: 0, loses: 2 },
             { leader: LeaderEnum.GP_LIM, wins: 0, loses: 1 },
-            { leader: LeaderEnum.BLUE_BUGGY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.PURPLE_DOFLAMINGO, wins: 1, loses: 0 },
+            { leader: LeaderEnum.GREEN_ZORO, wins: 1, loses: 0 },
         ],
         format: FormatEnum.EB03
     },
     {
         leader: LeaderEnum.PY_ROSINANTE,
         opponents: [
-            { leader: LeaderEnum.BLUE_KUZAN, wins: 1, loses: 0 },
+            { leader: LeaderEnum.BLUE_KUZAN, wins: 2, loses: 0 },
             { leader: LeaderEnum.UY_BOA, wins: 0, loses: 1 },
             { leader: LeaderEnum.YELLOW_LUFFY, wins: 1, loses: 0 },
+            { leader: LeaderEnum.YELLOW_KALGARA, wins: 1, loses: 0 },
+            { leader: LeaderEnum.PY_ROBIN, wins: 1, loses: 0 },
         ],
         format: FormatEnum.EB03
     },
@@ -365,6 +368,9 @@ export const CURRENT_RANKED = [
         leader: LeaderEnum.RP_SUGAR,
         opponents: [
             { leader: LeaderEnum.YELLOW_VEGAPUNK, wins: 1, loses: 0 },
+            { leader: LeaderEnum.RP_ROGER, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_NAMI, wins: 0, loses: 1 },
+            { leader: LeaderEnum.YELLOW_LUFFY, wins: 0, loses: 1 },
         ],
         format: FormatEnum.EB03
     },
