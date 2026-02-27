@@ -767,4 +767,20 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.PY_ROSINANTE,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalMedium,
+        players: 14,
+        placement: 6, 
+        set: FormatEnum.EB03,
+        date: new Date('2026-02-26').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.PURPLE_DOFLAMINGO, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.RG_LUFFY_OP13, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.PURPLE_FOXY, wonDice: true, won: false },
+        ],
+        location: 'Lisboa'
+    },
 ]

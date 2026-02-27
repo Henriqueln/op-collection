@@ -388,4 +388,12 @@ export const CURRENT_RANKED = [
         ],
         format: FormatEnum.EB03
     },
+    {
+        leader: LeaderEnum.RU_ACE,
+        opponents: [
+            { leader: LeaderEnum.PY_ROSINANTE, wins: 1, loses: 0 },
+            { leader: LeaderEnum.UY_NAMI, wins: 1, loses: 0 },
+        ],
+        format: FormatEnum.EB03
+    },
 ]
