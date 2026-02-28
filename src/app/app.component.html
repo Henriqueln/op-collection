@@ -1,122 +1,116 @@
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<input [(ngModel)]="hideTopBar" id="hideTopBar" type="checkbox"> Hide topbar
-<input [(ngModel)]="showAll" id="showAll" type="checkbox"> Show All
-<div [class.hidden]="hideTopBar" style="position: fixed;top: 5;background-color: white;">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<input [(ngModel)]="hideTopBar" id="hideTopBar" type="checkbox" /> Hide topbar
+<input [(ngModel)]="showAll" id="showAll" type="checkbox" /> Show All
+<div
+  [class.hidden]="hideTopBar"
+  style="position: fixed; top: 5; background-color: white"
+>
   <div>
     <label for="fname">Set:</label>
-    <input [(ngModel)]="setName" id="fname" type="text">
+    <input [(ngModel)]="setName" id="fname" type="text" />
     <label for="image">Image:</label>
-    <input [(ngModel)]="image" id="image" type="text">
+    <input [(ngModel)]="image" id="image" type="text" />
     <label for="rarity">Rarity:</label>
     <select [(ngModel)]="rarity" id="rarity">
-      <option *ngFor="let option of raritiesOptions" [value]="option">{{ option }}</option>
+      <option *ngFor="let option of raritiesOptions" [value]="option">
+        {{ option }}
+      </option>
     </select>
     <label for="categ">Category:</label>
     <select [(ngModel)]="category" id="category">
-      <option *ngFor="let option of categoriesOptions" [value]="option">{{ option }}</option>
+      <option *ngFor="let option of categoriesOptions" [value]="option">
+        {{ option }}
+      </option>
     </select>
     <label for="color">Color:</label>
-    <input [(ngModel)]="color" id="color" type="text">
+    <input [(ngModel)]="color" id="color" type="text" />
     <label for="color2">Color2:</label>
-    <input [(ngModel)]="color2" id="color2" type="text">
+    <input [(ngModel)]="color2" id="color2" type="text" />
     <label for="type1">Type1:</label>
     <select [(ngModel)]="type1" id="type1">
-      <option *ngFor="let option of typeOptions" [value]="option">{{ option }}</option>
+      <option *ngFor="let option of typeOptions" [value]="option">
+        {{ option }}
+      </option>
     </select>
     <label for="type2">Type2:</label>
     <select [(ngModel)]="type2" id="type2">
-      <option *ngFor="let option of typeOptions" [value]="option">{{ option }}</option>
+      <option *ngFor="let option of typeOptions" [value]="option">
+        {{ option }}
+      </option>
     </select>
     <label for="type3">Type3:</label>
     <select [(ngModel)]="type3" id="type3">
-      <option *ngFor="let option of typeOptions" [value]="option">{{ option }}</option>
+      <option *ngFor="let option of typeOptions" [value]="option">
+        {{ option }}
+      </option>
     </select>
     <label for="source">Source:</label>
     <select [(ngModel)]="source" id="source">
-      <option *ngFor="let option of sourceOptions" [value]="option">{{ option }}</option>
+      <option *ngFor="let option of sourceOptions" [value]="option">
+        {{ option }}
+      </option>
     </select>
     <label for="name">Name:</label>
     <select [(ngModel)]="name" id="name">
       <ng-container *ngIf="category === 'Event' || category === 'Stage'">
-        <option *ngFor="let option of eventsNames" [value]="option">{{ option }}</option>
+        <option *ngFor="let option of eventsNames" [value]="option">
+          {{ option }}
+        </option>
       </ng-container>
       <ng-container *ngIf="category !== 'Event' && category !== 'Stage'">
-        <option *ngFor="let option of characterNames" [value]="option">{{ option }}</option>
+        <option *ngFor="let option of characterNames" [value]="option">
+          {{ option }}
+        </option>
       </ng-container>
     </select>
     <label for="code">Code:</label>
-    <input [(ngModel)]="code" id="code" type="text">
+    <input [(ngModel)]="code" id="code" type="text" />
     <label for="playset">Playset:</label>
-    <input [(ngModel)]="playset" id="playset" type="number">
+    <input [(ngModel)]="playset" id="playset" type="number" />
     <button (click)="create()">SAVE</button>
     <button (click)="updateCard()">UPDATE</button>
     <button (click)="printList()">PRINT LIST</button>
-    {{haveCards}}/{{totalCards}} ({{completion | number}}%)
+    {{ haveCards }}/{{ totalCards }} ({{ completion | number }}%)
   </div>
 
   <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button dark-red" (click)="filterColor(COLORS.RED)">Red</button>
-    <button class="w3-bar-item w3-button dark-green" (click)="filterColor(COLORS.GREEN)">Green</button>
-    <button class="w3-bar-item w3-button dark-blue" (click)="filterColor(COLORS.BLUE)">Blue</button>
-    <button class="w3-bar-item w3-button dark-purple" (click)="filterColor(COLORS.PURPLE)">Purple</button>
-    <button class="w3-bar-item w3-button dark-black" (click)="filterColor(COLORS.BLACK)">Black</button>
-    <button class="w3-bar-item w3-button dark-yellow" (click)="filterColor(COLORS.YELLOW)">Yellow</button>
-    <button class="w3-bar-item w3-button" (click)="filterBySource()">Source</button>
-    <button class="w3-bar-item w3-button" (click)="removeFilters()">Remove Filters</button>
-    <button class="w3-bar-item w3-button" routerLink="market">Market Watch</button>
-    <button class="w3-bar-item w3-button" routerLink="tournaments">Tournament Report</button>
-  </div>
+    <!-- Color Buttons -->
+    @for (btn of colorButtons; track btn.label) {
+      <button
+        class="w3-bar-item w3-button {{ btn.class }}"
+        (click)="filterColor(btn.value)"
+      >
+        {{ btn.label }}
+      </button>
+    }
 
+    <!-- Other Actions -->
+    @for (btn of actionButtons; track btn.label) {
+      <button
+        class="w3-bar-item w3-button"
+        [routerLink]="btn.routerLink"
+        (click)="btn.action?.()"
+      >
+        {{ btn.label }}
+      </button>
+    }
+  </div>
 
   <div class="w3-bar w3-black">
-    <button *ngFor="let set of setsValue" class="w3-bar-item w3-button" (click)="selectSet(set)">{{set}}</button>
+    @for (set of setsValue; track set) {
+      <button class="w3-bar-item w3-button" (click)="selectSet(set)">
+        {{ set }}
+      </button>
+    }
   </div>
-</div>
 
-<div style="margin-top: 240px; margin-bottom: 3rem;">
-  <app-playsets *ngIf="playsetsSelected" [cards]="filteredCards"></app-playsets>
-  <router-outlet></router-outlet>
-</div>
+  <app-card-view-table
+    [cards]="filteredCards"
+    (cardSelected)="selectCard($event)"
+    (quantityChange)="updateView()"
+  ></app-card-view-table>
 
-
-<div #scrollContainer style="height: 80vh; overflow-y: auto; margin-top: 190px; margin-bottom: 3rem;">
-  <table class="w3-table w3-striped">
-    <tr>
-      <th>ID</th>
-      <th>Quant</th>
-      <th>Extra</th>
-      <th></th>
-      <th>Img</th>
-      <th>Name</th>
-      <th>Rarity</th>
-      <!-- <th>Category</th> -->
-      <th>Type1</th>
-      <th>Type2</th>
-      <th>Type3</th>
-      <th>Source</th>
-    </tr>
-    <tr *ngFor="let card of filteredCards">
-      <td [ngClass]="getColor(card, card.color)" (click)="copyToClipboard(card.code)">{{card.code}}</td>
-      <td [ngClass]="getColor(card, card.color)">{{card.quantity}}/{{card.playset}}</td>
-      <td [ngClass]="getColor(card, card.color)">{{card.extra}}</td>
-      <td [ngClass]="getColor(card, card.color)"><input style="width: 30px;" [(ngModel)]="card.increment" id="increment"
-          type="number"><button (click)="increment(card)">+</button><button (click)="decrement(card)">-</button></td>
-      <td *ngIf="selectedSet !== SETS.PLAYSETS" [ngClass]="getColor(card, card.color)"><img (click)="selectCard(card)"
-          src="assets/img/{{card.code}}.png"></td>
-      <td [ngClass]="getColor(card, card.color)" (click)="copyToClipboard(card.name)">{{card.name}}</td>
-      <td [ngClass]="getColor(card, card.color)">{{card.rarity}}</td>
-      <!-- <td [ngClass]="getColor(card, card.color2)">{{card.category}}</td> -->
-      <td [ngClass]="getColor(card, card.color2)">{{card.type1}}</td>
-      <td [ngClass]="getColor(card, card.color2)">{{card.type2}}</td>
-      <td [ngClass]="getColor(card, card.color2)">{{card.type3}}</td>
-      <td [ngClass]="getColor(card, card.color2)">{{card.source}}</td>
-    </tr>
-  </table>
-</div>
-
-
-
-<!-- Generic card back -->
-<!-- 
+  <!-- Generic card back -->
+  <!-- 
 https://m.media-amazon.com/images/I/51xnq29+enL._AC_UF894,1000_QL80_.jpg
--->
+--></div>

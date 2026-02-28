@@ -1,0 +1,64 @@
+<div
+  #scrollContainer
+  class="card-table"
+>
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>ID</th>
+      <th>Quant</th>
+      <th>Extra</th>
+      <th></th>
+      <th>Img</th>
+      <th>Name</th>
+      <th>Rarity</th>
+      <!-- <th>Category</th> -->
+      <th>Type1</th>
+      <th>Type2</th>
+      <th>Type3</th>
+      <th>Source</th>
+    </tr>
+    @for (card of cards(); track card.code) {
+      <tr>
+        <td
+          [ngClass]="getColor(card, card.color)"
+          (click)="copyToClipboard(card.code)"
+        >
+          {{ card.code }}
+        </td>
+        <td [ngClass]="getColor(card, card.color)">
+          {{ card.quantity }} / {{ card.playset }}
+        </td>
+        <td [ngClass]="getColor(card, card.color)">{{ card.extra }}</td>
+        <td [ngClass]="getColor(card, card.color)">
+          <input
+            style="width: 30px"
+            [(ngModel)]="card.increment"
+            id="increment"
+            type="number"
+          /><button (click)="increment(card)">+</button
+          ><button (click)="decrement(card)">-</button>
+        </td>
+        <!-- @if (selectedSet !== SETS.PLAYSETS) { -->
+          <td [ngClass]="getColor(card, card.color)">
+            <img
+              (click)="selectCard(card)"
+              [src]="'assets/img/' + card.code + '.png'"
+            />
+          </td>
+        <!-- } -->
+        <td
+          [ngClass]="getColor(card, card.color)"
+          (click)="copyToClipboard(card.name)"
+        >
+          {{ card.name }}
+        </td>
+        <td [ngClass]="getColor(card, card.color)">{{ card.rarity }}</td>
+        <!-- <td [ngClass]="getColor(card, card.color2)">{{card.category}}</td> -->
+        <td [ngClass]="getColor(card, card.color2)">{{ card.type1 }}</td>
+        <td [ngClass]="getColor(card, card.color2)">{{ card.type2 }}</td>
+        <td [ngClass]="getColor(card, card.color2)">{{ card.type3 }}</td>
+        <td [ngClass]="getColor(card, card.color2)">{{ card.source }}</td>
+      </tr>
+    }
+  </table>
+</div>

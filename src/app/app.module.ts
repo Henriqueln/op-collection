@@ -10,6 +10,7 @@ import { MarketWatchComponent } from './market-watch/market-watch.component';
 import { PlaysetsComponent } from './playsets/playsets.component';
 import { TournamentReportComponent } from './tournament-report/tournament-report.component';
 import { NgChartsModule } from 'ng2-charts';
+import { CardViewTableComponent } from "./card-view-table/card-view-table.component";
 
 @NgModule({ declarations: [
         AppComponent,
@@ -18,7 +19,7 @@ import { NgChartsModule } from 'ng2-charts';
         TournamentReportComponent
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        NgChartsModule], providers: [ApiService, provideHttpClient(withInterceptorsFromDi())] })
+    AppRoutingModule,
+    FormsModule,
+    NgChartsModule, CardViewTableComponent], providers: [ApiService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
