@@ -3,9 +3,10 @@ import { MARKET_WATCH } from 'src/enums/market';
 import { MARKET_WATCH_FIXED } from 'src/enums/market-fixed';
 
 @Component({
-  selector: 'app-market-watch',
-  templateUrl: './market-watch.component.html',
-  styleUrls: ['./market-watch.component.css']
+    selector: 'app-market-watch',
+    templateUrl: './market-watch.component.html',
+    styleUrls: ['./market-watch.component.css'],
+    standalone: false
 })
 export class MarketWatchComponent implements OnInit {
   showWishlist = false;

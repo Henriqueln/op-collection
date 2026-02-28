@@ -5,9 +5,10 @@ import { TournamentsData } from 'src/enums/tournament/tournaments';
 import { ChartConfiguration, ChartType } from 'chart.js';
 
 @Component({
-  selector: 'app-tournament-report',
-  templateUrl: './tournament-report.component.html',
-  styleUrls: ['./tournament-report.component.css']
+    selector: 'app-tournament-report',
+    templateUrl: './tournament-report.component.html',
+    styleUrls: ['./tournament-report.component.css'],
+    standalone: false
 })
 export class TournamentReportComponent implements OnInit {
 

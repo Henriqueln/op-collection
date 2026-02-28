@@ -4,9 +4,10 @@ import { SETS } from 'src/enums/sets';
 import html2canvas from 'html2canvas';
 
 @Component({
-  selector: 'app-playsets',
-  templateUrl: './playsets.component.html',
-  styleUrls: ['./playsets.component.css']
+    selector: 'app-playsets',
+    templateUrl: './playsets.component.html',
+    styleUrls: ['./playsets.component.css'],
+    standalone: false
 })
 
 export class PlaysetsComponent implements OnInit {
