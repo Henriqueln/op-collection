@@ -1,0 +1,67 @@
+<div>
+  <label for="fname">Set:</label>
+  <input [(ngModel)]="cardCreate.set" id="fname" type="text" />
+  <label for="image">Image:</label>
+  <input [(ngModel)]="cardCreate.image" id="image" type="text" />
+  <label for="block">Block:</label>
+  <input [(ngModel)]="cardCreate.block" id="block" type="number" />
+  <label for="rarity">Rarity:</label>
+  <select [(ngModel)]="cardCreate.rarity" id="rarity">
+    @for (option of raritiesOptions; track option) {
+      <option [value]="option">{{ option }}</option>
+    }
+  </select>
+  <label for="categ">Category:</label>
+  <select [(ngModel)]="cardCreate.category" id="category">
+    @for (option of categoriesOptions; track option) {
+      <option [value]="option">{{ option }}</option>
+    }
+  </select>
+  <label for="color">Color:</label>
+  <input [(ngModel)]="cardCreate.color" id="color" type="text" />
+  <label for="color2">Color2:</label>
+  <input [(ngModel)]="cardCreate.color2" id="color2" type="text" />
+  <label for="type1">Type1:</label>
+  <select [(ngModel)]="cardCreate.type1" id="type1">
+    @for (option of typeOptions; track option) {
+      <option [value]="option">{{ option }}</option>
+    }
+  </select>
+  <label for="type2">Type2:</label>
+  <select [(ngModel)]="cardCreate.type2" id="type2">
+    @for (option of typeOptions; track option) {
+      <option [value]="option">{{ option }}</option>
+    }
+  </select>
+  <label for="type3">Type3:</label>
+  <select [(ngModel)]="cardCreate.type3" id="type3">
+    @for (option of typeOptions; track option) {
+      <option [value]="option">{{ option }}</option>
+    }
+  </select>
+  <label for="source">Source:</label>
+  <select [(ngModel)]="cardCreate.source" id="source">
+    @for (option of sourceOptions; track option) {
+      <option [value]="option">{{ option }}</option>
+    }
+  </select>
+  <label for="name">Name:</label>
+  <select [(ngModel)]="cardCreate.name" id="name">
+    @if (cardCreate.category === "Event" || cardCreate.category === "Stage") {
+      @for (option of eventsNames; track option) {
+        <option [value]="option">{{ option }}</option>
+      }
+    } @else {
+      @for (option of characterNames; track option) {
+        <option [value]="option">{{ option }}</option>
+      }
+    }
+  </select>
+  <label for="code">Code:</label>
+  <input [(ngModel)]="cardCreate.code" id="code" type="text" />
+  <label for="playset">Playset:</label>
+  <input [(ngModel)]="cardCreate.playset" id="playset" type="number" />
+  <button (click)="createCard()">SAVE</button>
+  <button (click)="updateCard()">UPDATE</button>
+  <!-- <button (click)="printList()">PRINT LIST</button> -->
+</div>

@@ -79,7 +79,5 @@ th {
 }
 
 .card-table {
-  height: 80vh;
-  overflow-y: auto;
   margin-bottom: 3rem;
 }

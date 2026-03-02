@@ -1,6 +1,6 @@
 export interface Card {
-    _id: string;
-    _rev: string;
+    _id?: string;
+    _rev?: string;
     category: string;
     code: string;
     color: string;
@@ -18,4 +18,5 @@ export interface Card {
     playset: number;
     color2: string;
     increment: number;
+    block?: number;
 }

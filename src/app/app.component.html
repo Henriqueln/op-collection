@@ -1,77 +1,16 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<input [(ngModel)]="hideTopBar" id="hideTopBar" type="checkbox" /> Hide topbar
-<input [(ngModel)]="showAll" id="showAll" type="checkbox" /> Show All
-<div
-  [class.hidden]="hideTopBar"
-  style="position: fixed; top: 5; background-color: white"
->
-  <div>
-    <label for="fname">Set:</label>
-    <input [(ngModel)]="setName" id="fname" type="text" />
-    <label for="image">Image:</label>
-    <input [(ngModel)]="image" id="image" type="text" />
-    <label for="rarity">Rarity:</label>
-    <select [(ngModel)]="rarity" id="rarity">
-      <option *ngFor="let option of raritiesOptions" [value]="option">
-        {{ option }}
-      </option>
-    </select>
-    <label for="categ">Category:</label>
-    <select [(ngModel)]="category" id="category">
-      <option *ngFor="let option of categoriesOptions" [value]="option">
-        {{ option }}
-      </option>
-    </select>
-    <label for="color">Color:</label>
-    <input [(ngModel)]="color" id="color" type="text" />
-    <label for="color2">Color2:</label>
-    <input [(ngModel)]="color2" id="color2" type="text" />
-    <label for="type1">Type1:</label>
-    <select [(ngModel)]="type1" id="type1">
-      <option *ngFor="let option of typeOptions" [value]="option">
-        {{ option }}
-      </option>
-    </select>
-    <label for="type2">Type2:</label>
-    <select [(ngModel)]="type2" id="type2">
-      <option *ngFor="let option of typeOptions" [value]="option">
-        {{ option }}
-      </option>
-    </select>
-    <label for="type3">Type3:</label>
-    <select [(ngModel)]="type3" id="type3">
-      <option *ngFor="let option of typeOptions" [value]="option">
-        {{ option }}
-      </option>
-    </select>
-    <label for="source">Source:</label>
-    <select [(ngModel)]="source" id="source">
-      <option *ngFor="let option of sourceOptions" [value]="option">
-        {{ option }}
-      </option>
-    </select>
-    <label for="name">Name:</label>
-    <select [(ngModel)]="name" id="name">
-      <ng-container *ngIf="category === 'Event' || category === 'Stage'">
-        <option *ngFor="let option of eventsNames" [value]="option">
-          {{ option }}
-        </option>
-      </ng-container>
-      <ng-container *ngIf="category !== 'Event' && category !== 'Stage'">
-        <option *ngFor="let option of characterNames" [value]="option">
-          {{ option }}
-        </option>
-      </ng-container>
-    </select>
-    <label for="code">Code:</label>
-    <input [(ngModel)]="code" id="code" type="text" />
-    <label for="playset">Playset:</label>
-    <input [(ngModel)]="playset" id="playset" type="number" />
-    <button (click)="create()">SAVE</button>
-    <button (click)="updateCard()">UPDATE</button>
-    <button (click)="printList()">PRINT LIST</button>
+<div class="header-options">
+  <input [(ngModel)]="showAll" id="showAll" type="checkbox" /> Show All
+  <button (click)="cardCreation = !cardCreation">Toggle Card Creation</button>
+</div>
+<div style="position: sticky; top: 5; background-color: white">
+  @if (cardCreation) {
+    <app-create-card
+      (cardsChanged)="updateView()"
+      [card]="selectedCard"
+    ></app-create-card>
     {{ haveCards }}/{{ totalCards }} ({{ completion | number }}%)
-  </div>
+  }
 
   <div class="w3-bar w3-black">
     <!-- Color Buttons -->
@@ -103,14 +42,17 @@
       </button>
     }
   </div>
-
+</div>
+<div style="max-height: 500px; overflow-y: auto">
+  <router-outlet></router-outlet>
   <app-card-view-table
     [cards]="filteredCards"
     (cardSelected)="selectCard($event)"
     (quantityChange)="updateView()"
   ></app-card-view-table>
+</div>
 
-  <!-- Generic card back -->
-  <!-- 
+<!-- Generic card back -->
+<!-- 
 https://m.media-amazon.com/images/I/51xnq29+enL._AC_UF894,1000_QL80_.jpg
---></div>
+-->

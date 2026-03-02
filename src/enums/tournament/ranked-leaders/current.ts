@@ -361,6 +361,7 @@ export const CURRENT_RANKED = [
             { leader: LeaderEnum.YELLOW_LUFFY, wins: 1, loses: 0 },
             { leader: LeaderEnum.YELLOW_KALGARA, wins: 1, loses: 0 },
             { leader: LeaderEnum.PY_ROBIN, wins: 1, loses: 0 },
+            { leader: LeaderEnum.GY_LAW, wins: 0, loses: 1 },
         ],
         format: FormatEnum.EB03
     },

@@ -40,6 +40,10 @@ export class AppComponent {
     { label: 'Market Watch', routerLink: 'market' },
     { label: 'Tournament Report', routerLink: 'tournaments' },
   ];
+  selectedCard: Card | undefined;
+  cardCreation = false;
+
+  //OLD CODE, TO REFACTOR
   showEdit = false;
 
   setsValue = Object.keys(SETS) as SETS[];
@@ -60,9 +64,9 @@ export class AppComponent {
   name = '';
   code = '';
   playset = 0;
-  id = '';
+  id: string | undefined = '';
   quantity = 0;
-  rev = '';
+  rev: string | undefined = '';
   totalCards = 0;
   haveCards = 0;
   completion = 0;
@@ -256,6 +260,8 @@ export class AppComponent {
     this.id = card._id;
     this.quantity = card.quantity;
     this.rev = card._rev;
+
+    this.selectedCard = card;
   }
 
   updateCard() {

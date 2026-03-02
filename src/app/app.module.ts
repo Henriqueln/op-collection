@@ -11,6 +11,7 @@ import { PlaysetsComponent } from './playsets/playsets.component';
 import { TournamentReportComponent } from './tournament-report/tournament-report.component';
 import { NgChartsModule } from 'ng2-charts';
 import { CardViewTableComponent } from "./card-view-table/card-view-table.component";
+import { CreateCardComponent } from "./create-card/create-card.component";
 
 @NgModule({ declarations: [
         AppComponent,
@@ -21,5 +22,5 @@ import { CardViewTableComponent } from "./card-view-table/card-view-table.compon
     bootstrap: [AppComponent], imports: [BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgChartsModule, CardViewTableComponent], providers: [ApiService, provideHttpClient(withInterceptorsFromDi())] })
+    NgChartsModule, CardViewTableComponent, CreateCardComponent], providers: [ApiService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
