@@ -34,7 +34,7 @@
       <td [ngClass]="leader?.color1?.toLowerCase() ?? ''">
         <img
           (click)="selectLeader(leader.code)"
-          src="assets/img/{{ leader.code }}.png"
+          src="assets/img/{{ leader.code }}_p1.png"
         />
       </td>
       <td [ngClass]="leader.color2.toLowerCase()">{{ leader.name }}</td>
@@ -61,7 +61,7 @@
         <td [ngClass]="tData.leader!.color1.toLowerCase()">
           <img
             (click)="selectLeader(tData.leader!.code)"
-            src="assets/img/{{ tData.leader!.code }}.png"
+            src="assets/img/{{ tData.leader!.code }}_p1.png"
           />
         </td>
         <td [ngClass]="tData.leader!.color1.toLowerCase()">
@@ -98,7 +98,7 @@
         <tr *ngFor="let leader of leaders">
             <td [ngClass]="leader.color1.toLowerCase()"></td>
             <td [ngClass]="leader.color1.toLowerCase()">
-                <img src="assets/img/{{leader.code}}.png">
+                <img src="assets/img/{{leader.code}}_p1.png">
             </td>
             <td [ngClass]="leader.color2.toLowerCase()">{{leader.name}}</td>
             <td [ngClass]="leader.color2.toLowerCase()">{{leader.timesUsed}}</td>
@@ -115,7 +115,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesUsed }}</p>
     </div>
@@ -126,7 +126,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesWon }}</p>
     </div>
@@ -137,7 +137,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesUsed }}</p>
     </div>
@@ -148,7 +148,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesWon }}</p>
     </div>
@@ -159,7 +159,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesUsed }}</p>
     </div>
@@ -170,7 +170,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesWon }}</p>
     </div>
@@ -181,7 +181,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.winRatio }}%</p>
     </div>
@@ -192,7 +192,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesUsed }}</p>
     </div>
@@ -203,7 +203,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesWon }}</p>
     </div>
@@ -214,7 +214,7 @@
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
-        src="assets/img/{{ used.code }}.png"
+        src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.winRatio }}%</p>
     </div>
@@ -222,21 +222,21 @@
   <h4 style="font-weight: bold">Most Wins Against</h4>
   <div style="display: flex; gap: 2rem">
     <div *ngFor="let used of leaderStats.individualWins">
-      <img style="height: 150px" src="assets/img/{{ used.code }}.png" />
+      <img style="height: 150px" src="assets/img/{{ used.code }}_p1.png" />
       <p style="text-align: center">{{ used.timesWon }}</p>
     </div>
   </div>
   <h4 style="font-weight: bold">Worst win ratio</h4>
   <div style="display: flex; gap: 2rem">
     <div *ngFor="let used of leaderStats.individualLoseRatio">
-      <img style="height: 150px" src="assets/img/{{ used.code }}.png" />
+      <img style="height: 150px" src="assets/img/{{ used.code }}_p1.png" />
       <p style="text-align: center">{{ used.winRatio }}%</p>
     </div>
   </div>
   <h4 style="font-weight: bold">Best win ratio</h4>
   <div style="display: flex; gap: 2rem">
     <div *ngFor="let used of leaderStats.individualWinRatio">
-      <img style="height: 150px" src="assets/img/{{ used.code }}.png" />
+      <img style="height: 150px" src="assets/img/{{ used.code }}_p1.png" />
       <p style="text-align: center">{{ used.winRatio }}%</p>
     </div>
   </div>
@@ -256,13 +256,13 @@
   <div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap">
     <img
       style="width: 150px; height: auto; margin-bottom: 1rem"
-      src="assets/img/{{ selectedLeader?.code }}.png"
+      src="assets/img/{{ selectedLeader?.code }}_p1.png"
     />
     <div *ngFor="let leader of leaderCurrentSetFiltered.opponents">
       <ng-container *ngIf="getRowContext(leader) as tData">
         <img
           style="width: 120px; height: auto; margin-bottom: 1rem"
-          src="assets/img/{{ leader.leader }}.png"
+          src="assets/img/{{ leader.leader }}_p1.png"
         />
         <div
           [style.color]="
@@ -300,13 +300,13 @@
   <div style="display: flex; gap: 1rem; padding: 1rem; flex-wrap: wrap">
     <img
       style="width: 150px; height: auto; margin-bottom: 1rem"
-      src="assets/img/{{ selectedLeader?.code }}.png"
+      src="assets/img/{{ selectedLeader?.code }}_p1.png"
     />
     <div *ngFor="let leader of leaderFilteredAllTime">
       <ng-container *ngIf="getRowContext(leader) as tData">
         <img
           style="width: 120px; height: auto; margin-bottom: 1rem"
-          src="assets/img/{{ leader.leader }}.png"
+          src="assets/img/{{ leader.leader }}_p1.png"
         />
         <div
           [style.color]="
