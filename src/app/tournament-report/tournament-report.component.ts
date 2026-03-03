@@ -313,10 +313,12 @@ export class TournamentReportComponent implements OnInit {
     );
     if (!leader) {
       leader = this.createEmptyLeaderData();
-      this.apiService.addNewGame(leader).subscribe(() => {})
+      this.apiService.addNewGame(leader).subscribe(() => {});
     } else {
       let opponents = leader.opponents;
-      let opponent = opponents.find((o: any) => o.leader === this.leaderOpponent);
+      let opponent = opponents.find(
+        (o: any) => o.leader === this.leaderOpponent,
+      );
       if (!opponent) {
         opponents.push({
           leader: this.leaderOpponent as any,
@@ -327,9 +329,12 @@ export class TournamentReportComponent implements OnInit {
         if (this.wonGame) opponent.wins++;
         else opponent.loses++;
       }
-      this.apiService.addGame(leader).subscribe(() => {})
+      this.apiService.addGame(leader).subscribe(() => {
+        this.apiService.getGames().subscribe((data) => {
+          this.ranked = data;
+        });
+      });
     }
-    
   }
 
   createEmptyLeaderData(): any {
