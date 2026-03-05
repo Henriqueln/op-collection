@@ -19,6 +19,12 @@
     Add Game
   </button>
 </div>
+FORMAT
+<select (change)="refreshData()" [(ngModel)]="currentSet" id="type3">
+  @for (option of formats; track option) {
+    <option [value]="option">{{ option }}</option>
+  }
+</select>
 
 <!-- Tab 1 -->
 <div *ngIf="activeTab === 'tab1'" #scrollContainer1 style="margin-bottom: 3rem">
@@ -334,13 +340,17 @@
   LEADER
   <select [(ngModel)]="leaderUsed" id="type3">
     @for (option of leaders; track option) {
-      <option [value]="option.code">{{ option.code }} - {{ option.name }}</option>
+      <option [value]="option.code">
+        {{ option.code }} - {{ option.name }}
+      </option>
     }
   </select>
   OPPONENT
   <select [(ngModel)]="leaderOpponent" id="type3">
     @for (option of leaders; track option) {
-      <option [value]="option.code">{{ option.code }} - {{ option.name }}</option>
+      <option [value]="option.code">
+        {{ option.code }} - {{ option.name }}
+      </option>
     }
   </select>
   FORMAT

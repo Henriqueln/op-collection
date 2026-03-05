@@ -1,20 +1,8 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { SETS } from 'src/enums/sets';
 import { ApiService } from './api.service';
 import { Card } from './entities/card';
-import {
-  CATEGORIES,
-  categoriesOptions,
-  raritiesOptions,
-} from 'src/enums/categories';
 import { COLOR } from 'src/enums/color';
-import { typesOptions } from 'src/enums/types';
-import { sourcesOptions } from 'src/enums/sources';
-import { nameOptions } from 'src/enums/name';
-import { eventsNames } from 'src/enums/events';
-import { characterNames } from 'src/enums/characters';
-import { Clipboard } from '@angular/cdk/clipboard';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -42,51 +30,25 @@ export class AppComponent {
   ];
   selectedCard: Card | undefined;
   cardCreation = false;
+  setsValue = Object.keys(SETS) as SETS[];
+  selectedSet = SETS.OP01;
 
   //OLD CODE, TO REFACTOR
-  showEdit = false;
 
-  setsValue = Object.keys(SETS) as SETS[];
-  title = 'opCollection';
   allCards: Card[] = [];
   filteredCards: Card[] = [];
-  selectedSet = SETS.OP01;
-  setName = '';
-  image = '';
-  rarity = '';
-  category = '';
-  color = '';
-  color2 = '';
-  type1 = '';
-  type2 = '';
-  type3 = '';
+
   source = '';
-  name = '';
-  code = '';
-  playset = 0;
-  id: string | undefined = '';
-  quantity = 0;
-  rev: string | undefined = '';
   totalCards = 0;
   haveCards = 0;
   completion = 0;
   colorFilter = '';
   sourceFilter = '';
   playsetsSelected = false;
-  cardType = CATEGORIES.LEADER;
-  typeOptions = typesOptions;
-  sourceOptions = sourcesOptions;
-  categoriesOptions = categoriesOptions;
-  raritiesOptions = raritiesOptions;
-  nameOptions = nameOptions;
-  eventsNames = eventsNames.sort((a, b) => a.localeCompare(b));
-  characterNames = characterNames.sort((a, b) => a.localeCompare(b));
-  hideTopBar = false;
   showAll = false;
 
   constructor(
     private apiService: ApiService,
-    private clipboard: Clipboard,
   ) {}
 
   ngOnInit() {
@@ -172,122 +134,8 @@ export class AppComponent {
     this.completion = (this.haveCards * 100) / this.totalCards;
   }
 
-  increment(card: Card) {
-    card.quantity = card.quantity + card.increment;
-    this.apiService.updateCard(card).subscribe((result) => {
-      this.updateView();
-    });
-  }
-
-  decrement(card: Card) {
-    card.quantity = card.quantity - card.increment;
-    this.apiService.updateCard(card).subscribe((result) => {
-      this.updateView();
-    });
-  }
-
-  getColor(card: Card, color: string): string {
-    if (!color) color = card.color;
-    if (color === COLOR.RED) {
-      if (card.quantity >= card.playset) return 'dark-red';
-      else return 'red';
-    }
-    if (color === COLOR.GREEN) {
-      if (card.quantity >= card.playset) return 'dark-green';
-      else return 'green';
-    }
-    if (color === COLOR.BLUE) {
-      if (card.quantity >= card.playset) return 'dark-blue';
-      else return 'blue';
-    }
-    if (color === COLOR.PURPLE) {
-      if (card.quantity >= card.playset) return 'dark-purple';
-      else return 'purple';
-    }
-    if (color === COLOR.BLACK) {
-      if (card.quantity >= card.playset) return 'dark-black';
-      else return 'black';
-    }
-    if (color === COLOR.YELLOW) {
-      if (card.quantity >= card.playset) return 'dark-yellow';
-      else return 'yellow';
-    }
-    return '';
-  }
-
-  create() {
-    let request = {
-      set: this.setName,
-      quantity: 0,
-      image: this.image,
-      rarity: this.rarity,
-      category: this.category,
-      color: this.color,
-      code: this.code,
-      color2: this.color2,
-      extra: 0,
-      leo: false,
-      name: this.name,
-      playset: this.playset,
-      source: this.source,
-      type1: this.type1,
-      type2: this.type2,
-      type3: this.type3,
-    } as Card;
-    this.apiService.createCard(request).subscribe((response) => {
-      this.updateView();
-    });
-  }
-
-  copyToClipboard(text: string) {
-    this.clipboard.copy(text);
-  }
-
   selectCard(card: Card) {
-    this.setName = card.set;
-    this.image = card.image;
-    this.rarity = card.rarity;
-    this.category = card.category;
-    this.color = card.color;
-    this.color2 = card.color2;
-    this.type1 = card.type1;
-    this.type2 = card.type2;
-    this.type3 = card.type3;
-    this.source = card.source;
-    this.name = card.name;
-    this.code = card.code;
-    this.playset = card.playset;
-    this.id = card._id;
-    this.quantity = card.quantity;
-    this.rev = card._rev;
-
     this.selectedCard = card;
-  }
-
-  updateCard() {
-    let request = {
-      _id: this.id,
-      _rev: this.rev,
-      set: this.setName,
-      image: this.image,
-      rarity: this.rarity,
-      category: this.category,
-      color: this.color,
-      code: this.code,
-      color2: this.color2,
-      extra: 0,
-      leo: false,
-      name: this.name,
-      playset: this.playset,
-      source: this.source,
-      type1: this.type1,
-      type2: this.type2,
-      type3: this.type3,
-      quantity: this.quantity,
-    } as Card;
-    this.apiService.updateCard(request).subscribe((result) => {
-      this.updateView();
-    });
   }
 
   printList() {

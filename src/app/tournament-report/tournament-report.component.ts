@@ -39,7 +39,7 @@ export class TournamentReportComponent implements OnInit {
 
   leaderUsed = '';
   leaderOpponent = '';
-  format = 'EB03';
+  format = FormatEnum.EB03;
   wonGame = false;
 
   chartData!: ChartConfiguration<'pie'>['data'];
@@ -50,7 +50,12 @@ export class TournamentReportComponent implements OnInit {
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
+  refreshData(){
+    this.getData();
+    this.switchTab(this.activeTab); 
+  }
+
+  getData(){
     this.apiService.getGames().subscribe((data) => {
       this.ranked = data;
     });
@@ -82,6 +87,10 @@ export class TournamentReportComponent implements OnInit {
     this.leadersCurrentSet = this.leadersCurrentSet.sort(
       (a: any, b: any) => b.points - a.points,
     );
+  }
+
+  ngOnInit(): void {
+    this.getData();
   }
 
   selectLeader(leaderCode: string) {
