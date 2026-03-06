@@ -19,4 +19,7 @@ export interface Card {
     color2: string;
     increment: number;
     block?: number;
+    priceHistory?: number[];
+    currentPrice?: number;
+    previousPrice?: number;
 }

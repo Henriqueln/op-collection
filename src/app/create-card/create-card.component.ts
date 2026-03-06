@@ -26,16 +26,21 @@ export class CreateCardComponent {
 
   card = input<Card | undefined>();
   cardCreate: Card = this.getEmptyCard();
+  price: number = 0;
   private apiService = inject(ApiService);
   public cardsChanged = output<void>();
 
   constructor() {
-    console.log(this.categoriesOptions)
+    console.log(this.categoriesOptions);
     effect(() => {
       const value = this.card();
 
       if (value) {
+        if(!value.priceHistory || value.priceHistory.length === 0) {
+          value.priceHistory = [0];
+        }
         this.cardCreate = { ...value };
+        this.price = value.priceHistory?.reverse()?.[0] ?? 0;
       } else {
         this.cardCreate = this.getEmptyCard();
       }
@@ -62,18 +67,31 @@ export class CreateCardComponent {
       name: '',
       color2: '',
       block: 4,
+      priceHistory: [0],
     };
   }
 
   createCard(): void {
     this.cardCreate._id = undefined;
     this.cardCreate._rev = undefined;
+    if (
+      this.price > 0 &&
+      this.price !== this.cardCreate.priceHistory?.reverse()?.[0]
+    ) {
+      this.cardCreate.priceHistory?.push(this.price);
+    }
     this.apiService.createCard(this.cardCreate).subscribe(() => {
       this.cardsChanged.emit();
     });
   }
 
   updateCard(): void {
+    if (
+      this.price > 0 &&
+      this.price !== this.cardCreate.priceHistory?.reverse()?.[0]
+    ) {
+      this.cardCreate.priceHistory?.push(this.price);
+    }
     this.apiService.updateCard(this.cardCreate).subscribe(() => {
       this.cardsChanged.emit();
     });

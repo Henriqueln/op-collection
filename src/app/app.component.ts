@@ -25,6 +25,7 @@ export class AppComponent {
   readonly actionButtons = [
     { label: 'Source', action: () => this.filterBySource() },
     { label: 'Remove Filters', action: () => this.removeFilters() },
+    { label: 'Not Owned', action: () => this.showNotOwned() },
     { label: 'Market Watch', routerLink: 'market' },
     { label: 'Tournament Report', routerLink: 'tournaments' },
   ];
@@ -46,10 +47,9 @@ export class AppComponent {
   sourceFilter = '';
   playsetsSelected = false;
   showAll = false;
+  notOwned = false;
 
-  constructor(
-    private apiService: ApiService,
-  ) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.updateView();
@@ -69,6 +69,7 @@ export class AppComponent {
           card.leo = false;
           card.increment = 1;
           card.extra = card.quantity - card.playset;
+          if (card.priceHistory?.length === 0) card.priceHistory = [0];
           if (card.extra < 0) card.extra = 0;
           return card;
         })
@@ -108,8 +109,16 @@ export class AppComponent {
           (c) => c.source === this.sourceFilter,
         );
       }
+      if (this.notOwned) {
+        this.filteredCards = this.filteredCards.filter((c) => c.quantity === 0);
+      }
       this.updateStatistics();
     });
+  }
+
+  showNotOwned() {
+    this.notOwned = true;
+    this.updateView();
   }
 
   filterColor(color: string) {
@@ -125,6 +134,7 @@ export class AppComponent {
   removeFilters() {
     this.colorFilter = '';
     this.sourceFilter = '';
+    this.notOwned = false;
     this.updateView();
   }
 
