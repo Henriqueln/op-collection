@@ -42,6 +42,15 @@ export class ApiService {
     );
   }
 
+  getWishlist(): Observable<any> {
+    let request = { selector: {}, limit: 999999 };
+    return this.http.post<any>(`${this.url}/current-wishlist/_find`, request, { headers: this.headers }).pipe(
+      map((response) => {
+        return response.docs;
+      }),
+    );
+  }
+
   updateCard(request: Card) {
     return this.http.put<any>(`${this.url}/cards/${request._id}`, request, { headers: this.headers });
   }

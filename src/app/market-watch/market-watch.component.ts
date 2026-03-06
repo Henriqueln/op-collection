@@ -35,11 +35,19 @@ export class MarketWatchComponent implements OnInit {
   });
 
   allCards: Card[] = [];
+  wishlistCards: any[] = [];
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.getCards();
+    this.getWishlist();
+  }
+
+  getWishlist() {
+    this.apiService.getWishlist().subscribe((result) => {
+      this.wishlistCards = result;
+    });
   }
 
   getCards() {
@@ -53,7 +61,8 @@ export class MarketWatchComponent implements OnInit {
           if (card.priceHistory?.length === 0) card.priceHistory = [0];
           if (card.extra < 0) card.extra = 0;
           card.currentPrice = card.priceHistory?.reverse()?.[0] ?? 0;
-          card.previousPrice = card.priceHistory?.reverse()?.[1] ?? card.currentPrice;
+          card.previousPrice =
+            card.priceHistory?.reverse()?.[1] ?? card.currentPrice;
           return card;
         })
         .sort((a, b) => {
@@ -61,7 +70,19 @@ export class MarketWatchComponent implements OnInit {
           if (a.code > b.code) return 1;
           return 0;
         });
-      this.allCards = this.allCards.filter((c) => c.quantity === 0);
+      this.allCards = this.allCards
+        .filter(
+          (c) =>
+            c.quantity === 0 &&
+            c.priceHistory &&
+            c.priceHistory?.length > 0 &&
+            c.priceHistory.reverse()[0] > 0,
+        )
+        .sort((a, b) => {
+          if ((a.currentPrice ?? 0) > (b.currentPrice ?? 0)) return 1;
+          if ((a.currentPrice ?? 0) < (b.currentPrice ?? 0)) return -1;
+          return 0;
+        });
     });
   }
 }
