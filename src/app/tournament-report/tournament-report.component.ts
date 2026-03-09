@@ -23,6 +23,7 @@ export class TournamentReportComponent implements OnInit {
   leaderCurrentSetFiltered: any;
   leaderFilteredAllTime: any;
   leaders = leaders;
+  leadersDropdown = [...leaders.sort((a, b) => a.name.localeCompare(b.name))];
   tournaments = TournamentsData;
   activeTab: string = 'tab1'; // default active tab
   stores = Stores;
@@ -50,12 +51,13 @@ export class TournamentReportComponent implements OnInit {
 
   constructor(private apiService: ApiService) {}
 
-  refreshData(){
+  refreshData() {
     this.getData();
-    this.switchTab(this.activeTab); 
+    this.switchTab(this.activeTab);
   }
 
-  getData(){
+  getData() {
+    console.log(this.leadersDropdown);
     this.apiService.getGames().subscribe((data) => {
       this.ranked = data;
     });
@@ -352,5 +354,17 @@ export class TournamentReportComponent implements OnInit {
       leader: this.leaderUsed,
       opponents: [],
     };
+  }
+
+  selected: any;
+  isOpen = false;
+
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
+
+  select(option: any) {
+    this.leaderOpponent = option;
+    this.isOpen = false;
   }
 }

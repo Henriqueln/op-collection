@@ -101,3 +101,45 @@ th {
   background-color: #fff;
   border-bottom: 2px solid #fff; /* visually connect to table */
 }
+
+.dropdown {
+  position: relative;
+  font-family: Arial;
+  width: 200px;
+}
+
+.dropdown-selected {
+  border: 1px solid #ccc;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+}
+
+.dropdown-list {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: white;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f3f3f3;
+}
+
+.icon {
+  height: 50px;
+}

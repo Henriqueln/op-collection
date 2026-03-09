@@ -336,7 +336,7 @@ FORMAT
   </div>
 </div>
 
-<div *ngIf="activeTab === 'tab6'" #scrollContainer2 style="margin-bottom: 3rem">
+<div *ngIf="activeTab === 'tab6'" #scrollContainer2 style="margin-bottom: 3rem; display: flex" >
   LEADER
   <select [(ngModel)]="leaderUsed" id="type3">
     @for (option of leaders; track option) {
@@ -346,17 +346,36 @@ FORMAT
     }
   </select>
   OPPONENT
-  <select [(ngModel)]="leaderOpponent" id="type3">
-    @for (option of leaders; track option) {
-      <option [value]="option.code">
-        {{ option.code }} - {{ option.name }}
-      </option>
-    }
-  </select>
+    <div class="dropdown">
+      <div class="dropdown-selected" (click)="toggleDropdown()">
+        <img
+          *ngIf="selected"
+          [src]="'assets/img/' + selected.code + '_p1.png'"
+          class="icon"
+        />
+        <span *ngIf="selected">{{ selected.name }}</span>
+        <span *ngIf="!selected">Select option</span>
+      </div>
+
+      <div class="dropdown-list" *ngIf="isOpen">
+        <div
+          class="dropdown-item"
+          *ngFor="let option of leadersDropdown"
+          (click)="select(option.code)"
+        >
+          <img [src]="'assets/img/' + option.code + '_p1.png'" class="icon" />
+          {{ option.name }}
+        </div>
+      </div>
+    </div>
+  <!-- </select> -->
+
   FORMAT
   <select [(ngModel)]="format" id="type3">
     @for (option of formats; track option) {
-      <option [value]="option">{{ option }}</option>
+      <option [value]="option">
+        {{ option }}
+      </option>
     }
   </select>
   <input type="checkbox" [(ngModel)]="wonGame" id="wonGame" /> WON GAME
