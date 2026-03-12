@@ -353,6 +353,7 @@ export enum FormatEnum {
   OP13 = 'OP13',
   OP14 = 'OP14',
   EB03 = 'EB03',
+  OP15 = 'OP15',
 }
 
 export enum StoresEnum {
