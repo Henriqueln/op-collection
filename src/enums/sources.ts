@@ -98,6 +98,7 @@ export const sourcesOptions = [
   'Premium Card Collection - Best Selection Vol. 3',
   'Premium Card Collection - Best Selection Vol. 4',
   'Premium Card Collection - Best Selection Vol. 5',
+  'Premium Card Collection -Best Selection Vol.6',
   'Premium Card Collection - Film Red',
   'Premium Card Collection - Girls Collection',
   'Premium Card Collection - Uta',
