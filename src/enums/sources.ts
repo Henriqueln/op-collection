@@ -136,6 +136,7 @@ export const sourcesOptions = [
   'SP - OP12',
   'SP - OP13',
   'SP - OP14',
+  'SP - OP15',
   'SP - EB04',
   'SP - PRB02',
   'Special Foil - PRB01',
@@ -185,6 +186,9 @@ export const sourcesOptions = [
   'Treasure Rare - OP14 (CH)',
   'Treasure Rare - OP14 (EN)',
   'Treasure Rare - OP14 (FR)',
+  'Treasure Rare - OP15 (CH)',
+  'Treasure Rare - OP15 (EN)',
+  'Treasure Rare - OP15 (FR)',
   'Welcome Pack Vol. 1',
   'Welcome Pack Vol. 2',
 ];

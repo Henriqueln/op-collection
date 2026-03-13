@@ -140,5 +140,13 @@ export const typesOptions = [
   'World Government',
   'World Pirates',
   '?',
-  'Neptunian'
+  'Neptunian',
+  'CP8',
+  'Rumbar Pirates',
+  'The Moon',
+  'Space Pirates',
+  'Hot Springs Island',
+  'Rolling Pirates',
+  'The Victims\' Club',
+  'The Owner of Cindry\'s Shadow',
 ];
