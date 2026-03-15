@@ -25,6 +25,12 @@ FORMAT
     <option [value]="option">{{ option }}</option>
   }
 </select>
+<!-- LEADER LATER ADD OPTION TO SELECT LEADER HERE. AFTER STATS REFACTOR
+<select (change)="refreshData()" [(ngModel)]="selectedLeader" id="type3">
+  @for (option of leaders; track option) {
+    <option [value]="option.code">{{ option.code }} - {{ option.name }}</option>
+  }
+</select> -->
 
 <!-- Tab 1 -->
 <div *ngIf="activeTab === 'tab1'" #scrollContainer1 style="margin-bottom: 3rem">
@@ -336,7 +342,11 @@ FORMAT
   </div>
 </div>
 
-<div *ngIf="activeTab === 'tab6'" #scrollContainer2 style="margin-bottom: 3rem; display: flex" >
+<div
+  *ngIf="activeTab === 'tab6'"
+  #scrollContainer2
+  style="margin-bottom: 3rem; display: flex"
+>
   LEADER
   <select [(ngModel)]="leaderUsed" id="type3">
     @for (option of leaders; track option) {
@@ -346,28 +356,28 @@ FORMAT
     }
   </select>
   OPPONENT
-    <div class="dropdown">
-      <div class="dropdown-selected" (click)="toggleDropdown()">
-        <img
-          *ngIf="selected"
-          [src]="'assets/img/' + selected.code + '_p1.png'"
-          class="icon"
-        />
-        <span *ngIf="selected">{{ selected.name }}</span>
-        <span *ngIf="!selected">Select option</span>
-      </div>
+  <div class="dropdown">
+    <div class="dropdown-selected" (click)="toggleDropdown()">
+      <img
+        *ngIf="selected"
+        [src]="'assets/img/' + selected.code + '_p1.png'"
+        class="icon"
+      />
+      <span *ngIf="selected">{{ selected.name }}</span>
+      <span *ngIf="!selected">Select option</span>
+    </div>
 
-      <div class="dropdown-list" *ngIf="isOpen">
-        <div
-          class="dropdown-item"
-          *ngFor="let option of leadersDropdown"
-          (click)="select(option.code)"
-        >
-          <img [src]="'assets/img/' + option.code + '_p1.png'" class="icon" />
-          {{ option.name }}
-        </div>
+    <div class="dropdown-list" *ngIf="isOpen">
+      <div
+        class="dropdown-item"
+        *ngFor="let option of leadersDropdown"
+        (click)="select(option.code)"
+      >
+        <img [src]="'assets/img/' + option.code + '_p1.png'" class="icon" />
+        {{ option.name }}
       </div>
     </div>
+  </div>
   <!-- </select> -->
 
   FORMAT

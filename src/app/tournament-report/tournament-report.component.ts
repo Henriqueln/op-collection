@@ -324,6 +324,11 @@ export class TournamentReportComponent implements OnInit {
     );
     if (!leader) {
       leader = this.createEmptyLeaderData();
+      leader.opponents.push({
+          leader: this.leaderOpponent as any,
+          wins: this.wonGame ? 1 : 0,
+          loses: this.wonGame ? 0 : 1,
+        });
       this.apiService.addNewGame(leader).subscribe(() => {});
     } else {
       let opponents = leader.opponents;
