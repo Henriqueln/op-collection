@@ -123,8 +123,8 @@ LEADER
   <h4 style="font-weight: bold">
     Most Played (Tournaments - {{ currentSet }})
   </h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostUsedCompCurrent">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <div *ngFor="let used of statistics.mostUsedTournament">
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
@@ -134,30 +134,8 @@ LEADER
     </div>
   </div>
   <h4 style="font-weight: bold">Most Wins (Tournaments - {{ currentSet }})</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostWinsCompCurrent">
-      <img
-        (click)="selectLeader(used.code)"
-        style="height: 150px"
-        src="assets/img/{{ used.code }}_p1.png"
-      />
-      <p style="text-align: center">{{ used.timesWon }}</p>
-    </div>
-  </div>
-  <h4 style="font-weight: bold">Most Played (Tournaments)</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostUsedComp">
-      <img
-        (click)="selectLeader(used.code)"
-        style="height: 150px"
-        src="assets/img/{{ used.code }}_p1.png"
-      />
-      <p style="text-align: center">{{ used.timesUsed }}</p>
-    </div>
-  </div>
-  <h4 style="font-weight: bold">Most Wins (Tournaments)</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostWinsComp">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <div *ngFor="let used of statistics.mostWinsTournament">
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
@@ -167,76 +145,25 @@ LEADER
     </div>
   </div>
   <h4 style="font-weight: bold">Most Played (Ranked - {{ currentSet }})</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostWinsRankCurrent">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <div *ngFor="let used of statistics.mostUsedRanked">
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
         src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.timesUsed }}</p>
-    </div>
-  </div>
-  <h4 style="font-weight: bold">Most Wins (Ranked - {{ currentSet }})</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostWinsRankCurrent">
-      <img
-        (click)="selectLeader(used.code)"
-        style="height: 150px"
-        src="assets/img/{{ used.code }}_p1.png"
-      />
-      <p style="text-align: center">{{ used.timesWon }}</p>
     </div>
   </div>
   <h4 style="font-weight: bold">Best Win Ratio (Ranked - {{ currentSet }})</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.bestWinRatioRankCurrent">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <div *ngFor="let used of statistics.mostWinRatio">
       <img
         (click)="selectLeader(used.code)"
         style="height: 150px"
         src="assets/img/{{ used.code }}_p1.png"
       />
       <p style="text-align: center">{{ used.winRatio }}%</p>
-    </div>
-  </div>
-  <h4 style="font-weight: bold">Most Played (Ranked - All Time)</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostWinsRank">
-      <img
-        (click)="selectLeader(used.code)"
-        style="height: 150px"
-        src="assets/img/{{ used.code }}_p1.png"
-      />
-      <p style="text-align: center">{{ used.timesUsed }}</p>
-    </div>
-  </div>
-  <h4 style="font-weight: bold">Most Wins (Ranked - All Time)</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.mostWinsRank">
-      <img
-        (click)="selectLeader(used.code)"
-        style="height: 150px"
-        src="assets/img/{{ used.code }}_p1.png"
-      />
-      <p style="text-align: center">{{ used.timesWon }}</p>
-    </div>
-  </div>
-  <h4 style="font-weight: bold">Best Win Ratio (Ranked - All Time)</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.bestWinRatioRank">
-      <img
-        (click)="selectLeader(used.code)"
-        style="height: 150px"
-        src="assets/img/{{ used.code }}_p1.png"
-      />
-      <p style="text-align: center">{{ used.winRatio }}%</p>
-    </div>
-  </div>
-  <h4 style="font-weight: bold">Most Wins Against</h4>
-  <div style="display: flex; gap: 2rem">
-    <div *ngFor="let used of leaderStats.individualWins">
-      <img style="height: 150px" src="assets/img/{{ used.code }}_p1.png" />
-      <p style="text-align: center">{{ used.timesWon }}</p>
     </div>
   </div>
   <h4 style="font-weight: bold">Worst win ratio</h4>

@@ -22,6 +22,11 @@ export class TournamentReportComponent implements OnInit {
   leadersRanking = JSON.parse(JSON.stringify(leaders));
   currentLeader = '-1';
   tournamentsFiltered = JSON.parse(JSON.stringify(TournamentsData));
+  statistics: any = {
+    mostUsedTournament: [],
+    mostWinsTournament: [],
+    mostUsedRanked: [],
+  };
   // OLD CODE
   leadersCurrentSet = JSON.parse(JSON.stringify(leaders));
   leaderCurrentSetFiltered: any;
@@ -102,15 +107,93 @@ export class TournamentReportComponent implements OnInit {
     this.leadersRanking = JSON.parse(JSON.stringify(leaders));
   }
 
+  resetStatistics() {
+    this.statistics = {
+      mostUsedTournament: [],
+      mostWinsTournament: [],
+      mostUsedRanked: [],
+    };
+  }
+
+  getStatistics(set = '', leader = '', data: any) {
+    this.resetStatistics();
+    this.statistics.mostUsedTournament = JSON.parse(
+      JSON.stringify(this.leadersRanking),
+    ).sort((a: any, b: any) => b.timesUsed - a.timesUsed);
+    this.statistics.mostWinsTournament = JSON.parse(
+      JSON.stringify(this.leadersRanking),
+    )
+      .filter((l: any) => l.timesWon > 0)
+      .sort((a: any, b: any) => b.timesWon - a.timesWon);
+    console.log('statistics', this.statistics);
+
+    if (set && set !== FormatEnum.ALL_TIME) {
+      data = data.filter((d: any) => d.format === set);
+    }
+    if (leader && leader !== '-1') {
+      data = data.filter((d: any) => d.leader === leader);
+    }
+    data.forEach((d: any) => {
+      const statsLead = {
+        code: d.leader,
+        timesUsed: 0,
+        timesWon: 0,
+        timesLost: 0,
+      };
+      d.opponents.forEach((o: any) => {
+        statsLead.timesLost += o.loses;
+        statsLead.timesWon += o.wins;
+        statsLead.timesUsed += o.loses + o.wins;
+      });
+      const existingLeader = this.statistics.mostUsedRanked.find(
+        (s: any) => s.code === d.leader,
+      );
+      if (existingLeader) {
+        existingLeader.timesLost += statsLead.timesLost;
+        existingLeader.timesWon += statsLead.timesWon;
+        existingLeader.timesUsed += statsLead.timesUsed;
+      } else {
+        this.statistics.mostUsedRanked.push(statsLead);
+      }
+    });
+
+    this.statistics.mostUsedRanked = this.statistics.mostUsedRanked.map(
+      (s: any) => {
+        return {
+          ...s,
+          winRatio:
+            Math.round((s.timesWon / (s.timesWon + s.timesLost)) * 100 * 100) /
+            100,
+        };
+      },
+    );
+
+    this.statistics.mostUsedRanked = this.statistics.mostUsedRanked.sort(
+      (a: any, b: any) => b.timesUsed - a.timesUsed,
+    );
+
+    this.statistics.mostWinRatio = this.normalizeArray(
+      this.statistics.mostUsedRanked,
+    )
+      .filter((s: any) => s.timesUsed > 10)
+      .sort((a: any, b: any) => b.winRatio - a.winRatio);
+  }
+
+  normalizeArray(array: any[]): any[] {
+    return JSON.parse(JSON.stringify(array));
+  }
+
   getData() {
+    this.getTournamentData(this.currentSet, this.currentLeader);
     this.apiService.getGames().subscribe((data) => {
       this.ranked = data;
       console.log('games data', data);
+      this.getStatistics(
+        this.currentSet,
+        this.currentLeader,
+        JSON.parse(JSON.stringify(data)),
+      );
     });
-    this.getTournamentData(this.currentSet, this.currentLeader);
-    // this.getTournamentData('OP14');
-    // this.getTournamentData('', 'OP01-001');
-    // this.getTournamentData('OP13', 'OP13-003');
     this.tournaments.forEach((t) => {
       const score = getTournamentScore(
         t.tournamentType,
@@ -119,9 +202,9 @@ export class TournamentReportComponent implements OnInit {
       );
       // this.leaders.find((l) => l.code === t.leader)!.points += score.score;
       // this.leaders.find((l) => l.code === t.leader)!.timesUsed++;
-      if (t.placement === 1) {
-        this.leaders.find((l) => l.code === t.leader)!.timesWon++;
-      }
+      // if (t.placement === 1) {
+      //   this.leaders.find((l) => l.code === t.leader)!.timesWon++;
+      // }
       if (t.set === this.currentSet) {
         this.leadersCurrentSet.find((l: any) => l!.code === t.leader)!.points +=
           score.score;
