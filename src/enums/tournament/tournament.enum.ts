@@ -334,6 +334,7 @@ export const leaders: Leader[] = [
 ]
 
 export enum FormatEnum {
+  ALL_TIME = 'ALL_TIME',
   OP01 = 'OP01',
   OP02 = 'OP02',
   OP03 = 'OP03',

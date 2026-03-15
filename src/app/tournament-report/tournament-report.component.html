@@ -25,12 +25,13 @@ FORMAT
     <option [value]="option">{{ option }}</option>
   }
 </select>
-<!-- LEADER LATER ADD OPTION TO SELECT LEADER HERE. AFTER STATS REFACTOR
-<select (change)="refreshData()" [(ngModel)]="selectedLeader" id="type3">
+LEADER
+<select (change)="refreshData()" [(ngModel)]="currentLeader" id="type3">
+  <option [value]="'-1'">All Leaders</option>
   @for (option of leaders; track option) {
     <option [value]="option.code">{{ option.code }} - {{ option.name }}</option>
   }
-</select> -->
+</select> 
 
 <!-- Tab 1 -->
 <div *ngIf="activeTab === 'tab1'" #scrollContainer1 style="margin-bottom: 3rem">
@@ -41,7 +42,7 @@ FORMAT
       <th>Leader</th>
       <th>Points</th>
     </tr>
-    <tr *ngFor="let leader of leaders">
+    <tr *ngFor="let leader of leadersRanking">
       <td [ngClass]="leader?.color1?.toLowerCase() ?? ''"></td>
       <td [ngClass]="leader?.color1?.toLowerCase() ?? ''">
         <img
@@ -68,7 +69,7 @@ FORMAT
       <th>Points</th>
       <th>Date</th>
     </tr>
-    <tr *ngFor="let t of tournaments">
+    <tr *ngFor="let t of tournamentsFiltered">
       <ng-container *ngIf="getRowContext(t) as tData">
         <td [ngClass]="tData.leader!.color1.toLowerCase()">
           <img

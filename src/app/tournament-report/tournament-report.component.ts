@@ -19,6 +19,10 @@ import { ApiService } from '../api.service';
   standalone: false,
 })
 export class TournamentReportComponent implements OnInit {
+  leadersRanking = JSON.parse(JSON.stringify(leaders));
+  currentLeader = '-1';
+  tournamentsFiltered = JSON.parse(JSON.stringify(TournamentsData));
+  // OLD CODE
   leadersCurrentSet = JSON.parse(JSON.stringify(leaders));
   leaderCurrentSetFiltered: any;
   leaderFilteredAllTime: any;
@@ -56,20 +60,65 @@ export class TournamentReportComponent implements OnInit {
     this.switchTab(this.activeTab);
   }
 
+  getTournamentData(set = '', leader = '') {
+    this.resetRanking();
+    let tournamentsFiltered = [...this.tournaments];
+    if (set && set !== FormatEnum.ALL_TIME) {
+      tournamentsFiltered = tournamentsFiltered.filter(
+        (tournament) => tournament.set === set,
+      );
+    }
+    if (leader && leader !== '-1') {
+      tournamentsFiltered = tournamentsFiltered.filter(
+        (tournament) => tournament.leader === leader,
+      );
+    }
+    console.log('tournaments filtered', tournamentsFiltered);
+    this.tournamentsFiltered = JSON.parse(JSON.stringify(tournamentsFiltered));
+    tournamentsFiltered.forEach((tournament) => {
+      const score = getTournamentScore(
+        tournament.tournamentType,
+        tournament.players,
+        tournament.placement,
+      );
+      this.leadersRanking.find(
+        (leaderRank: any) => leaderRank.code === tournament.leader,
+      )!.points += score.score;
+      this.leadersRanking.find(
+        (leaderRank: any) => leaderRank.code === tournament.leader,
+      )!.timesUsed++;
+      if (tournament.placement === 1) {
+        this.leadersRanking.find(
+          (leaderRank: any) => leaderRank.code === tournament.leader,
+        )!.timesWon++;
+      }
+    });
+    this.leadersRanking = this.leadersRanking
+      .filter((l: any) => l.points > 0)
+      .sort((a: any, b: any) => b.points - a.points);
+  }
+
+  resetRanking() {
+    this.leadersRanking = JSON.parse(JSON.stringify(leaders));
+  }
+
   getData() {
-    console.log(this.leadersDropdown);
     this.apiService.getGames().subscribe((data) => {
       this.ranked = data;
+      console.log('games data', data);
     });
-
+    this.getTournamentData(this.currentSet, this.currentLeader);
+    // this.getTournamentData('OP14');
+    // this.getTournamentData('', 'OP01-001');
+    // this.getTournamentData('OP13', 'OP13-003');
     this.tournaments.forEach((t) => {
       const score = getTournamentScore(
         t.tournamentType,
         t.players,
         t.placement,
       );
-      this.leaders.find((l) => l.code === t.leader)!.points += score.score;
-      this.leaders.find((l) => l.code === t.leader)!.timesUsed++;
+      // this.leaders.find((l) => l.code === t.leader)!.points += score.score;
+      // this.leaders.find((l) => l.code === t.leader)!.timesUsed++;
       if (t.placement === 1) {
         this.leaders.find((l) => l.code === t.leader)!.timesWon++;
       }
@@ -325,10 +374,10 @@ export class TournamentReportComponent implements OnInit {
     if (!leader) {
       leader = this.createEmptyLeaderData();
       leader.opponents.push({
-          leader: this.leaderOpponent as any,
-          wins: this.wonGame ? 1 : 0,
-          loses: this.wonGame ? 0 : 1,
-        });
+        leader: this.leaderOpponent as any,
+        wins: this.wonGame ? 1 : 0,
+        loses: this.wonGame ? 0 : 1,
+      });
       this.apiService.addNewGame(leader).subscribe(() => {});
     } else {
       let opponents = leader.opponents;
