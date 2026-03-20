@@ -1,9 +1,27 @@
 html,
 body {
   height: 100%;
-  overflow: hidden !important;
+  margin: 0;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.filters {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0; /* critical */
+}
 button {
   display: block;
 }

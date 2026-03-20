@@ -1,58 +1,43 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<div class="header-options">
-  <input [(ngModel)]="showAll" id="showAll" type="checkbox" /> Show All
-  <button (click)="cardCreation = !cardCreation">Toggle Card Creation</button>
-</div>
-<div style="position: sticky; top: 5; background-color: white">
-  @if (cardCreation) {
-    <app-create-card
-      (cardsChanged)="updateView()"
-      [card]="selectedCard"
-    ></app-create-card>
-    {{ haveCards }}/{{ totalCards }} ({{ completion | number }}%)
+<div class="page">
+  <div class="header-options">
+    <button (click)="hideFilters = !hideFilters">Hide Filters</button>
+  </div>
+
+  @if (!hideFilters) {
+    <div class="filters">
+      <div class="w3-bar w3-black">
+        @for (btn of colorButtons; track btn.label) {
+          <button
+            class="w3-bar-item w3-button {{ btn.class }}"
+            (click)="filterColor(btn.value)"
+          >
+            {{ btn.label }}
+          </button>
+        }
+
+        @for (btn of actionButtons; track btn.label) {
+          <button
+            class="w3-bar-item w3-button"
+            [routerLink]="btn.routerLink"
+            (click)="btn.action?.()"
+          >
+            {{ btn.label }}
+          </button>
+        }
+      </div>
+
+      <div class="w3-bar w3-black">
+        @for (set of setsValue; track set) {
+          <button class="w3-bar-item w3-button" (click)="selectSet(set)">
+            {{ set }}
+          </button>
+        }
+      </div>
+    </div>
   }
 
-  <div class="w3-bar w3-black">
-    <!-- Color Buttons -->
-    @for (btn of colorButtons; track btn.label) {
-      <button
-        class="w3-bar-item w3-button {{ btn.class }}"
-        (click)="filterColor(btn.value)"
-      >
-        {{ btn.label }}
-      </button>
-    }
-
-    <!-- Other Actions -->
-    @for (btn of actionButtons; track btn.label) {
-      <button
-        class="w3-bar-item w3-button"
-        [routerLink]="btn.routerLink"
-        (click)="btn.action?.()"
-      >
-        {{ btn.label }}
-      </button>
-    }
-  </div>
-
-  <div class="w3-bar w3-black">
-    @for (set of setsValue; track set) {
-      <button class="w3-bar-item w3-button" (click)="selectSet(set)">
-        {{ set }}
-      </button>
-    }
+  <div class="content">
+    <router-outlet></router-outlet>
   </div>
 </div>
-<div style="max-height: 500px; overflow-y: auto">
-  <router-outlet></router-outlet>
-  <app-card-view-table
-    [cards]="filteredCards"
-    (cardSelected)="selectCard($event)"
-    (quantityChange)="updateView()"
-  ></app-card-view-table>
-</div>
-
-<!-- Generic card back -->
-<!-- 
-https://m.media-amazon.com/images/I/51xnq29+enL._AC_UF894,1000_QL80_.jpg
--->

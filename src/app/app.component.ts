@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SETS } from 'src/enums/sets';
 import { ApiService } from './api.service';
 import { Card } from './entities/card';
 import { COLOR } from 'src/enums/color';
+import { FiltersService } from './filters.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,6 +27,7 @@ export class AppComponent {
     { label: 'Source', action: () => this.filterBySource() },
     { label: 'Remove Filters', action: () => this.removeFilters() },
     { label: 'Not Owned', action: () => this.showNotOwned() },
+    { label: 'Card List', routerLink: 'card-list' },
     { label: 'Market Watch', routerLink: 'market' },
     { label: 'Tournament Report', routerLink: 'tournaments' },
   ];
@@ -36,18 +38,17 @@ export class AppComponent {
 
   //OLD CODE, TO REFACTOR
 
-  allCards: Card[] = [];
-  filteredCards: Card[] = [];
-
   source = '';
   totalCards = 0;
   haveCards = 0;
   completion = 0;
   colorFilter = '';
   sourceFilter = '';
-  playsetsSelected = false;
   showAll = false;
   notOwned = false;
+  hideFilters = false;
+
+  private filtersService = inject(FiltersService)
 
   constructor(private apiService: ApiService) {}
 
@@ -55,65 +56,12 @@ export class AppComponent {
     this.updateView();
   }
 
-  selectSet(set: SETS) {
-    this.selectedSet = set;
-    this.updateView();
-  }
+  updateView() {}
 
-  updateView() {
-    this.playsetsSelected = false;
-    this.apiService.getCards().subscribe((result) => {
-      this.allCards = result;
-      this.allCards = this.allCards
-        .map((card) => {
-          card.leo = false;
-          card.increment = 1;
-          card.extra = card.quantity - card.playset;
-          if (card.priceHistory?.length === 0) card.priceHistory = [0];
-          if (card.extra < 0) card.extra = 0;
-          return card;
-        })
-        .sort((a, b) => {
-          if (a.code < b.code) return -1;
-          if (a.code > b.code) return 1;
-          return 0;
-        });
-      if (this.selectedSet === SETS.PLAYSETS) {
-        this.playsetsSelected = true;
-        this.filteredCards = this.allCards.filter(
-          (c) =>
-            c.quantity < c.playset && c.rarity !== 'ALT' && c.set !== SETS.DON,
-        );
-        this.filteredCards = this.filteredCards.map((c) => {
-          if (c.playset == 5 || c.playset == 2) {
-            c.playset = c.playset - 1;
-          }
-          return c;
-        });
-      } else {
-        if (!this.showAll) {
-          this.filteredCards = this.allCards.filter(
-            (c) => c.set === this.selectedSet,
-          );
-        } else {
-          this.filteredCards = this.allCards;
-        }
-      }
-      if (this.colorFilter) {
-        this.filteredCards = this.filteredCards.filter(
-          (c) => c.color === this.colorFilter || c.color2 === this.colorFilter,
-        );
-      }
-      if (this.sourceFilter) {
-        this.filteredCards = this.filteredCards.filter(
-          (c) => c.source === this.sourceFilter,
-        );
-      }
-      if (this.notOwned) {
-        this.filteredCards = this.filteredCards.filter((c) => c.quantity === 0);
-      }
-      this.updateStatistics();
-    });
+  selectSet(set: any) {
+    this.selectedSet = set;
+    this.filtersService.setValue(set);
+    this.updateView();
   }
 
   showNotOwned() {
@@ -123,6 +71,7 @@ export class AppComponent {
 
   filterColor(color: string) {
     this.colorFilter = color;
+    this.filtersService.setColor(color);
     this.updateView();
   }
 
@@ -139,9 +88,9 @@ export class AppComponent {
   }
 
   updateStatistics() {
-    this.totalCards = this.filteredCards.length;
-    this.haveCards = this.filteredCards.filter((x) => x.quantity > 0).length;
-    this.completion = (this.haveCards * 100) / this.totalCards;
+    // this.totalCards = this.filteredCards.length;
+    // this.haveCards = this.filteredCards.filter((x) => x.quantity > 0).length;
+    // this.completion = (this.haveCards * 100) / this.totalCards;
   }
 
   selectCard(card: Card) {
@@ -149,14 +98,14 @@ export class AppComponent {
   }
 
   printList() {
-    let textOutput = '';
-    this.filteredCards.forEach((card) => {
-      textOutput += `${card.playset - card.quantity}X ${card.code} - ${card.name}\n`;
-    });
+    // let textOutput = '';
+    // this.filteredCards.forEach((card) => {
+    //   textOutput += `${card.playset - card.quantity}X ${card.code} - ${card.name}\n`;
+    // });
 
-    const blob = new Blob([textOutput], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    window.open(url);
+    // const blob = new Blob([textOutput], { type: 'text/plain' });
+    // const url = window.URL.createObjectURL(blob);
+    // window.open(url);
   }
 }
 

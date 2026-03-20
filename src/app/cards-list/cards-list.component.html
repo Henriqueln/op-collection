@@ -1,0 +1,13 @@
+<button (click)="cardCreation = !cardCreation">Toggle Card Creation</button>
+@if (cardCreation) {
+  <app-create-card
+    (cardsChanged)="updateView()"
+    [card]="selectedCard"
+  ></app-create-card>
+  <!-- {{ haveCards }}/{{ totalCards }} ({{ completion | number }}%) -->
+}
+<app-card-view-table
+  [cards]="filteredCards"
+  (cardSelected)="selectCard($event)"
+  (quantityChange)="updateView()"
+></app-card-view-table>
