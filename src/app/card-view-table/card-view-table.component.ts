@@ -70,4 +70,15 @@ export class CardViewTableComponent {
   selectCard(card: Card) {
     this.cardSelected.emit(card);
   }
+
+  addToWishlist(card: Card) {
+    const request = {
+      code: card.code,
+      quantity: card.increment
+    }
+    console.log('card', card)
+    this.apiService.addWishlist(request).subscribe(() => {
+
+    })
+  }
 }

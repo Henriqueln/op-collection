@@ -37,6 +37,7 @@
             type="number"
           /><button (click)="increment(card)">+</button
           ><button (click)="decrement(card)">-</button>
+          <button (click)="addToWishlist(card)">Wishlist</button>
         </td>
         <!-- @if (selectedSet !== SETS.PLAYSETS) { -->
           <td [ngClass]="getColor(card, card.color)">

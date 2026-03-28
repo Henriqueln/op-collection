@@ -12,6 +12,7 @@ import { ApiService } from '../api.service';
 })
 export class MarketWatchComponent implements OnInit {
   showWishlist = false;
+  selectedCard: any = {};
   cards = MARKET_WATCH.map((market) => {
     const prices = market.prices.reverse();
     market.currentPrice = prices[0];
@@ -84,5 +85,12 @@ export class MarketWatchComponent implements OnInit {
           return 0;
         });
     });
+  }
+
+  deleteWishlist(){
+    this.apiService.deleteWishList(this.selectedCard._id, this.selectedCard._rev).subscribe(() => {
+      this.getWishlist();
+    })
+
   }
 }

@@ -51,6 +51,14 @@ export class ApiService {
     );
   }
 
+  addWishlist(request: any): Observable<any> {
+    return this.http.post<any>(`${this.url}/current-wishlist`, request, { headers: this.headers });
+  }
+
+  deleteWishList(request: string, rev: string): Observable<any> {
+    return this.http.delete<any>(`${this.url}/current-wishlist/${request}?rev=${rev}`, { headers: this.headers })
+  }
+
   updateCard(request: Card) {
     return this.http.put<any>(`${this.url}/cards/${request._id}`, request, { headers: this.headers });
   }
