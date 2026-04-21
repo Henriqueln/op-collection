@@ -923,6 +923,22 @@ export const TournamentsData = [
         location: 'Lisboa'
     },
     {
+        leader: LeaderEnum.RY_BONNEY,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 26,
+        placement: 5, 
+        set: FormatEnum.OP15,
+        date: new Date('2026-04-04').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.UY_NAMI, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.RU_LUCY, wonDice: false, won: false },
+            { number: 3, opponent: LeaderEnum.RG_KRIEG, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.PURPLE_ENEL, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
         leader: LeaderEnum.RU_ACE,
         store: StoresEnum.MERURU,
         tournamentType: TournamentType.LocalSmall,

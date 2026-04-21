@@ -51,6 +51,7 @@ export class TournamentReportComponent implements OnInit {
   leaderOpponent = '';
   format = FormatEnum.OP15;
   wonGame = false;
+  hideRotated = true;
 
   chartData!: ChartConfiguration<'pie'>['data'];
 
@@ -63,6 +64,9 @@ export class TournamentReportComponent implements OnInit {
   refreshData() {
     this.getData();
     this.switchTab(this.activeTab);
+  }
+
+  refreshLeaders() {
   }
 
   getTournamentData(set = '', leader = '') {

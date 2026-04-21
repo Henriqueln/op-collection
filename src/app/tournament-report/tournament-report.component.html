@@ -31,7 +31,7 @@ LEADER
   @for (option of leaders; track option) {
     <option [value]="option.code">{{ option.code }} - {{ option.name }}</option>
   }
-</select> 
+</select>
 
 <!-- Tab 1 -->
 <div *ngIf="activeTab === 'tab1'" #scrollContainer1 style="margin-bottom: 3rem">
@@ -123,7 +123,7 @@ LEADER
   <h4 style="font-weight: bold">
     Most Played (Tournaments - {{ currentSet }})
   </h4>
-  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap">
     <div *ngFor="let used of statistics.mostUsedTournament">
       <img
         (click)="selectLeader(used.code)"
@@ -134,7 +134,7 @@ LEADER
     </div>
   </div>
   <h4 style="font-weight: bold">Most Wins (Tournaments - {{ currentSet }})</h4>
-  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap">
     <div *ngFor="let used of statistics.mostWinsTournament">
       <img
         (click)="selectLeader(used.code)"
@@ -145,7 +145,7 @@ LEADER
     </div>
   </div>
   <h4 style="font-weight: bold">Most Played (Ranked - {{ currentSet }})</h4>
-  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap">
     <div *ngFor="let used of statistics.mostUsedRanked">
       <img
         (click)="selectLeader(used.code)"
@@ -156,7 +156,7 @@ LEADER
     </div>
   </div>
   <h4 style="font-weight: bold">Best Win Ratio (Ranked - {{ currentSet }})</h4>
-  <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+  <div style="display: flex; gap: 2rem; flex-wrap: wrap">
     <div *ngFor="let used of statistics.mostWinRatio">
       <img
         (click)="selectLeader(used.code)"
@@ -278,9 +278,17 @@ LEADER
   LEADER
   <select [(ngModel)]="leaderUsed" id="type3">
     @for (option of leaders; track option) {
-      <option [value]="option.code">
-        {{ option.code }} - {{ option.name }}
-      </option>
+      @if (hideRotated) {
+        @if (!option.rotated) {
+          <option [value]="option.code">
+            {{ option.code }} - {{ option.name }}
+          </option>
+        }
+      } @else {
+        <option [value]="option.code">
+          {{ option.code }} - {{ option.name }}
+        </option>
+      }
     }
   </select>
   OPPONENT
@@ -301,8 +309,10 @@ LEADER
         *ngFor="let option of leadersDropdown"
         (click)="select(option.code)"
       >
-        <img [src]="'assets/img/' + option.code + '_p1.png'" class="icon" />
-        {{ option.name }}
+        <div *ngIf="(hideRotated && !option.rotated) || !hideRotated">
+          <img [src]="'assets/img/' + option.code + '_p1.png'" class="icon" />
+          {{ option.name }}
+        </div>
       </div>
     </div>
   </div>
@@ -316,6 +326,15 @@ LEADER
       </option>
     }
   </select>
+
+  <input
+    (change)="refreshLeaders()"
+    type="checkbox"
+    [(ngModel)]="hideRotated"
+    id="type4"
+  />
+  Hide Rotated
+
   <input type="checkbox" [(ngModel)]="wonGame" id="wonGame" /> WON GAME
   <button (click)="addGame()">ADD GAME</button>
 </div>
