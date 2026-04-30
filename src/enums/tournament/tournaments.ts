@@ -954,4 +954,20 @@ export const TournamentsData = [
         ],
         location: 'Curitiba'
     },
+    {
+        leader: LeaderEnum.RED_SHANKS,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalSmall,
+        players: 10,
+        placement: 1, 
+        set: FormatEnum.OP15,
+        date: new Date('2026-04-30').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.PURPLE_DOFLAMINGO, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.BLACK_CROCODILE, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.RU_VIVI_EB03, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
 ]
