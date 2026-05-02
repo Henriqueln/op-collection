@@ -985,4 +985,19 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.RY_BONNEY,
+    store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalBig,
+        players: 24,
+        placement: 20, 
+        set: FormatEnum.OP15,
+        date: new Date('2026-05-02').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.RG_LUFFY_OP13, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.GREEN_MIHAWK, wonDice: false, won: false },
+            { number: 3, opponent: LeaderEnum.RB_KOBY, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
 ]
