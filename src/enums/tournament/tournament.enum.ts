@@ -6,9 +6,11 @@ export enum TournamentType {
   LocalSmall = "LocalSmall",
   LocalMedium = "LocalMedium",
   LocalBig = "LocalBig",
+  PiratesParty = "PiratesParty",
 
   // Store-level
   StoreTreasureCup = "storeTreasureCup",
+  ExtraGrandBattle = "extraGrandBattle",
   StoreChampionship = "storeChampionship",
 
   // Large events
@@ -22,7 +24,9 @@ export const TournamentTypeData = [
   { id: TournamentType.LocalSmall, name: 'Locals Small' },
   { id: TournamentType.LocalMedium, name: 'Locals Medium' },
   { id: TournamentType.LocalBig, name: 'Locals Big' },
+  { id: TournamentType.PiratesParty, name: 'Pirates Party' },
   { id: TournamentType.StoreTreasureCup, name: 'Store Treasure Cup' },
+  { id: TournamentType.ExtraGrandBattle, name: 'Extra Grand Battle' },
   { id: TournamentType.StoreChampionship, name: 'Store Championship' },
   { id: TournamentType.TreasureCup, name: 'Treasure Cup' },
   { id: TournamentType.Regional, name: 'Regional' },
@@ -73,8 +77,9 @@ export const TournamentMultipliers: Record<TournamentType, number> = {
   [TournamentType.LocalSmall]: 0.05,
   [TournamentType.LocalMedium]: 0.08,
   [TournamentType.LocalBig]: 0.12,
-
+  [TournamentType.PiratesParty]: 0.08,
   [TournamentType.StoreTreasureCup]: 0.25,
+  [TournamentType.ExtraGrandBattle]: 0.25,
   [TournamentType.StoreChampionship]: 0.40,
 
   [TournamentType.TreasureCup]: 1.2,
