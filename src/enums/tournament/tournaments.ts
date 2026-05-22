@@ -1096,7 +1096,7 @@ export const TournamentsData = [
         location: 'Lisboa'
     },
     {
-        leader: LeaderEnum.RU_VIVI,
+        leader: LeaderEnum.RU_VIVI_EB03,
         store: StoresEnum.CONFLUX,
         tournamentType: TournamentType.LocalSmall,
         players: 8,
@@ -1126,8 +1126,8 @@ export const TournamentsData = [
         location: 'Lisboa'
     },
     {
-        leader: LeaderEnum.RU_ACE,
-        store: StoresEnum.PTMERCH,
+        leader: LeaderEnum.PY_ROSINANTE,
+        store: StoresEnum.LOTUS_MARKET,
         tournamentType: TournamentType.LocalSmall,
         players: 9,
         placement: 3, 
