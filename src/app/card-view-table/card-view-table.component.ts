@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { CurrencyPipe, NgClass } from '@angular/common';
 import { Component, inject, input, output } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Card } from '../entities/card';
@@ -8,7 +8,7 @@ import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-card-view-table',
-  imports: [NgClass, ReactiveFormsModule, FormsModule],
+  imports: [NgClass, ReactiveFormsModule, FormsModule, CurrencyPipe],
   templateUrl: './card-view-table.component.html',
   styleUrl: './card-view-table.component.css',
   standalone: true,
@@ -80,5 +80,10 @@ export class CardViewTableComponent {
     this.apiService.addWishlist(request).subscribe(() => {
 
     })
+  }
+
+  getCardCurrentPrice(card: Card): number {
+    if(!card.priceHistory || card.priceHistory.length === 0) return 0;
+    return card.priceHistory[0];
   }
 }

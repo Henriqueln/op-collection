@@ -55,6 +55,7 @@
         </td>
         <td [ngClass]="getColor(card, card.color)">{{ card.rarity }}</td>
         <!-- <td [ngClass]="getColor(card, card.color2)">{{card.category}}</td> -->
+        <td [ngClass]="getColor(card, card.color2)">{{ getCardCurrentPrice(card) | currency:'EUR':'symbol':'1.2-2' }}</td>
         <td [ngClass]="getColor(card, card.color2)">{{ card.type1 }}</td>
         <td [ngClass]="getColor(card, card.color2)">{{ card.type2 }}</td>
         <td [ngClass]="getColor(card, card.color2)">{{ card.type3 }}</td>

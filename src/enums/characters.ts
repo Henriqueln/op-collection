@@ -762,4 +762,5 @@ export const characterNames = [
     'Younger Brother Marine',
     'Benevolent King of the Waves',
     'Luffy & Ace',
+    'Prisioner of Impel Down'
 ];
