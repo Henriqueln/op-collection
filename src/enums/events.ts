@@ -99,4 +99,7 @@ export const eventsNames = [
     'I\'ve Come Here... To Cut Those Chains!!!',
     'Hallowed Glacier Slash',
     'Mahoroba',
+    'The Name of This Era Is "Whitebeard"!!',
+    'Can You Still Fight, Luffy?! Of Course!!',
+    'And You Get Yourself in Big Trouble!!'
 ]

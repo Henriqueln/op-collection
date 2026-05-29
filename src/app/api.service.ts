@@ -7,7 +7,7 @@ import { Card } from './entities/card';
 export class ApiService {
   // readonly url = 'http://localhost:5984';
   // readonly url = 'https://brachial-unmartial-sherryl.ngrok-free.dev'
-  readonly url = 'https://ripe-times-give.loca.lt'
+  readonly url = 'https://vitamins-blues-economic-folder.trycloudflare.com';
 
   headers = new HttpHeaders({
     Authorization: 'Basic ' + btoa('admin:1234'), // Encode username:password

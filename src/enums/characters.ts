@@ -761,4 +761,5 @@ export const characterNames = [
     'Older Brother Marine',
     'Younger Brother Marine',
     'Benevolent King of the Waves',
+    'Luffy & Ace',
 ];
