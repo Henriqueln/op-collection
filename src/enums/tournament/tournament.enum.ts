@@ -212,6 +212,13 @@ export enum LeaderEnum {
   GREEN_KID = 'ST02-001',
   BLUE_CROCODILE = 'ST03-001',
   RED_LUFFY_ST21 = 'ST21-001',
+  RED_ACE_OP16 = 'OP16-001',
+  GU_LUFFY = 'OP16-022',
+  ACE_LUFFY = 'ST30-001',
+  BLUE_BUGGY_OP16 = 'OP16-041',
+  PURPLE_SENGOKU = 'OP16-060',
+  BLACK_YAMATO = 'OP16-079',
+  BY_TEACH = 'OP16-080',
 }
 
 export const leaders: Leader[] = [
@@ -265,6 +272,7 @@ export const leaders: Leader[] = [
   createLeader('Monkey D. Luffy', COLOR.RED, COLOR.RED, LeaderEnum.RED_LUFFY, true),
   createLeader('Nami', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_NAMI),
   createLeader('Buggy', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_BUGGY),
+  createLeader('Buggy', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_BUGGY_OP16),
   createLeader('Emporio Ivankov', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_IVANKOV, true),
   createLeader('Jewelry Bonney', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_BONNEY),
   createLeader('Shanks', COLOR.RED, COLOR.RED, LeaderEnum.RED_SHANKS),
@@ -277,6 +285,7 @@ export const leaders: Leader[] = [
   createLeader('Sabo', COLOR.RED, COLOR.YELLOW, LeaderEnum.RY_SABO),
   createLeader('Sakazuki', COLOR.BLUE, COLOR.BLACK, LeaderEnum.UB_SAKAZUKI),
   createLeader('Yamato', COLOR.GREEN, COLOR.YELLOW, LeaderEnum.GY_YAMATO),
+  createLeader('Yamato', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_YAMATO),
   createLeader('Rob Lucci', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_LUCCI, true),
   createLeader('Rob Lucci', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_LUCCI_OP07),
   createLeader('Gecko Moria', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_MORIA),
@@ -301,6 +310,7 @@ export const leaders: Leader[] = [
   createLeader('Rebecca', COLOR.BLUE, COLOR.BLACK, LeaderEnum.UB_REBECCA, true),
   createLeader('Vinsmoke Reiju', COLOR.BLUE, COLOR.PURPLE, LeaderEnum.UP_REIJU),
   createLeader('Marshall D. Teach', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_TEACH),
+  createLeader('Marshall D. Teach', COLOR.BLACK, COLOR.YELLOW, LeaderEnum.BY_TEACH),
   createLeader('Nami', COLOR.BLUE, COLOR.YELLOW, LeaderEnum.UY_NAMI),
   createLeader('Tony Tony Chopper', COLOR.RED, COLOR.GREEN, LeaderEnum.RG_CHOPPER),
   createLeader('Koby', COLOR.RED, COLOR.BLACK, LeaderEnum.RB_KOBY),
@@ -310,6 +320,7 @@ export const leaders: Leader[] = [
   createLeader('Caesar Clown', COLOR.RED, COLOR.BLUE, LeaderEnum.RU_CAESAR),
   createLeader('Koala', COLOR.BLACK, COLOR.YELLOW, LeaderEnum.BY_KOALA),
   createLeader('Portgas D. Ace', COLOR.RED, COLOR.BLUE, LeaderEnum.RU_ACE),
+  createLeader('Portgas D. Ace', COLOR.RED, COLOR.RED, LeaderEnum.RED_ACE_OP16),
   createLeader('Imu', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_IMU),
   createLeader('Lim', COLOR.GREEN, COLOR.PURPLE, LeaderEnum.GP_LIM),
   createLeader('Gol D. Roger', COLOR.RED, COLOR.PURPLE, LeaderEnum.RP_ROGER),
@@ -329,6 +340,7 @@ export const leaders: Leader[] = [
   createLeader('Boa Hancock', COLOR.BLUE, COLOR.YELLOW, LeaderEnum.UY_BOA),
   createLeader('Jinbe', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_JINBE),
   createLeader('Monkey D. Luffy', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_LUFFY),
+  createLeader('Monkey D. Luffy', COLOR.GREEN, COLOR.BLUE, LeaderEnum.GU_LUFFY),
   createLeader('Dracule Mihawk', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_MIHAWK),
   createLeader('Sabo', COLOR.RED, COLOR.BLACK, LeaderEnum.RB_SABO_OP13),
   createLeader('Vegapunk', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_VEGAPUNK),
@@ -336,6 +348,8 @@ export const leaders: Leader[] = [
   createLeader('Carrot', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_CARROT),
   createLeader('Nico Robin', COLOR.PURPLE, COLOR.YELLOW, LeaderEnum.PY_ROBIN),
   createLeader('Foxy', COLOR.PURPLE, COLOR.PURPLE, LeaderEnum.PURPLE_FOXY),
+  createLeader('Ace & Luffy', COLOR.RED, COLOR.GREEN, LeaderEnum.ACE_LUFFY),
+  createLeader('Sengoku', COLOR.PURPLE, COLOR.PURPLE, LeaderEnum.PURPLE_SENGOKU),
 ]
 
 export enum FormatEnum {

@@ -2,6 +2,7 @@ export const sourcesOptions = [
   '',
   '1st Anniversary Chinese (CH)',
   '1st Anniversary English',
+  '1st Anniversary French',
   '1st Anniversary Japanese',
   '2nd Anniversary Japanese',
   '2nd Anniversary English',
