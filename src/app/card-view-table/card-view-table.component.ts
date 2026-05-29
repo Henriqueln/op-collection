@@ -84,6 +84,6 @@ export class CardViewTableComponent {
 
   getCardCurrentPrice(card: Card): number {
     if(!card.priceHistory || card.priceHistory.length === 0) return 0;
-    return card.priceHistory[0];
+    return card.priceHistory.reverse()[0];
   }
 }
