@@ -753,4 +753,12 @@ export const characterNames = [
     'Margarita',
     'The Risky Brothers',
     'Octoballoon',
+    'McGuy',
+    'Ramba',
+    'Bunkov',
+    'Antlerkov',
+    'Miss Olive',
+    'Older Brother Marine',
+    'Younger Brother Marine',
+    'Benevolent King of the Waves',
 ];
