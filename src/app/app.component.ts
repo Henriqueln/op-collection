@@ -13,6 +13,7 @@ import { FiltersService } from './filters.service';
 export class AppComponent {
   SETS = SETS;
   COLORS = COLOR;
+  url = '';
 
   readonly colorButtons = [
     { label: 'Red', value: this.COLORS.RED, class: 'dark-red' },
@@ -106,6 +107,11 @@ export class AppComponent {
     // const blob = new Blob([textOutput], { type: 'text/plain' });
     // const url = window.URL.createObjectURL(blob);
     // window.open(url);
+  }
+
+  setApiUrl() {
+    this.apiService.setUrl(this.url);
+    this.updateView();
   }
 }
 

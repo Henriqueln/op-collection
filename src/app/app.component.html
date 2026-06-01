@@ -1,4 +1,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<input
+  type="text"
+  [(ngModel)]="url">
+  <button (click)="setApiUrl()">Set API URL</button>
 <div class="page">
   <div class="header-options">
     <button (click)="hideFilters = !hideFilters">Hide Filters</button>

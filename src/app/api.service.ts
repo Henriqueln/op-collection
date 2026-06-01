@@ -7,7 +7,8 @@ import { Card } from './entities/card';
 export class ApiService {
   // readonly url = 'http://localhost:5984';
   // readonly url = 'https://brachial-unmartial-sherryl.ngrok-free.dev'
-  readonly url = 'https://payment-everything-beaches-gentle.trycloudflare.com';
+  // readonly url = 'https://payment-everything-beaches-gentle.trycloudflare.com';
+  url = 'http://localhost:5984';
 
   headers = new HttpHeaders({
     Authorization: 'Basic ' + btoa('admin:1234'), // Encode username:password
@@ -15,6 +16,10 @@ export class ApiService {
   });
 
   constructor(private http: HttpClient) {}
+
+  setUrl(newUrl: string) {
+    this.url = newUrl;
+  }
 
   getSets(): Observable<any> {
     let request = { selector: {}, limit: 999999 };
