@@ -64,5 +64,11 @@ export enum SETS {
 
     DON = 'DON',
 
-    PLAYSETS = 'PLAYSETS'
+    PLAYSETS = 'PLAYSETS',
+
+    DIGI = 'DIGI',
+    MTG = 'MTG',
+    LORCANA = 'LORCANA',
+    STAR_WARS = 'STAR_WARS',
+    DBZ = 'DBZ',
 }

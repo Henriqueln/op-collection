@@ -1,8 +1,6 @@
 <div style="position: absolute; background-color: grey;">
   <label for="fname">Set:</label>
   <input [(ngModel)]="cardCreate.set" id="fname" type="text" />
-  <label for="image">Image:</label>
-  <input [(ngModel)]="cardCreate.image" id="image" type="text" />
   <label for="image">Price:</label>
   <input [(ngModel)]="price" id="image" type="number" />
   <label for="block">Block:</label>
@@ -59,6 +57,7 @@
       }
     }
   </select>
+  <input [(ngModel)]="cardCreate.name" id="name" type="text" />
   <label for="code">Code:</label>
   <input [(ngModel)]="cardCreate.code" id="code" type="text" />
   <label for="playset">Playset:</label>
