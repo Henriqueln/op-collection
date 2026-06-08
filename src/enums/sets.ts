@@ -53,6 +53,12 @@ export enum SETS {
     ST28 = 'ST28',
     ST29 = 'ST29',
     ST30 = 'ST30',
+    ST31 = 'ST31',
+    ST32 = 'ST32',
+    ST33 = 'ST33',
+    ST34 = 'ST34',
+    ST35 = 'ST35',
+    ST36 = 'ST36',
     
     P = 'P',
 
