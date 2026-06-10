@@ -71,4 +71,5 @@ export enum SETS {
     LORCANA = 'LORCANA',
     STAR_WARS = 'STAR_WARS',
     DBZ = 'DBZ',
+    POKEMON = 'POKEMON',
 }

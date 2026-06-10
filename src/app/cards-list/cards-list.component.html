@@ -1,4 +1,12 @@
 <button (click)="cardCreation = !cardCreation">Toggle Card Creation</button>
+<button (click)="getRandomCard()">Get Random Card</button>
+@if (randomCard) {
+  <div>
+    <h3>Random Card:</h3>
+    <img style="width: 100px" [src]="'assets/img/' + randomCard.code + '.png'" />
+    <p>{{ randomCard.name }} ({{ randomCard.code }})</p>
+  </div>
+}
 @if (cardCreation) {
   <app-create-card
     (cardsChanged)="updateView()"

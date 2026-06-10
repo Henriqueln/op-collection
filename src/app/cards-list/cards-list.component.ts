@@ -22,6 +22,7 @@ export class CardsListComponent {
   playsetsSelected = false;
   allCards: Card[] = [];
   selectedCard: Card | undefined;
+  randomCard: Card | undefined;
   destroyRef = inject(DestroyRef);
   private apiService = inject(ApiService);
   private filtersService = inject(FiltersService);
@@ -104,5 +105,12 @@ export class CardsListComponent {
       // this.updateStatistics();
       console.log('filtered cards', this.filteredCards)
     });
+  }
+
+  getRandomCard(){
+    const cards = this.allCards.filter(c => c.quantity === 0);
+    const randomIndex = Math.floor(Math.random() * cards.length);
+    const randomCard = cards[randomIndex];
+    this.randomCard = randomCard;
   }
 }

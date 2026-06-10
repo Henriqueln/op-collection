@@ -46,6 +46,10 @@ export class CardViewTableComponent {
       if (card.quantity >= card.playset) return 'dark-yellow';
       else return 'yellow';
     }
+    if (color === COLOR.WHITE) {
+      if (card.quantity >= card.playset) return 'dark-white';
+      else return 'white';
+    }
     return '';
   }
 

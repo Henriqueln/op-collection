@@ -70,6 +70,14 @@ th {
   background-color: #fae2a0;
 }
 
+.white {
+  background-color: #f4f3f1;
+}
+
+.dark-white {
+  background-color: #e3e1dd;
+}
+
 .hidden {
   display: none;
 }
