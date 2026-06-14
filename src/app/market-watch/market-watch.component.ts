@@ -12,6 +12,7 @@ import { ApiService } from '../api.service';
 })
 export class MarketWatchComponent implements OnInit {
   showWishlist = false;
+  hideNonOpCards = false;
   selectedCard: any = {};
   cards = MARKET_WATCH.map((market) => {
     const prices = market.prices.reverse();
@@ -43,6 +44,18 @@ export class MarketWatchComponent implements OnInit {
   ngOnInit() {
     this.getCards();
     this.getWishlist();
+  }
+
+  isCardOp(card: Card) {
+    if (
+      card.code.startsWith('OP') ||
+      card.code.startsWith('EB') ||
+      card.code.startsWith('PRB') ||
+      card.code.startsWith('ST')
+    ) {
+      return true;
+    }
+    return false;
   }
 
   getWishlist() {
@@ -87,10 +100,11 @@ export class MarketWatchComponent implements OnInit {
     });
   }
 
-  deleteWishlist(){
-    this.apiService.deleteWishList(this.selectedCard._id, this.selectedCard._rev).subscribe(() => {
-      this.getWishlist();
-    })
-
+  deleteWishlist() {
+    this.apiService
+      .deleteWishList(this.selectedCard._id, this.selectedCard._rev)
+      .subscribe(() => {
+        this.getWishlist();
+      });
   }
 }
