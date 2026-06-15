@@ -1173,4 +1173,69 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.RY_BONNEY,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalSmall,
+        players: 9,
+        placement: 9, 
+        set: FormatEnum.OP16,
+        date: new Date('2026-06-11').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BYE, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.RU_LUCY, wonDice: false, won: false },
+            { number: 3, opponent: LeaderEnum.RU_ACE, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.GU_LUFFY, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_SHANKS,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 27,
+        placement: 1, 
+        set: FormatEnum.OP16,
+        date: new Date('2026-06-13').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BLACK_IMU, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.UY_NAMI, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.UP_LUFFY, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.RY_BONNEY, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_SHANKS,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.PiratesParty,
+        players: 14,
+        placement: 6, 
+        set: FormatEnum.OP16,
+        date: new Date('2026-06-13').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.PURPLE_ENEL, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.PURPLE_ENEL, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.RB_KOBY, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.RED_SHANKS, wonDice: false, won: false },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_SHANKS,
+        store: StoresEnum.DUELOS_DE_HONRA,
+        tournamentType: TournamentType.LocalSmall,
+        players: 11,
+        placement: 4, 
+        set: FormatEnum.OP16,
+        date: new Date('2026-06-14').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.BY_TEACH, wonDice: true, won: false },
+            { number: 2, opponent: LeaderEnum.RU_LUCY, wonDice: true, won: true },
+            { number: 3, opponent: LeaderEnum.BLUE_KUZAN, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.RB_KOBY, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+
 ]
