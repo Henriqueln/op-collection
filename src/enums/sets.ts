@@ -15,6 +15,7 @@ export enum SETS {
     OP14 = 'OP14',
     OP15 = 'OP15',
     OP16 = 'OP16',
+    OP17 = 'OP17',
 
     EB01 = 'EB01',
     EB02 = 'EB02',
@@ -72,4 +73,7 @@ export enum SETS {
     STAR_WARS = 'STAR_WARS',
     DBZ = 'DBZ',
     POKEMON = 'POKEMON',
+    WEISS = 'WEISS',
+    UNION_ARENA = 'UNION_ARENA',
+    NARUTO = 'NARUTO'
 }
