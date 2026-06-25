@@ -17,6 +17,7 @@ import { CreateCardComponent } from '../create-card/create-card.component';
 export class CardsListComponent {
   selectedSet = SETS.OP01;
   cardCreation = false;
+  hideOwned = false;
   selectedColor = '';
   filteredCards: Card[] = [];
   playsetsSelected = false;
@@ -38,6 +39,12 @@ export class CardsListComponent {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((color) => {
         this.selectedColor = color;
+        this.updateView();
+      });
+    this.filtersService.hideOwned$
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((hideOwned) => {
+        this.hideOwned = hideOwned;
         this.updateView();
       });
   }
@@ -93,6 +100,9 @@ export class CardsListComponent {
           (c) =>
             c.color === this.selectedColor || c.color2 === this.selectedColor,
         );
+      }
+      if (this.hideOwned) {
+        this.filteredCards = this.filteredCards.filter((c) => c.quantity === 0);
       }
       // if (this.sourceFilter) {
       //   this.filteredCards = this.filteredCards.filter(

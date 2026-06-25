@@ -11,6 +11,9 @@ export class FiltersService {
   selectedColor = new BehaviorSubject('');
   selectedColor$ = this.selectedColor.asObservable();
 
+  hideOwned = new BehaviorSubject(false);
+  hideOwned$ = this.hideOwned.asObservable();
+
   setValue(value: any) {
     this.selectedSet.next(value);
   }
@@ -25,5 +28,13 @@ export class FiltersService {
 
   getColor() {
     return this.selectedColor.value;
+  }
+
+  setHideOwned(value: boolean) {
+    this.hideOwned.next(value);
+  }
+
+  getHideOwned() {
+    return this.hideOwned.value;
   }
 }

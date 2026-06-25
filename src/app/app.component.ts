@@ -67,6 +67,7 @@ export class AppComponent {
 
   showNotOwned() {
     this.notOwned = true;
+    this.filtersService.setHideOwned(true);
     this.updateView();
   }
 
@@ -85,6 +86,8 @@ export class AppComponent {
     this.colorFilter = '';
     this.sourceFilter = '';
     this.notOwned = false;
+    this.filtersService.setColor('');
+    this.filtersService.setHideOwned(false);
     this.updateView();
   }
 
