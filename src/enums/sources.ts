@@ -202,6 +202,7 @@ export const sourcesOptions = [
   'Tournament Pack Vol. 13',
   'Tournament Pack Vol. 14',
   'Tournament Pack Vol. 15',
+  'Tournament Pack Vol. 16',
   'Treasure Booster Vol. 1',
   'Treasure Campaign Pack - 3rd Anniversary',
   'Treasure Rare - OP06 (CH)',
