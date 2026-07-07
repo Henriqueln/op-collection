@@ -18,4 +18,6 @@
   [cards]="filteredCards"
   (cardSelected)="selectCard($event)"
   (quantityChange)="updateView()"
+  (sortByNameOutput)="sortByName()"
+  (sortByCodeOutput)="sortByCode()"
 ></app-card-view-table>

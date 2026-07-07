@@ -123,4 +123,12 @@ export class CardsListComponent {
     const randomCard = cards[randomIndex];
     this.randomCard = randomCard;
   }
+
+  sortByName() {
+    this.filteredCards = this.filteredCards.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  sortByCode() {
+    this.filteredCards = this.filteredCards.sort((a, b) => a.code.localeCompare(b.code));
+  }
 }

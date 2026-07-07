@@ -19,6 +19,8 @@ export class CardViewTableComponent {
   public cards = input<Card[]>();
   public quantityChange = output<void>();
   public cardSelected = output<Card>();
+  public sortByNameOutput = output<void>();
+  public sortByCodeOutput = output<void>();
 
   getColor(card: Card, color: string): string {
     if (!color) color = card.color;
@@ -89,5 +91,13 @@ export class CardViewTableComponent {
   getCardCurrentPrice(card: Card): number {
     if(!card.priceHistory || card.priceHistory.length === 0) return 0;
     return card.priceHistory.reverse()[0];
+  }
+
+  sortByName() {
+    this.sortByNameOutput.emit();
+  }
+
+  sortByCode() {
+    this.sortByCodeOutput.emit();
   }
 }

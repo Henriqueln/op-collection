@@ -75,5 +75,6 @@ export enum SETS {
     POKEMON = 'POKEMON',
     WEISS = 'WEISS',
     UNION_ARENA = 'UNION_ARENA',
-    NARUTO = 'NARUTO'
+    NARUTO = 'NARUTO',
+    NARUTO_NEW = 'NARUTO_NEW'
 }
