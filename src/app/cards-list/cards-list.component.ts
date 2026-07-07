@@ -27,6 +27,8 @@ export class CardsListComponent {
   destroyRef = inject(DestroyRef);
   private apiService = inject(ApiService);
   private filtersService = inject(FiltersService);
+  isSortByName = false;
+  isSortByCode = true;
 
   ngOnInit() {
     this.filtersService.selectedSet$
@@ -114,6 +116,11 @@ export class CardsListComponent {
       // }
       // this.updateStatistics();
       console.log('filtered cards', this.filteredCards)
+      if(this.isSortByName){
+        this.filteredCards = this.filteredCards.sort((a, b) => a.name.localeCompare(b.name));
+      } else {
+        this.filteredCards = this.filteredCards.sort((a, b) => a.code.localeCompare(b.code));
+      }
     });
   }
 
@@ -125,10 +132,14 @@ export class CardsListComponent {
   }
 
   sortByName() {
-    this.filteredCards = this.filteredCards.sort((a, b) => a.name.localeCompare(b.name));
+    this.isSortByName = true;
+    this.isSortByCode = false;
+    this.updateView();
   }
 
   sortByCode() {
-    this.filteredCards = this.filteredCards.sort((a, b) => a.code.localeCompare(b.code));
+    this.isSortByName = false;
+    this.isSortByCode = true;
+    this.updateView();
   }
 }
