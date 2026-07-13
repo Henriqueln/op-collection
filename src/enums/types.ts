@@ -149,4 +149,5 @@ export const typesOptions = [
   'Rolling Pirates',
   'The Victims\' Club',
   'The Owner of Cindry\'s Shadow',
+  'Elbaph',
 ];

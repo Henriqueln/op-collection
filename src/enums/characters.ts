@@ -764,5 +764,7 @@ export const characterNames = [
     'Luffy & Ace',
     'Prisioner of Impel Down',
     'Bonk Punch & Monster',
-    'Inuarashi & Nekomamushi'
+    'Inuarashi & Nekomamushi',
+    'Baron Tamago & Pekoms',
+    'Loki'
 ];
