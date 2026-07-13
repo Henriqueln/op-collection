@@ -762,5 +762,7 @@ export const characterNames = [
     'Younger Brother Marine',
     'Benevolent King of the Waves',
     'Luffy & Ace',
-    'Prisioner of Impel Down'
+    'Prisioner of Impel Down',
+    'Bonk Punch & Monster',
+    'Inuarashi & Nekomamushi'
 ];

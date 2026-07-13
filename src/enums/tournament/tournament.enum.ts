@@ -377,6 +377,8 @@ export enum FormatEnum {
   OP15_EXTRA = 'OP15-EXTRA',
   OP16 = 'OP16',
   OP16_EXTRA = 'OP16-EXTRA',
+  OP17 = 'OP17',
+  OP17_EXTRA = 'OP17-EXTRA',
 }
 
 export enum StoresEnum {
