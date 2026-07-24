@@ -1388,10 +1388,11 @@ export const TournamentsData = [
         set: FormatEnum.OP16,
         date: new Date('2026-07-09').getTime(), 
         rounds: [
-            { number: 1, opponent: LeaderEnum.UY_NAMI, wonDice: true, won: true },
-            { number: 2, opponent: LeaderEnum.UY_BOA, wonDice: true, won: false },
-            { number: 3, opponent: LeaderEnum.GREEN_MIHAWK, wonDice: false, won: true },
-            { number: 4, opponent: LeaderEnum.UY_NAMI, wonDice: false, won: true },
+            { number: 1, opponent: LeaderEnum.PURPLE_SENGOKU, wonDice: true, won: true },
+            { number: 2, opponent: LeaderEnum.GREEN_ZORO, wonDice: true, won: false },
+            { number: 3, opponent: LeaderEnum.BY_TEACH, wonDice: false, won: false },
+            { number: 4, opponent: LeaderEnum.YELLOW_ENEL, wonDice: false, won: true },
+            { number: 5, opponent: LeaderEnum.UY_BOA, wonDice: false, won: true },
         ],
         location: 'Lisboa'
     },
