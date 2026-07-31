@@ -103,6 +103,7 @@ export const sourcesOptions = [
   'Judge pack Vol. 2 (JP)',
   'Judge pack Vol. 3 (JP)',
   'Jump Promo',
+  'JP Only',
   'Lecafig (JP)',
   'Mini-tin Pack Set vol. 2 (Asia)',
   'Mini-tin Pack Set vol. 3 (Asia)',
