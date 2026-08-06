@@ -766,5 +766,9 @@ export const characterNames = [
     'Bonk Punch & Monster',
     'Inuarashi & Nekomamushi',
     'Baron Tamago & Pekoms',
-    'Loki'
+    'Loki',
+    'Ulti & Page One',
+    'Gloriosa',
+    'Gerd',
+    'Rodo',
 ];

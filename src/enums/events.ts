@@ -102,5 +102,7 @@ export const eventsNames = [
     'The Name of This Era Is "Whitebeard"!!',
     'Can You Still Fight, Luffy?! Of Course!!',
     'And You Get Yourself in Big Trouble!!',
-    'Thousand Sunny'
+    'Thousand Sunny',
+    'I Don\'t Have Time to Chat with Snot-Nosed Brats',
+    'Fulgora'
 ]

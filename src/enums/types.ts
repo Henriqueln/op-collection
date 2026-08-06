@@ -151,4 +151,7 @@ export const typesOptions = [
   'The Owner of Cindry\'s Shadow',
   'Elbaph',
   'Former Big Mom Pirates',
+  'Giant Pirates',
+  'Rocks Pirates',
+  'Admiral'
 ];
