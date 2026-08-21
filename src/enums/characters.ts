@@ -771,4 +771,18 @@ export const characterNames = [
     'Gloriosa',
     'Gerd',
     'Rodo',
+    'Crone Oli',
+    'Fugar',
+    'Rocks D. Xebec',
+    'Wang Zhi',
+    'Ganzui',
+    'Kyo',
+    'Don Marlon',
+    'Barbell',
+    'Miss Buckingham Stussy',
+    'Lead Performers',
+    'Kurozumi Kanjuro',
+    'Dorry',
+    'Brogy',
+    'Sweet 3 Generals'
 ];

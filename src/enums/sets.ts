@@ -69,6 +69,10 @@ export enum SETS {
 
     DIGI = 'DIGI',
     MTG = 'MTG',
+    MTG_DINOS = 'MTG_DINOS',
+    MTG_DOGS = 'MTG_DOGS',
+    MTG_MARVEL = 'MTG_MARVEL',
+    MTG_OTHERS = 'MTG_OTHERS',
     LORCANA = 'LORCANA',
     STAR_WARS = 'STAR_WARS',
     DBZ = 'DBZ',

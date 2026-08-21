@@ -16,7 +16,7 @@ import { characterNames } from 'src/enums/characters';
   styleUrl: './create-card.component.css',
 })
 export class CreateCardComponent {
-  typeOptions = typesOptions;
+  typeOptions = typesOptions.sort((a, b) => a.localeCompare(b));
   sourceOptions = sourcesOptions;
   categoriesOptions = categoriesOptions;
   raritiesOptions = raritiesOptions;

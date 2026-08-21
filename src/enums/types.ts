@@ -103,6 +103,7 @@ export const typesOptions = [
   'Plague',
   'Punk Hazard',
   'Red-Haired Pirates',
+  'Red-Haired Pirates Allies',
   'Revolutionary Army',
   'Roger Pirates',
   'Saruyama Alliance',
