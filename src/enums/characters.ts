@@ -784,5 +784,15 @@ export const characterNames = [
     'Kurozumi Kanjuro',
     'Dorry',
     'Brogy',
-    'Sweet 3 Generals'
+    'Sweet 3 Generals',
+    'Pasia',
+    'Mermaid Cafe Dancers',
+    'Octopako',
+    'Osome',
+    'Russian',
+    'Ms. Father\'s Day',
+    'Ms. Monday',
+    'Ripley',
+    'Ahiru',
+    'Nojiko',
 ];

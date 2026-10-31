@@ -225,6 +225,7 @@ export enum LeaderEnum {
   PURPLE_KAIDO_OP17 = 'OP17-058',
   BLACK_LUFFY_OP17 = 'OP17-079',
   YELLOW_LINLIN_OP17 = 'OP17-099',
+  GY_ROBIN = 'EB05-010',
 }
 
 export const leaders: Leader[] = [
@@ -362,6 +363,7 @@ export const leaders: Leader[] = [
   createLeader('Monkey D. Luffy', COLOR.BLACK, COLOR.BLACK, LeaderEnum.BLACK_LUFFY_OP17),
   createLeader('Kaido', COLOR.PURPLE, COLOR.PURPLE, LeaderEnum.PURPLE_KAIDO_OP17),
   createLeader('Charlotte Linlin', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_LINLIN_OP17),
+  createLeader('Nico Robin', COLOR.GREEN, COLOR.YELLOW, LeaderEnum.GY_ROBIN),
 ]
 
 export enum FormatEnum {
@@ -391,6 +393,8 @@ export enum FormatEnum {
   OP16_EXTRA = 'OP16-EXTRA',
   OP17 = 'OP17',
   OP17_EXTRA = 'OP17-EXTRA',
+  EB05 = 'EB05',
+  OP18 = 'OP18',
 }
 
 export enum StoresEnum {

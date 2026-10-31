@@ -154,5 +154,7 @@ export const typesOptions = [
   'Former Big Mom Pirates',
   'Giant Pirates',
   'Rocks Pirates',
-  'Admiral'
+  'Admiral',
+  'Sabaody Archipelago',
+  'Senor Pink\'s Wife'
 ];

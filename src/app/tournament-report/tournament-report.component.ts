@@ -38,7 +38,7 @@ export class TournamentReportComponent implements OnInit {
   stores = Stores;
   tournamentTypes = TournamentTypeData;
   ranked: any[] = [];
-  currentSet = FormatEnum.OP17;
+  currentSet = FormatEnum.EB05;
   formats = Object.keys(FormatEnum);
   selectedLeader = leaders.find((l) => l.code === LeaderEnum.RED_ZORO);
 
@@ -49,7 +49,7 @@ export class TournamentReportComponent implements OnInit {
 
   leaderUsed = '';
   leaderOpponent = '';
-  format = FormatEnum.OP17;
+  format = FormatEnum.EB05;
   wonGame = false;
   hideRotated = true;
 
