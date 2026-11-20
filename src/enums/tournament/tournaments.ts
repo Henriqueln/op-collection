@@ -1526,5 +1526,67 @@ export const TournamentsData = [
         ],
         location: 'Lisboa'
     },
+    {
+        leader: LeaderEnum.ACE_LUFFY,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 22,
+        placement: 1, 
+        set: FormatEnum.OP17,
+        date: new Date('2026-09-11').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_MIHAWK, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.BLACK_LUFFY_OP17, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.PY_PUDDING, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.PURPLE_KAIDO, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.ACE_LUFFY,
+        store: StoresEnum.VERSUS,
+        tournamentType: TournamentType.LocalBig,
+        players: 22,
+        placement: 1, 
+        set: FormatEnum.OP17,
+        date: new Date('2026-09-11').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.GREEN_MIHAWK, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.BLACK_LUFFY_OP17, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.PY_PUDDING, wonDice: true, won: true },
+            { number: 4, opponent: LeaderEnum.PURPLE_KAIDO, wonDice: true, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.ACE_LUFFY,
+        store: StoresEnum.PTMERCH,
+        tournamentType: TournamentType.LocalSmall,
+        players: 7,
+        placement: 1, 
+        set: FormatEnum.OP17,
+        date: new Date('2026-09-12').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.PY_PUDDING, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.GREEN_SHANKS, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
+    {
+        leader: LeaderEnum.RED_RAYLEIGH,
+        store: StoresEnum.LOTUS_MARKET,
+        tournamentType: TournamentType.LocalSmall,
+        players: 9,
+        placement: 1, 
+        set: FormatEnum.OP17,
+        date: new Date('2026-11-20').getTime(), 
+        rounds: [
+            { number: 1, opponent: LeaderEnum.PY_ROBIN, wonDice: false, won: true },
+            { number: 2, opponent: LeaderEnum.BY_TEACH, wonDice: false, won: true },
+            { number: 3, opponent: LeaderEnum.RB_SABO_OP13, wonDice: false, won: true },
+            { number: 4, opponent: LeaderEnum.BLUE_ROCKS, wonDice: false, won: true },
+        ],
+        location: 'Lisboa'
+    },
 
 ]

@@ -226,6 +226,12 @@ export enum LeaderEnum {
   BLACK_LUFFY_OP17 = 'OP17-079',
   YELLOW_LINLIN_OP17 = 'OP17-099',
   GY_ROBIN = 'EB05-010',
+  RU_KAROO = 'OP18-001',
+  GP_FRANKY = 'OP18-021',
+  GREEN_LUFFY = 'OP18-022',
+  BLUE_ALL_SUNDAY = 'OP18-041',
+  PB_GUNKO = 'OP18-060',
+  BY_SPANDAM = 'OP18-060',
 }
 
 export const leaders: Leader[] = [
@@ -364,6 +370,12 @@ export const leaders: Leader[] = [
   createLeader('Kaido', COLOR.PURPLE, COLOR.PURPLE, LeaderEnum.PURPLE_KAIDO_OP17),
   createLeader('Charlotte Linlin', COLOR.YELLOW, COLOR.YELLOW, LeaderEnum.YELLOW_LINLIN_OP17),
   createLeader('Nico Robin', COLOR.GREEN, COLOR.YELLOW, LeaderEnum.GY_ROBIN),
+  createLeader('Karoo', COLOR.RED, COLOR.BLUE, LeaderEnum.RU_KAROO),
+  createLeader('Franky', COLOR.GREEN, COLOR.PURPLE, LeaderEnum.GP_FRANKY),
+  createLeader('Monkey D. Luffy', COLOR.GREEN, COLOR.GREEN, LeaderEnum.GREEN_LUFFY),
+  createLeader('Miss All Sunday', COLOR.BLUE, COLOR.BLUE, LeaderEnum.BLUE_ALL_SUNDAY),
+  createLeader('Saint Gunko', COLOR.PURPLE, COLOR.BLACK, LeaderEnum.PB_GUNKO),
+  createLeader('Spandam', COLOR.BLACK, COLOR.YELLOW, LeaderEnum.BY_SPANDAM),
 ]
 
 export enum FormatEnum {
